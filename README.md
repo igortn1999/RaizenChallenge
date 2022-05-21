@@ -8,8 +8,7 @@
 4. Dentro do eclipse: Import project > Maven > Existing Maven Projects > escolher a pasta que contem o pom.xml
 5. Deixar o Maven baixar todas as dependencias
 6. Realizar as instruções especificadas no arquivo raizen.properties (src/main/resources/raizen.properties)
-7. Adicionar as libs necessárias ao classpath do projeto raizen:
-7.1 Clicar com o botao direito no projeto > properties > Java Build Path > Libraries > Clicar em classpath > add jars > selecionar os jars em src/lib
+7. Adicionar as libs necessárias ao classpath do projeto raizen: Clicar com o botao direito no projeto > properties > Java Build Path > Libraries > Clicar em classpath > add jars > selecionar os jars em src/lib
 8. Executar a classe RaizenApplication.java
 
 ##Configurações do banco de dados:
