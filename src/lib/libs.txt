@@ -3,4 +3,5 @@ Sempre que for necessario adicionar uma biblioteca, adicionar o seu nome nesse a
 
 Bibliotecas adicionadas:
 
-mysql-connector-java-8.0.26.jar
+mysql-connector-java-8.0.26.jar:
+https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-8.0.29.tar.gz
