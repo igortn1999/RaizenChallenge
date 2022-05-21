@@ -37,7 +37,6 @@ build/
 
 ### Sensible Content ###
 application.properties
-raizen.properties
 
 ### Libs ####
 **/lib/*.jar
