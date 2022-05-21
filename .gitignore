@@ -34,3 +34,10 @@ build/
 
 ### Eclipse ###
 .metadata/
+
+### Sensible Content ###
+application.properties
+raizen.properties
+
+### Libs ####
+**/lib/*.jar

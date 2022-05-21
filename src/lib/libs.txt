@@ -1,0 +1,6 @@
+Utilizar esta pasta para adicionar bibliotecas externas necessárias
+Sempre que for necessario adicionar uma biblioteca, adicionar o seu nome nesse arquivo.
+
+Bibliotecas adicionadas:
+
+mysql-connector-java-8.0.26.jar
