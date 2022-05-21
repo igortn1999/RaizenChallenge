@@ -18,6 +18,9 @@ Para criar esse container, é necessário ter o docker instalado e baixar a imag
 - $ docker pull mysql:5.7
 
 Para criar um container, foi utilizado esse comando:
-- $ docker run --name mySQL -e MYSQL_ROOT_PASSWORD=<SENHA DO DB AQUI> -d mysql:5.7
+- $ docker run --name mySQL -e MYSQL_USER=<NOME DO USUARIO DO DB -e MYSQL_PASSWORD=<SENHA DESSE USUARIO> -e MYSQL_ROOT_PASSWORD=<SENHA DO ROOT> -e MYSQL_DATABASE=raizen -p 3061:3306 -d mysql:5.7
+
+Dessa forma a porta 3306 do container (onde o DB é exposto) é ligada à porta 3061 da maquina local
+
 
 
