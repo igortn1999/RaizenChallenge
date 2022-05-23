@@ -35,8 +35,6 @@ build/
 ### Eclipse ###
 .metadata/
 
-### Sensible Content ###
-application.properties
 
 ### Libs ####
 **/lib/*.jar
