@@ -1,4 +1,4 @@
-package com.app.raizen.mvc.model.entities;
+package com.app.raizen.models;
 
 import java.io.Serializable;
 import java.util.UUID;
@@ -12,15 +12,15 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 
 @Entity
-@Table(name="test")
-public class ModelTest implements Serializable {
+@Table(name="test", schema="public")
+public class TestModel implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private UUID id;
 	
-	@Column(length = 50)
+	@Column(name = "nome", nullable = false)
 	@NotBlank
 	private String nome;
 	
