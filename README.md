@@ -1,6 +1,6 @@
 # RaizenChallenge
 
-##Para importar o projeto no Eclipse:
+## Para importar o projeto no Eclipse:
 
 1. Criar uma wokspace
 2. Clonar este repositorio dentro dessa Workspace
@@ -11,16 +11,14 @@
 7. Adicionar as libs necessárias ao classpath do projeto raizen: Clicar com o botao direito no projeto > properties > Java Build Path > Libraries > Clicar em classpath > add jars > selecionar os jars em src/lib
 8. Executar a classe RaizenApplication.java
 
-##Configurações do banco de dados:
+## Configurações do banco de dados:
 
-Por enquanto, estamos usando um DB MySQL instanciado pelo docker.
-Para criar esse container, é necessário ter o docker instalado e baixar a imagem do mysql:
-- $ docker pull mysql:5.7
+Por enquanto, estamos usando um DB PostgreSQL instanciado pelo docker.
+Para criar esse container, é necessário ter o docker instalado e, dentro do diretório do projeto, após dar o clone no repositório, rodar o comando:
 
-Para criar um container, foi utilizado esse comando:
-- $ docker run --name mySQL -e MYSQL_USER=<NOME DO USUARIO DO DB -e MYSQL_PASSWORD=<SENHA DESSE USUARIO> -e MYSQL_ROOT_PASSWORD=<SENHA DO ROOT> -e MYSQL_DATABASE=raizen -p 3061:3306 -d mysql:5.7
+`docker compose up`
 
-Dessa forma a porta 3306 do container (onde o DB é exposto) é ligada à porta 3061 da maquina local
+Dessa forma, o container subirá automaticamente e estará na porta porta 3306.
 
 
 
