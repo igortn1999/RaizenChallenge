@@ -18,7 +18,7 @@ Para criar esse container, é necessário ter o docker instalado e, dentro do di
 
 `docker compose up`
 
-Dessa forma, o container subirá automaticamente e estará na porta porta 3306.
+Dessa forma, o container subirá automaticamente e estará na porta porta 5432.
 
 
 
