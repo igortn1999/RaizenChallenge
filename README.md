@@ -22,5 +22,6 @@ Para criar um container, foi utilizado esse comando:
 
 Dessa forma a porta 3306 do container (onde o DB é exposto) é ligada à porta 3061 da maquina local
 
+OU é possivel também instanciando o cantaniner pelo docker-compose. As instruções estão na pasta docker-compose.
 
 

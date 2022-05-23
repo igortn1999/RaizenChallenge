@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+
+  raizen-db:
+    image: "mysql:5.7"
+    container_name: raizen-db
+    environment: 
+      - MYSQL_DATABASE=raizen
+      - MYSQL_USER=<NOME_USUARIO>
+      - MYSQL_PASSWORD=<SENHA_USUARIO>
+    ports: 
+      - "3061:3306"

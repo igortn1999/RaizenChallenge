@@ -37,6 +37,7 @@ build/
 
 ### Sensible Content ###
 application.properties
+*.yml
 
 ### Libs ####
 **/lib/*.jar
