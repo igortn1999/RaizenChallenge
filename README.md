@@ -22,4 +22,8 @@ Para criar um container mySQL, foi utilizado esse comando:
 - $ docker run --name mySQL -e MYSQL_USER=<NOME DO USUARIO DO DB -e MYSQL_PASSWORD=<SENHA DESSE USUARIO> -e MYSQL_ROOT_PASSWORD=<SENHA DO ROOT> -e MYSQL_DATABASE=raizen -p 3061:3306 -d mysql:5.7
 Dessa forma a porta 3306 do container (onde o DB é exposto) é ligada à porta 3061 da maquina local
 
+Para criar um container postgresql, foi utilizado esse comando:
+- $ docker run --name raizend-db -e POSTGRES_DB=raizen-db -e POSTGRES_USER=guardian -e POSTGRES_PASSWORD=Guardi4n -p 5432:5432 -d postgres:11
+Dessa forma a porta 5432 do container (onde o DB é exposto) é ligada à porta 5432 da maquina local
+
 OU é possivel também instanciando o cantaniner pelo docker-compose. As instruções estão na pasta docker-compose.
