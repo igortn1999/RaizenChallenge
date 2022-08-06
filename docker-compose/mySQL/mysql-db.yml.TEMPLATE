@@ -11,3 +11,5 @@ services:
       - MYSQL_PASSWORD=<SENHA_USUARIO>
     ports: 
       - "3061:3306"
+      PROPABLY WILL BE DELETED
+
