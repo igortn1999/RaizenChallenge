@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.app.raizen.models.Model;
 import com.app.raizen.repositories.ModelRepository;
 
+import net.bytebuddy.utility.RandomString;
+
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
 public class Controller {
@@ -22,11 +24,9 @@ public class Controller {
 	
 	@GetMapping(path = {"/api"})
 	public Model getModels() {
-		Model mod = new Model("Painel Solar");
+		Model mod = new Model("Painel Solar - "+RandomString.make(5));
 		mr.save(mod);
-		return mod;
-		
-		
+		return mr.getById(mod.getId());
 	}
 
 }

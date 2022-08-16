@@ -27,4 +27,12 @@ public class Model {
 		super();
 		this.nome=nome;
 	}
+	
+	public int getId() {
+		return this.id;
+	}
+	
+	public String getName() {
+		return this.nome;
+	}
 }
