@@ -13,17 +13,12 @@
 
 ##Configurações do banco de dados:
 
-Por enquanto, estamos usando um DB Postgres ou MySQL instanciado pelo docker.
-Para criar esse container, é necessário ter o docker instalado e baixar a imagem do postgres (recomendado) ou mysql:
-- $ docker pull postgresql:11 
-- $ docker pull mysql:5.7
-
-Para criar um container mySQL, foi utilizado esse comando:
-- $ docker run --name mySQL -e MYSQL_USER=<NOME DO USUARIO DO DB -e MYSQL_PASSWORD=<SENHA DESSE USUARIO> -e MYSQL_ROOT_PASSWORD=<SENHA DO ROOT> -e MYSQL_DATABASE=raizen -p 3061:3306 -d mysql:5.7
-Dessa forma a porta 3306 do container (onde o DB é exposto) é ligada à porta 3061 da maquina local
+Por enquanto, estamos usando um DB Postgres instanciado pelo docker.
+Para criar esse container, é necessário ter o docker instalado e baixar a imagem do postgreSQL:
+- $ docker pull postgresql:11
 
 Para criar um container postgresql, foi utilizado esse comando:
-- $ docker run --name raizend-db -e POSTGRES_DB=raizen-db -e POSTGRES_USER=guardian -e POSTGRES_PASSWORD=Guardi4n -p 5432:5432 -d postgres:11
+- $ docker run --name raizend-db -e POSTGRES_DB=raizen-db -e POSTGRES_USER=guardian -e POSTGRES_PASSWORD=<INSERIR SENHA AQUI> -p 5432:5432 -d postgres:11
 Dessa forma a porta 5432 do container (onde o DB é exposto) é ligada à porta 5432 da maquina local
 
 OU é possivel também instanciando o cantaniner pelo docker-compose. As instruções estão na pasta docker-compose.
