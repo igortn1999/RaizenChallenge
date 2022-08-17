@@ -6,4 +6,4 @@ npm install
 
 cd  $WORK/docker-compose/postgresSQL/
 FILE=ls *.yml | grep .yml #TODO fix docker-compose command
-docker-compose -f $(ls *.yml | grep .yml) up -d
+docker-compose -f $(ls *.yml) up -d
