@@ -19,4 +19,7 @@ public interface DeviceRepository extends JpaRepository<Device, Integer>{
 	
 	public Device findById(int id);
 	
+	//@Query(value = "SELECT new com.app.raizen.dto.DeviceDto(u.id, u.name, u.consumption) " + "FROM Device u WHERE u.name = ?1")
+	public List<Device> findByConsumption(@Param("consumption") double consumption);
+	
 }

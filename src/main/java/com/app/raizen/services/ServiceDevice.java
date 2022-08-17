@@ -29,5 +29,9 @@ public class ServiceDevice {
 	public Object findById(int id) {
 		return dr.findById(id);
 	}
+	
+	public Object findByConsumption(double consumption) {
+		return dr.findByConsumption(consumption);
+	}
 
 }

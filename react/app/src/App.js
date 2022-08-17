@@ -14,7 +14,7 @@ function App() {
     const get_panel = async () => {
 
       try {
-        await fetch("http://localhost:8080/api", {
+        await fetch("http://localhost:8080/api/devices", {
           method: "GET",
         }).then(async (data) => {
           let body = await data.json()

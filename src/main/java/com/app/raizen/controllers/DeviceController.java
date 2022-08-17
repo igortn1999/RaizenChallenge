@@ -43,5 +43,10 @@ public class DeviceController {
 	public ResponseEntity<Object> findDeviceByName(@PathVariable int id){
 		return ResponseEntity.status(HttpStatus.OK).body(serviceDevice.findById(id));
 	}
+	
+	@GetMapping(path = "/kwh/{consumption}")
+	public ResponseEntity<Object> findDeviceByConsumption(@PathVariable double consumption){
+		return ResponseEntity.status(HttpStatus.OK).body(serviceDevice.findByConsumption(consumption));
+	}
 
 }

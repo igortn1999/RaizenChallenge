@@ -19,6 +19,9 @@ public class Device {
 	@Column(name="name")
 	private String name;
 	
+	@Column(name="consumption")
+	private double consumption;
+
 	public Device() {
 		
 	}
@@ -26,6 +29,13 @@ public class Device {
 	public Device(String name) {
 		super();
 		this.name=name;
+		this.consumption=0;
+	}
+	
+	public Device(String name, double consumption) {
+		super();
+		this.name=name;
+		this.consumption=consumption;
 	}
 	
 	public int getId() {
@@ -43,4 +53,13 @@ public class Device {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	public double getConsumption() {
+		return consumption;
+	}
+
+	public void setConsumption(double consumption) {
+		this.consumption = consumption;
+	}
+	
 }
