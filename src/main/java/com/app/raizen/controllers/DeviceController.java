@@ -3,18 +3,18 @@ package com.app.raizen.controllers;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.app.raizen.models.Device;
-import com.app.raizen.repositories.DeviceRepository;
-
-import net.bytebuddy.utility.RandomString;
+import com.app.raizen.services.ServiceDevice;
 
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
@@ -22,34 +22,26 @@ import net.bytebuddy.utility.RandomString;
 public class DeviceController {
 	
 	@Autowired
-	DeviceRepository dr;
+	ServiceDevice serviceDevice;
 	
-	@RequestMapping(method = {RequestMethod.POST, RequestMethod.PUT})
-	public @ResponseBody Device saveDevice(@Valid Device device) {
-		dr.save(device);
-		return device;
+	@PostMapping
+	public @ResponseBody ResponseEntity<Object> saveDevice(@Valid Device device) {
+		return ResponseEntity.status(HttpStatus.CREATED).body(serviceDevice.save(device));
 	}
 	
 	@GetMapping
-	public Iterable<Device> getDevices(){
-		return dr.findAll();
+	public ResponseEntity<Object> getDevices(){
+		return ResponseEntity.status(HttpStatus.OK).body(serviceDevice.findAll());
 	}
 	
 	@GetMapping(path = "/name/{namePart}")
-	public Iterable<Device> findDeviceByName(@PathVariable String namePart){
-		return dr.findByNameContainingIgnoringCase(namePart.trim());
+	public ResponseEntity<Object> findDeviceByName(@PathVariable String namePart){
+		return ResponseEntity.status(HttpStatus.OK).body(serviceDevice.findByNameContaining(namePart));
 	}
 	
-	@GetMapping(path = "/id/{namePart}")
-	public Iterable<Device> findDeviceById(@PathVariable int id){
-		return dr.findById(id);
-	}
-	
-	@GetMapping(path = {"/test"})
-	public Iterable<Device> getModels() {
-		Device device = new Device("Painel Solar - "+RandomString.make(5));
-		dr.save(device);
-		return dr.findById(device.getId());
+	@GetMapping(path = "/id/{id}")
+	public ResponseEntity<Object> findDeviceByName(@PathVariable int id){
+		return ResponseEntity.status(HttpStatus.OK).body(serviceDevice.findById(id));
 	}
 
 }
