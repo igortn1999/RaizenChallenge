@@ -21,4 +21,4 @@ Para criar um container postgresql, foi utilizado esse comando:
 - $ docker run --name raizend-db -e POSTGRES_DB=raizen-db -e POSTGRES_USER=guardian -e POSTGRES_PASSWORD=<INSERIR SENHA AQUI> -p 5432:5432 -d postgres:11
 Dessa forma a porta 5432 do container (onde o DB é exposto) é ligada à porta 5432 da maquina local
 
-OU é possivel também instanciando o cantaniner pelo docker-compose. As instruções estão na pasta docker-compose.
+OU é possivel também instanciando o cantaniner pelo docker-compose. As instruções se encontram na pasta docker-compose.
