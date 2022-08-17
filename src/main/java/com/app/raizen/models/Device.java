@@ -9,30 +9,38 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 
 @Entity
-@Table(name="Model", schema="public")
-public class Model {
+@Table(name="Devices", schema="public")
+public class Device {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	@Column(name="nome")
-	private String nome;
+	@Column(name="name")
+	private String name;
 	
-	public Model() {
+	public Device() {
 		
 	}
 	
-	public Model(String nome) {
+	public Device(String name) {
 		super();
-		this.nome=nome;
+		this.name=name;
 	}
 	
 	public int getId() {
 		return this.id;
 	}
 	
+	public void setId(int id) {
+		this.id = id;
+	}
+	
 	public String getName() {
-		return this.nome;
+		return this.name;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
 	}
 }
