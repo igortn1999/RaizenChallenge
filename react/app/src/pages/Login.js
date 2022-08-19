@@ -1,6 +1,7 @@
 import '../styles/Login.css';
-import Refiki from '../static/refiki.svg'
-import Guardian from '../static/guardian_logo.png'
+import Refiki from '../static/refiki.svg';
+import Guardian from '../static/guardian_logo.png';
+import { Link } from "react-router-dom";
 
 
 function LoginPage() {
@@ -15,9 +16,9 @@ function LoginPage() {
                 </div>
                 <img src={Refiki} className="refiki" alt="Girl in a computer"/>
 
-                <div className='guardian_logo'>
+                <Link to="/integrantes" className='guardian_logo'>
                     <img src={Guardian} alt="guardian logo"/>
-                </div>
+                </Link>
             </div>
 
             <section className='buttons'>
