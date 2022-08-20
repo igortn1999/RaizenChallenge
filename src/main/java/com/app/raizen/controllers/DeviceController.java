@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.app.raizen.models.Device;
 import com.app.raizen.services.ServiceDevice;
+import com.fasterxml.jackson.core.JsonFactory;
 
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
@@ -48,5 +49,15 @@ public class DeviceController {
 	public ResponseEntity<Object> findDeviceByConsumption(@PathVariable double consumption){
 		return ResponseEntity.status(HttpStatus.OK).body(serviceDevice.findByConsumption(consumption));
 	}
-
+	
+	@GetMapping(path = "/id/{id}/kwh")
+	public ResponseEntity<Object> getConsumption(@PathVariable int id) throws Exception{
+		ResponseEntity<Object> res = ResponseEntity.status(HttpStatus.OK).body(((Device)serviceDevice.findById(id)).getConsumption());
+		if (res == null){
+			//TODO figure out what to do if there is no Device with required ID
+		}
+		return res;
+		
+	}
+	
 }
