@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.app.raizen.models.Device;
 import com.app.raizen.services.ServiceDevice;
-import com.fasterxml.jackson.core.JsonFactory;
 
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
