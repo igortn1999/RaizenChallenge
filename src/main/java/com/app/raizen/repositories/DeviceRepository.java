@@ -14,7 +14,7 @@ import com.app.raizen.models.Device;
 public interface DeviceRepository extends JpaRepository<Device, Integer>{
 //public interface DeviceRepository extends PagingAndSortingRepository<Device, Integer>{
 	
-	@Query(value = "SELECT new com.app.raizen.dto.DeviceDto(u.id, u.name) " + "FROM Device u WHERE u.name LIKE %?1%")
+	@Query(value = "SELECT new com.app.raizen.dto.DeviceDto(u.id, u.name, u.consumption) " + "FROM Device u WHERE u.name LIKE %?1%")
 	public List<DeviceDto> findByNameContaining(@Param("namePart") String namePart);
 	
 	public Device findById(int id);

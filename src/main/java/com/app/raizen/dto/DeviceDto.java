@@ -12,9 +12,8 @@ public class DeviceDto {
 	}
 	
 	public DeviceDto(int id, String name) {
-		this.id=id;
-		this.name=name;
-		this.consumption=33.333;
+		this.id = id;
+		this.name = name;
 	}
 	
 	public DeviceDto(int id, String name, double consumption) {
