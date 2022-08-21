@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BusinessInfoDesign class="oracle.dbtools.crest.model.businessinfo.BusinessInfoDesign" name="Business Information" id="ED4F0AAF-9BB7-82D6-AA8D-7481D3F22EB0">
+<createdBy>Igor</createdBy>
+<createdTime>2022-08-21 23:19:25 UTC</createdTime>
+<ownerDesignName>raizen-uml</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</BusinessInfoDesign>

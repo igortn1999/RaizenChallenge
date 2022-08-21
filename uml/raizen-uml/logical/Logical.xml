@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="7E5F137A-DD94-8542-5BEB-29AC53E97E22" mainViewID="BA8A3E9B-9A72-AFE3-8BB7-0D2255A5A2F9">
+<createdBy>Igor</createdBy>
+<createdTime>2022-08-21 23:19:24 UTC</createdTime>
+<ownerDesignName>raizen-uml</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

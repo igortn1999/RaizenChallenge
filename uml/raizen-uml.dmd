@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="raizen-uml" id="6D703D9D-0418-1608-31E3-C14C7385D4F6" version="3.5">
+<createdBy>Igor</createdBy>
+<createdTime>2022-08-21 23:19:24 UTC</createdTime>
+<ownerDesignName>raizen-uml</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>6D703D9D-0418-1608-31E3-C14C7385D4F6</designId>
+</OSDM_Design>
