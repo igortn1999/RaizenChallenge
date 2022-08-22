@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C300EBA6-FAEB-6109-9C03-1F6618051C9E" name="User">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A2649190-4259-4420-6197-2036442EA7AE" name="SolarQuote">
 <createdBy>Igor</createdBy>
-<createdTime>2022-08-21 23:19:56 UTC</createdTime>
+<createdTime>2022-08-22 01:50:29 UTC</createdTime>
 <ownerDesignName>raizen-uml</ownerDesignName>
 <engineerTo>
 <item key="C4B91F5E-CA0B-A1BF-07D3-6D05FB40835D" value="true"/>
@@ -15,9 +15,9 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id" id="C60E027D-C3F1-AF67-CAC1-383B976A847C">
+<Attribute name="id" id="D8214406-D197-15D8-62E9-E1C80B2DD837">
 <createdBy>Igor</createdBy>
-<createdTime>2022-08-21 23:20:26 UTC</createdTime>
+<createdTime>2022-08-22 01:50:58 UTC</createdTime>
 <ownerDesignName>raizen-uml</ownerDesignName>
 <engineerTo>
 <item key="C4B91F5E-CA0B-A1BF-07D3-6D05FB40835D" value="true"/>
@@ -28,44 +28,47 @@
 <dataTypePrecision>5</dataTypePrecision>
 <ownDataTypeParameters>,5,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="name" id="47BE1808-34A2-DA56-2CB4-1DBEC866FAAC">
+<Attribute name="requested_consumption" id="DC66BAC8-D456-B47C-D56E-C6FAEAE67171">
 <createdBy>Igor</createdBy>
-<createdTime>2022-08-21 23:22:06 UTC</createdTime>
+<createdTime>2022-08-22 01:52:43 UTC</createdTime>
 <ownerDesignName>raizen-uml</ownerDesignName>
 <engineerTo>
 <item key="C4B91F5E-CA0B-A1BF-07D3-6D05FB40835D" value="true"/>
 </engineerTo>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50</dataTypeSize>
-<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
 </Attribute>
-<Attribute name="CPF/CNPJ" id="7429D5C5-AF0D-1D9F-B241-F2C14BC51447">
+<Attribute name="id1" id="8C8262CD-9E59-FBDA-CEBE-49B4BE402503">
 <createdBy>Igor</createdBy>
-<createdTime>2022-08-21 23:23:21 UTC</createdTime>
+<createdTime>2022-08-22 02:02:51 UTC</createdTime>
+<generatorID>A08A617C-A20C-2732-F899-EE05BD153660</generatorID>
 <ownerDesignName>raizen-uml</ownerDesignName>
 <engineerTo>
 <item key="C4B91F5E-CA0B-A1BF-07D3-6D05FB40835D" value="true"/>
 </engineerTo>
+<referedAttribute>C60E027D-C3F1-AF67-CAC1-383B976A847C</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>18</dataTypeSize>
-<ownDataTypeParameters>18,,</ownDataTypeParameters>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="0AA570AE-5B45-CBD8-60F5-2736A55131D1" name="User PK">
+<identifier id="866CDD9F-67CF-6B9F-D295-41F8ACE49E74" name="SolarQuote PK">
 <createdBy>Igor</createdBy>
-<createdTime>2022-08-21 23:20:39 UTC</createdTime>
+<createdTime>2022-08-22 01:51:02 UTC</createdTime>
 <ownerDesignName>raizen-uml</ownerDesignName>
 <engineerTo>
 <item key="C4B91F5E-CA0B-A1BF-07D3-6D05FB40835D" value="true"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
-<attributeRef>C60E027D-C3F1-AF67-CAC1-383B976A847C</attributeRef>
+<attributeRef>D8214406-D197-15D8-62E9-E1C80B2DD837</attributeRef>
 </usedAttributes>
 </identifier>
 </identifiers>
