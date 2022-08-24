@@ -1,0 +1,72 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="C300EBA6-FAEB-6109-9C03-1F6618051C9E" name="User">
+<createdBy>Igor</createdBy>
+<createdTime>2022-08-21 23:19:56 UTC</createdTime>
+<ownerDesignName>raizen-uml</ownerDesignName>
+<engineerTo>
+<item key="C4B91F5E-CA0B-A1BF-07D3-6D05FB40835D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="C60E027D-C3F1-AF67-CAC1-383B976A847C">
+<createdBy>Igor</createdBy>
+<createdTime>2022-08-21 23:20:26 UTC</createdTime>
+<ownerDesignName>raizen-uml</ownerDesignName>
+<engineerTo>
+<item key="C4B91F5E-CA0B-A1BF-07D3-6D05FB40835D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="name" id="47BE1808-34A2-DA56-2CB4-1DBEC866FAAC">
+<createdBy>Igor</createdBy>
+<createdTime>2022-08-21 23:22:06 UTC</createdTime>
+<ownerDesignName>raizen-uml</ownerDesignName>
+<engineerTo>
+<item key="C4B91F5E-CA0B-A1BF-07D3-6D05FB40835D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CPF/CNPJ" id="7429D5C5-AF0D-1D9F-B241-F2C14BC51447">
+<createdBy>Igor</createdBy>
+<createdTime>2022-08-21 23:23:21 UTC</createdTime>
+<ownerDesignName>raizen-uml</ownerDesignName>
+<engineerTo>
+<item key="C4B91F5E-CA0B-A1BF-07D3-6D05FB40835D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>18</dataTypeSize>
+<ownDataTypeParameters>18,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="0AA570AE-5B45-CBD8-60F5-2736A55131D1" name="User PK">
+<createdBy>Igor</createdBy>
+<createdTime>2022-08-21 23:20:39 UTC</createdTime>
+<ownerDesignName>raizen-uml</ownerDesignName>
+<engineerTo>
+<item key="C4B91F5E-CA0B-A1BF-07D3-6D05FB40835D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>C60E027D-C3F1-AF67-CAC1-383B976A847C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

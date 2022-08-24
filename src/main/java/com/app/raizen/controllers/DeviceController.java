@@ -51,12 +51,11 @@ public class DeviceController {
 	
 	@GetMapping(path = "/id/{id}/kwh")
 	public ResponseEntity<Object> getConsumption(@PathVariable int id) throws Exception{
-		ResponseEntity<Object> res = ResponseEntity.status(HttpStatus.OK).body(((Device)serviceDevice.findById(id)).getConsumption());
-		if (res == null){
-			//TODO figure out what to do if there is no Device with required ID
+		Object device = serviceDevice.findById(id);
+		if (device == null){
+			return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Not Found"); 
 		}
-		return res;
-		
+		return ResponseEntity.status(HttpStatus.OK).body(((Device)device).getConsumption());
 	}
 	
 }

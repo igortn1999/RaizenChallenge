@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="user_device" directorySegmentName="seg_0" id="64EED9A4-54D3-1CC1-8FE6-C5279F66A1B9">
+<createdBy>Igor</createdBy>
+<createdTime>2022-08-21 23:27:34 UTC</createdTime>
+<ownerDesignName>raizen-uml</ownerDesignName>
+<engineerTo>
+<item key="C4B91F5E-CA0B-A1BF-07D3-6D05FB40835D" value="true"/>
+</engineerTo>
+<sourcePk>0AA570AE-5B45-CBD8-60F5-2736A55131D1</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>C300EBA6-FAEB-6109-9C03-1F6618051C9E</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>F8C5BE18-8AA4-6697-5B64-0873E484031A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A2649190-4259-4420-6197-2036442EA7AE" name="SolarQuote">
+<createdBy>Igor</createdBy>
+<createdTime>2022-08-22 01:50:29 UTC</createdTime>
+<ownerDesignName>raizen-uml</ownerDesignName>
+<engineerTo>
+<item key="C4B91F5E-CA0B-A1BF-07D3-6D05FB40835D" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="D8214406-D197-15D8-62E9-E1C80B2DD837">
+<createdBy>Igor</createdBy>
+<createdTime>2022-08-22 01:50:58 UTC</createdTime>
+<ownerDesignName>raizen-uml</ownerDesignName>
+<engineerTo>
+<item key="C4B91F5E-CA0B-A1BF-07D3-6D05FB40835D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="requested_consumption" id="DC66BAC8-D456-B47C-D56E-C6FAEAE67171">
+<createdBy>Igor</createdBy>
+<createdTime>2022-08-22 01:52:43 UTC</createdTime>
+<ownerDesignName>raizen-uml</ownerDesignName>
+<engineerTo>
+<item key="C4B91F5E-CA0B-A1BF-07D3-6D05FB40835D" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id1" id="8C8262CD-9E59-FBDA-CEBE-49B4BE402503">
+<createdBy>Igor</createdBy>
+<createdTime>2022-08-22 02:02:51 UTC</createdTime>
+<generatorID>A08A617C-A20C-2732-F899-EE05BD153660</generatorID>
+<ownerDesignName>raizen-uml</ownerDesignName>
+<engineerTo>
+<item key="C4B91F5E-CA0B-A1BF-07D3-6D05FB40835D" value="true"/>
+</engineerTo>
+<referedAttribute>C60E027D-C3F1-AF67-CAC1-383B976A847C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="866CDD9F-67CF-6B9F-D295-41F8ACE49E74" name="SolarQuote PK">
+<createdBy>Igor</createdBy>
+<createdTime>2022-08-22 01:51:02 UTC</createdTime>
+<ownerDesignName>raizen-uml</ownerDesignName>
+<engineerTo>
+<item key="C4B91F5E-CA0B-A1BF-07D3-6D05FB40835D" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>D8214406-D197-15D8-62E9-E1C80B2DD837</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
