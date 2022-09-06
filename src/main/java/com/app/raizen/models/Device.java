@@ -1,5 +1,7 @@
 package com.app.raizen.models;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name="Devices", schema="public")
@@ -16,8 +19,18 @@ public class Device {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
+	@NotNull
+	@Column(name = "userid")
+	private int userid;
+	
+	@Column(name = "addressid")
+	private int addressId;
+	
 	@Column(name="name")
 	private String name;
+	
+	@Column(name="last_maintenance")
+	private Date lastMaintenane;
 	
 	@Column(name="consumption")
 	private double consumption;
@@ -27,13 +40,11 @@ public class Device {
 	}
 	
 	public Device(String name) {
-		super();
 		this.name=name;
 		this.consumption=0;
 	}
 	
 	public Device(String name, double consumption) {
-		super();
 		this.name=name;
 		this.consumption=consumption;
 	}

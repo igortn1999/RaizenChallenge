@@ -8,6 +8,6 @@ import com.app.raizen.models.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer>{
 	
+	//TODO find if there are ways to securely query users, or if this is even needed
 	
-
 }

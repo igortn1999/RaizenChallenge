@@ -13,8 +13,9 @@ public class ServiceUser {
 	@Autowired
 	UserRepository ur;
 
+	//Probably not safe. This only exists for testing purposes
 	public Object findAll() {
-		return ur.findAll();
+		return ur.findAll(); 
 	}
 
 	@Transactional
