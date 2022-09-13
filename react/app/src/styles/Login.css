@@ -88,7 +88,7 @@
     justify-content: center;
 }
 
-.LoginPage .socialmediabuttons button{
+.socialmediabuttons button{
     width: 5rem;
     height: 5rem;
     border-radius: 100%;
@@ -96,7 +96,7 @@
     background-color: #861F83;
 }
 
-.LoginPage .facebook{
+.facebook{
     margin-right: 1rem;
     background-image: url(../static/facebook.png);
     background-position: center;
@@ -104,10 +104,19 @@
     background-size: 70%;
 }
 
-.LoginPage .google{
+.google{
     margin-left: 1rem;
     background-image: url(../static/google.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 70%;
+}
+
+.LoginPage .entrar{ 
+    transition: all .1s ease-in-out;
+}
+
+.LoginPage .entrar:active{
+    transform: scale(0.9);
+    transition: all .1s;
 }

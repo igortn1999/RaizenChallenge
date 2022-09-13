@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import LoginPage from './pages/Login';
+import PreLoginPage from './pages/PreLogin';
+import LoginPage from './pages/loginNormal';
+import Sobre from './pages/sobre';
 import Integrantes from './pages/IntegrantesGrupo';
 import NotFound from './pages/404';
 import reportWebVitals from './reportWebVitals';
@@ -15,8 +17,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<LoginPage />} />
+      <Route path="/" index element={<PreLoginPage />} />
+      <Route path="/login" index element={<LoginPage />} />
       <Route path="/integrantes" element={<Integrantes />} />
+      <Route path="/sobre" element={<Sobre />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
   </BrowserRouter>

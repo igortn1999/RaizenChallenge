@@ -4,7 +4,7 @@ import Guardian from '../static/guardian_logo.png';
 import { Link } from "react-router-dom";
 
 
-function LoginPage() {
+function PreLoginPage() {
 
 
 
@@ -12,17 +12,23 @@ function LoginPage() {
     return (
         <div className="LoginPage">
             <div className='topbar'>
-                <div className='logo'>
-                </div>
-                <img src={Refiki} className="refiki" alt="Girl in a computer"/>
+                <Link to="/sobre">
+                    <div className='logo'>
+                    </div>
+                </Link>
+
+                <img src={Refiki} className="refiki" alt="Girl in a computer" />
 
                 <Link to="/integrantes" className='guardian_logo'>
-                    <img src={Guardian} alt="guardian logo"/>
+                    <img src={Guardian} alt="guardian logo" />
                 </Link>
             </div>
 
             <section className='buttons'>
+                <Link to="login">
                 <button className='entrar'>Entrar</button>
+                </Link>
+                
                 <button className='inscrevase'>Inscreva-se</button>
             </section>
 
@@ -37,4 +43,4 @@ function LoginPage() {
     );
 }
 
-export default LoginPage;
+export default PreLoginPage;
