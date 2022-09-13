@@ -8,8 +8,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name="Devices", schema="public")
@@ -19,9 +17,9 @@ public class Device {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	@NotNull
-	@Column(name = "userid")
-	private int userid;
+//	@NotNull
+//	@Column(name = "userid")
+//	private int userid;
 	
 	@Column(name = "addressid")
 	private int addressId;

@@ -16,13 +16,13 @@ public class Address {
 	@GeneratedValue
 	private int id;
 	
-	@NotNull
-	@Column(name = "userid")
-	private int userid;
+//	@NotNull
+//	@Column(name = "userid")
+//	private int userid;
 	
 	@NotNull
-	@Column(name = "address")
-	private String address;
+	@Column(name = "Streetname")
+	private String streetName;
 	
 	@NotNull
 	@Column(name = "number")
@@ -42,30 +42,29 @@ public class Address {
 		
 	}
 
-	public Address(int userid, String address, int number, String complement, String zipCode, boolean hasDevice) {
-		super();
-		this.userid = userid;
-		this.address = address;
+	public Address(int userid, String streetName, int number, String complement, String zipCode, boolean hasDevice) {
+//		this.userid = userid;
+		this.streetName = streetName;
 		this.number = number;
 		this.complement = complement;
 		this.zipCode = zipCode;
 		this.hasDevice = hasDevice;
 	}
 
-	public int getUserid() {
-		return userid;
-	}
-
-	public void setUserid(int userid) {
-		this.userid = userid;
-	}
+//	public int getUserid() {
+//		return userid;
+//	}
+//
+//	public void setUserid(int userid) {
+//		this.userid = userid;
+//	}
 
 	public String getAddress() {
-		return address;
+		return streetName;
 	}
 
 	public void setAddress(String address) {
-		this.address = address;
+		this.streetName = address;
 	}
 
 	public int getNumber() {
