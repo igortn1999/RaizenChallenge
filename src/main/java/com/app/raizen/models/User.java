@@ -18,7 +18,7 @@ import org.hibernate.validator.constraints.UniqueElements;
 import net.bytebuddy.utility.RandomString;
 
 @Entity
-@Table(name = "Users", schema = "public", uniqueConstraints = @UniqueConstraint(columnNames = { "username", "cpf_cnpj" }))
+@Table(name = "Users", schema = "public", uniqueConstraints = @UniqueConstraint(columnNames = { "username", "CPFCNPJ" }))
 public class User {
 	
 	@Id
@@ -37,10 +37,10 @@ public class User {
 	@Column(name = "surename")
 	private String surename;
 	
-	@Column(name = "CPF_CNPJ")
-	private String cpf_cnpj;
+	@Column(name = "CPFCNPJ")
+	private String cpfCnpj;
 	
-	@Column(name = "e-mail")
+	@Column(name = "email")
 	private String email;
 	
 	@Column(name = "birthday")
@@ -54,15 +54,15 @@ public class User {
 		
 	}
 	
-	public User(String username, String password, String name, String cpf_cnpj){
+	public User(String username, String password, String name, String cpfCnpj){
 		this.username = username;
 		setPassword(password);
 		this.name = name;
-		this.cpf_cnpj = cpf_cnpj;
+		this.cpfCnpj = cpfCnpj;
 	}
 	
-	public User(String name, String cpf_cnpj){
-		this(RandomString.make(6).toString(), "password", name, cpf_cnpj);
+	public User(String name, String cpfCnpj){
+		this(RandomString.make(6).toString(), "password", name, cpfCnpj);
 	}
 
 	public int getId() {
@@ -104,12 +104,12 @@ public class User {
 		this.name = name;
 	}
 
-	public String getCpf_cnpj() {
-		return cpf_cnpj;
+	public String getCpfCnpj() {
+		return cpfCnpj;
 	}
 
-	public void setCpf_cnpj(String cpf_cnpj) {
-		this.cpf_cnpj = cpf_cnpj;
+	public void setCpfCnpj(String cpfCnpj) {
+		this.cpfCnpj = cpfCnpj;
 	}
 	
 	

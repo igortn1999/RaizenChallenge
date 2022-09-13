@@ -9,7 +9,7 @@ public class UserDto {
 	private String password;
 	private String name;
 	private String surename;
-	private String cpf_cnpj;
+	private String cpfCnpj;
 	private String email;
 	private Date birthday;
 	private String telephone;
@@ -18,7 +18,7 @@ public class UserDto {
 		
 	}
 
-	public UserDto(int id, String username, String password, String name, String surename, String cpf_cnpj,
+	public UserDto(int id, String username, String password, String name, String surename, String cpfCnpj,
 			String email, Date birthday, String telephone) {
 		super();
 		this.id = id;
@@ -26,7 +26,7 @@ public class UserDto {
 		setPassword(password);
 		this.name = name;
 		this.surename = surename;
-		this.cpf_cnpj = cpf_cnpj;
+		this.cpfCnpj = cpfCnpj;
 		this.email = email;
 		this.birthday = birthday;
 		this.telephone = telephone;
@@ -72,12 +72,12 @@ public class UserDto {
 		this.surename = surename;
 	}
 
-	public String getCpf_cnpj() {
-		return cpf_cnpj;
+	public String getCpfCnpj() {
+		return cpfCnpj;
 	}
 
-	public void setCpf_cnpj(String cpf_cnpj) {
-		this.cpf_cnpj = cpf_cnpj;
+	public void setCpf_cnpj(String cpfCnpj) {
+		this.cpfCnpj = cpfCnpj;
 	}
 
 	public String getEmail() {

@@ -1,39 +1,20 @@
-package com.app.raizen.models;
+package com.app.raizen.dto;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
-
-@Entity
-@Table(name = "SolarQuotas", schema = "public")
-public class SolarQuotas {
+public class SolarQuotaDto {
 	
-	@Id
-	@GeneratedValue
 	private int id;
-	
-	@NotNull
-	@Column(name = "userid")
 	private int userid;
-	
-	@Column(name = "quantity")
 	private int quantity;
+	private String production;
+	private double value;
 	
-	@Column(name = "production")
-	private String production;//TODO what is this for exactly?
-	
-	@Column(name = "value")
-	private double value;//TODO quantity and value are directly related
-	
-	public SolarQuotas() {
+	public SolarQuotaDto() {
 		
 	}
 
-	public SolarQuotas(@NotNull int userid, int quantity, String production, double value) {
+	public SolarQuotaDto(int id, int userid, int quantity, String production, double value) {
 		super();
+		this.id = id;
 		this.userid = userid;
 		this.quantity = quantity;
 		this.production = production;
@@ -79,5 +60,8 @@ public class SolarQuotas {
 	public void setValue(double value) {
 		this.value = value;
 	}
+	
+	
+
 
 }

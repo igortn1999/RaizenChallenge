@@ -21,10 +21,10 @@ public class Provider {
 	@Column(name = "surename")
 	private String surename;
 	
-	@Column(name = "CPF_CNPJ")
-	private String cpf_cnpj;
+	@Column(name = "CPFCNPJ")
+	private String cpfCnpj;
 	
-	@Column(name = "e-mail")
+	@Column(name = "email")
 	private String email;
 
 	@Column(name = "telephone")
@@ -40,11 +40,11 @@ public class Provider {
 		
 	}
 
-	public Provider(String name, String surename, String cpf_cnpj, String email, String telephone, String serviceType) {
+	public Provider(String name, String surename, String cpfCnpj, String email, String telephone, String serviceType) {
 		super();
 		this.name = name;
 		this.surename = surename;
-		this.cpf_cnpj = cpf_cnpj;
+		this.cpfCnpj = cpfCnpj;
 		this.email = email;
 		this.telephone = telephone;
 		this.serviceType = serviceType;
@@ -74,12 +74,12 @@ public class Provider {
 		this.surename = surename;
 	}
 
-	public String getCpf_cnpj() {
-		return cpf_cnpj;
+	public String getCpfCnpj() {
+		return cpfCnpj;
 	}
 
-	public void setCpf_cnpj(String cpf_cnpj) {
-		this.cpf_cnpj = cpf_cnpj;
+	public void setCpfCnpj(String cpfCnpj) {
+		this.cpfCnpj = cpfCnpj;
 	}
 
 	public String getEmail() {

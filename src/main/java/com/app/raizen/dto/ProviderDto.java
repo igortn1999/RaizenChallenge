@@ -5,21 +5,21 @@ public class ProviderDto {
 	private int id;
 	private String name;
 	private String surename;
-	private String cpf_cnpj;
+	private String cpfCnpj;
 	private String email;
 	private String telephone;
-//	private Address addrres;//TODO might cause trouble because of 'userid'
+//	private Address address;//TODO might cause trouble because of 'userid'
 	private String serviceType;//TODO maybe this should be a List?
 
 	public ProviderDto(){
 		
 	}
 
-	public ProviderDto(int id, String name, String surename, String cpf_cnpj, String email, String telephone, String serviceType) {
+	public ProviderDto(int id, String name, String surename, String cpfCnpj, String email, String telephone, String serviceType) {
 		this.id = id;
 		this.name = name;
 		this.surename = surename;
-		this.cpf_cnpj = cpf_cnpj;
+		this.cpfCnpj = cpfCnpj;
 		this.email = email;
 		this.telephone = telephone;
 		this.serviceType = serviceType;
@@ -49,12 +49,12 @@ public class ProviderDto {
 		this.surename = surename;
 	}
 
-	public String getCpf_cnpj() {
-		return cpf_cnpj;
+	public String getCpfCnpj() {
+		return cpfCnpj;
 	}
 
-	public void setCpf_cnpj(String cpf_cnpj) {
-		this.cpf_cnpj = cpf_cnpj;
+	public void setCpfCnpj(String cpfCnpj) {
+		this.cpfCnpj = cpfCnpj;
 	}
 
 	public String getEmail() {
