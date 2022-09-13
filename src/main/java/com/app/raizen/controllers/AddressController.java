@@ -12,30 +12,26 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.app.raizen.models.Device;
-import com.app.raizen.models.User;
-import com.app.raizen.services.ServiceUser;
+import com.app.raizen.models.Address;
+import com.app.raizen.services.ServiceAddress;
 
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
-@RequestMapping("/api/users")
-public class UserController {
+@RequestMapping("/api/addresses")
+public class AddressController {
 	
 	@Autowired
-	ServiceUser serviceUser;
-	
-	@GetMapping
-	public ResponseEntity<Object> getUsers(){
-		return ResponseEntity.status(HttpStatus.OK).body(serviceUser.findAll());
-	}
+	ServiceAddress serviceAddress;
 	
 	@PostMapping
-	public @ResponseBody ResponseEntity<Object> saveDevice(@Valid User user) {
-		return ResponseEntity.status(HttpStatus.CREATED).body(serviceUser.save(user));
+	public @ResponseBody ResponseEntity<Object> saveAddress(@Valid Address address ) {
+		return ResponseEntity.status(HttpStatus.CREATED).body(serviceAddress.save(address));
+	}
+	
+	@GetMapping
+	public ResponseEntity<Object> getAddresses(){
+		return ResponseEntity.status(HttpStatus.OK).body(serviceAddress.findAll());
 	}
 	
 	
-	
-	
-
 }

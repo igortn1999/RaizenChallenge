@@ -12,30 +12,25 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.app.raizen.models.Device;
-import com.app.raizen.models.User;
-import com.app.raizen.services.ServiceUser;
+import com.app.raizen.models.SolarQuota;
+import com.app.raizen.services.ServiceSolarQuota;
 
 @RestController
 @CrossOrigin(origins = "*", maxAge = 3600)
-@RequestMapping("/api/users")
-public class UserController {
+@RequestMapping("/api/sq")
+public class SolarQuotaController {
 	
 	@Autowired
-	ServiceUser serviceUser;
-	
-	@GetMapping
-	public ResponseEntity<Object> getUsers(){
-		return ResponseEntity.status(HttpStatus.OK).body(serviceUser.findAll());
-	}
+	ServiceSolarQuota sqc;
 	
 	@PostMapping
-	public @ResponseBody ResponseEntity<Object> saveDevice(@Valid User user) {
-		return ResponseEntity.status(HttpStatus.CREATED).body(serviceUser.save(user));
+	public @ResponseBody ResponseEntity<Object> saveSQ(@Valid SolarQuota sq) {
+		return ResponseEntity.status(HttpStatus.CREATED).body(sqc.save(sq));
 	}
 	
-	
-	
-	
+	@GetMapping
+	public ResponseEntity<Object> getSQ(){
+		return ResponseEntity.status(HttpStatus.OK).body(sqc.findAll());
+	}
 
 }
