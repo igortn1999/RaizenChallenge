@@ -6,6 +6,8 @@ import LoginPage from './pages/loginNormal';
 import Sobre from './pages/sobre';
 import Integrantes from './pages/IntegrantesGrupo';
 import NotFound from './pages/404';
+import Layout from './pages/hocs/Layout';
+import Contratacao from './pages/Contratar';
 import reportWebVitals from './reportWebVitals';
 import {
   BrowserRouter,
@@ -20,6 +22,7 @@ root.render(
       <Route path="/" index element={<PreLoginPage />} />
       <Route path="/login" index element={<LoginPage />} />
       <Route path="/integrantes" element={<Integrantes />} />
+      <Route path="/contratacao" element={<Contratacao />} />
       <Route path="/sobre" element={<Sobre />} />
       <Route path="*" element={<NotFound />} />
     </Routes>

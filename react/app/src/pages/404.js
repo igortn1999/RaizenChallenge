@@ -10,11 +10,9 @@ function NotFound() {
 
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="App-header">
         <h3>Hmmm....</h3>
         <h3>Parece que algo deu errado</h3>
-      </header>
     </div>
   );
 }

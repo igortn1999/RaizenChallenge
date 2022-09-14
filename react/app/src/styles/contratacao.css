@@ -1,0 +1,32 @@
+.contratacao{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 5rem;
+}
+
+.contratacao .heading{
+    display: flex;
+    align-items: center;
+    color:#861F83;
+    transform: scale(2.3);
+    font-weight: 600;
+    margin-top: 3rem;
+}
+
+.contratacao img{
+    margin-bottom: 2rem;
+}
+
+.contratacao .button_bigger{
+    width: 70%;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    padding:0.5rem;
+    border-color: transparent;
+    background-color:#861F83;
+    color:#FFF;
+}

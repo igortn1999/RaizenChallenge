@@ -11,52 +11,55 @@ import LockOpenIcon from '@mui/icons-material/LockOpen';
 
 
 function LoginPage() {
-    return (
-        <div className="LoginForm">
-            <BackBar />
-            <section>
-                <h1>Entrar</h1>
-                <p>Entre na sua conta e gerencie melhor seu gasto energético</p>
-            </section>
-            <form>
-            <Input
+  return (
+    <div className="LoginForm">
+      <BackBar />
+      <section>
+        <h1>Entrar</h1>
+        <p>Entre na sua conta e gerencie melhor seu gasto energético</p>
+      </section>
+      <form>
+        <Input
           id="input-with-icon-adornment"
           placeholder='E-mail'
           type="email"
           sx={{
-            width:'100%',
-            mt:'2rem'
+            width: '100%',
+            mt: '2rem'
           }}
           startAdornment={
             <InputAdornment position="start">
-              <PersonOutlineIcon sx={{color:'black'}}/>
+              <PersonOutlineIcon sx={{ color: 'black' }} />
             </InputAdornment>
           }
         />
-          <Input
+        <Input
           id="input-with-icon-adornment"
           placeholder='Senha'
           type="password"
           sx={{
-            width:'100%',
-            mt:'2rem'
+            width: '100%',
+            mt: '2rem'
           }}
           startAdornment={
             <InputAdornment position="start">
-              <LockOpenIcon sx={{color:'black'}}/>
+              <LockOpenIcon sx={{ color: 'black' }} />
             </InputAdornment>
           }
         />
-            </form>
-            <button className='login'>Entrar</button>
-            <button className='inscrevase'>Não tem uma conta? Inscreva-se</button>
-            <p>Ou entre com</p>
-            <section className='socialmediabuttons'>
-                <button className='facebook'></button>
-                <button className='google'></button>
-            </section>
-        </div>
-    );
+      </form>
+      <Link to="/contratacao" className='contratacao_btn'>
+        <button className='login'>Entrar</button>
+      </Link>
+
+      <button className='inscrevase'>Não tem uma conta? Inscreva-se</button>
+      <p>Ou entre com</p>
+      <section className='socialmediabuttons'>
+        <button className='facebook'></button>
+        <button className='google'></button>
+      </section>
+    </div>
+  );
 }
 
 export default LoginPage;
