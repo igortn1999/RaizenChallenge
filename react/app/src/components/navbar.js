@@ -6,8 +6,8 @@ import ConstructionIcon from '@mui/icons-material/Construction';
 import HomeIcon from '@mui/icons-material/Home';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 
-function Navbar(props) {
 
+function Navbar(props) {
 
     const iconStyle = { fontSize: '2.2rem', color: '#FFF' }
     const specialIconStyle = { fontSize: '5rem', color: '#861F83' }
@@ -27,7 +27,7 @@ function Navbar(props) {
             </div>
 
 
-            <Link to="/" className='option_navbar2'><AddCircleOutlineIcon sx={specialIconStyle} /></Link>
+            <Link to="/contratacao" className='option_navbar2'><AddCircleOutlineIcon sx={specialIconStyle} /></Link>
 
             <Link to="/" className='option_navbar' id="escudo"><HealthAndSafetyIcon sx={iconStyle} />
                 <p>Saúde</p>

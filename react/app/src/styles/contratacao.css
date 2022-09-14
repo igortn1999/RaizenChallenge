@@ -4,7 +4,7 @@
     align-content: center;
     align-items: center;
     width: 100%;
-    padding-bottom: 5rem;
+    padding-bottom: 8rem;
 }
 
 .contratacao .heading{
@@ -20,13 +20,34 @@
     margin-bottom: 2rem;
 }
 
-.contratacao .button_bigger{
-    width: 70%;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
+.contratacao .button_div{
+    width: 60%;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    background-color:#861F83;
     border-radius: 0.5rem;
     padding:0.5rem;
-    border-color: transparent;
-    background-color:#861F83;
+    margin-bottom: 1rem;
+
+}
+
+.contratacao .button_bigger{
+    width: 100%;
+    font-size: 1.5rem;
     color:#FFF;
+    text-decoration: none;
+
+}
+
+.tooltip{
+    width: 8rem;
+    margin-left: auto !important;
+    background-color: #ca3fc6 !important;
+    margin-top: 1rem !important;
+}
+
+.contratacao .button_bigger p{
+    margin: 0;
+    padding-left: 1rem;
 }
