@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -21,48 +22,45 @@ public class Device {
 //	@Column(name = "userid")
 //	private int userid;
 	
-	@Column(name = "addressid")
-	private int addressId;
-	
 	@Column(name="name")
 	private String name;
 	
-	@Column(name="last_maintenance")
-	private Date lastMaintenane;
-	
 	@Column(name="consumption")
 	private double consumption;
+	
+	@ManyToOne
+	private Address address;
+	
+	@Column(name="lastMaintenance")
+	private Date lastMaintenane;
 
 	public Device() {
 		
 	}
 	
-	public Device(String name) {
-		this.name=name;
-		this.consumption=0;
-	}
-	
-	public Device(String name, double consumption) {
+	public Device(String name, double consumption, Address address, Date lastMaintenane) {
 		this.name=name;
 		this.consumption=consumption;
+		this.address = address;
+		this.lastMaintenane = lastMaintenane;
 	}
-	
+
 	public int getId() {
-		return this.id;
+		return id;
 	}
-	
+
 	public void setId(int id) {
 		this.id = id;
 	}
-	
+
 	public String getName() {
-		return this.name;
+		return name;
 	}
-	
+
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+
 	public double getConsumption() {
 		return consumption;
 	}
@@ -70,5 +68,21 @@ public class Device {
 	public void setConsumption(double consumption) {
 		this.consumption = consumption;
 	}
-	
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
+	public Date getLastMaintenane() {
+		return lastMaintenane;
+	}
+
+	public void setLastMaintenane(Date lastMaintenane) {
+		this.lastMaintenane = lastMaintenane;
+	}
+		
 }

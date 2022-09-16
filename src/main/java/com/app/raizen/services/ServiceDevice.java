@@ -4,7 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.app.raizen.models.Address;
 import com.app.raizen.models.Device;
+import com.app.raizen.repositories.AddressRepository;
 import com.app.raizen.repositories.DeviceRepository;
 
 @Service
@@ -12,6 +14,9 @@ public class ServiceDevice {
 	
 	@Autowired
 	DeviceRepository dr;
+	
+	@Autowired
+	AddressRepository ar;
 	
 	@Transactional
 	public Object save(Device device) {
@@ -22,9 +27,9 @@ public class ServiceDevice {
 		return dr.findAll();
 	}
 	
-	public Object findByNameContaining(String deviceName) {
-		return dr.findByNameContaining(deviceName);
-	}
+//	public Object findByNameContaining(String deviceName) {
+//		return dr.findByNameContaining(deviceName);
+//	}
 	
 	public Object findById(int id) {
 		return dr.findById(id);

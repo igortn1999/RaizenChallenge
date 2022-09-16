@@ -1,11 +1,13 @@
 package com.app.raizen.models;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -21,7 +23,7 @@ public class Address {
 //	private int userid;
 	
 	@NotNull
-	@Column(name = "Streetname")
+	@Column(name = "streetName")
 	private String streetName;
 	
 	@NotNull
@@ -32,39 +34,39 @@ public class Address {
 	private String complement;
 	
 	@NotNull
-	@Column(name = "zipcode")
+	@Column(name = "zipCode")
 	private String zipCode;
 	
-	@Column(name = "hasdevice")
-	private boolean hasDevice;
+	@OneToMany(mappedBy = "address")
+	private List<Device> devices;
 	
 	public Address() {
 		
 	}
 
-	public Address(int userid, String streetName, int number, String complement, String zipCode, boolean hasDevice) {
-//		this.userid = userid;
+	public Address(@NotNull String streetName, @NotNull int number, String complement, @NotNull String zipCode, Device device) {
 		this.streetName = streetName;
 		this.number = number;
 		this.complement = complement;
 		this.zipCode = zipCode;
-		this.hasDevice = hasDevice;
+		addDevice(device);
+		
 	}
 
-//	public int getUserid() {
-//		return userid;
-//	}
-//
-//	public void setUserid(int userid) {
-//		this.userid = userid;
-//	}
+	public int getId() {
+		return id;
+	}
 
-	public String getAddress() {
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public String getStreetName() {
 		return streetName;
 	}
 
-	public void setAddress(String address) {
-		this.streetName = address;
+	public void setStreetName(String streetName) {
+		this.streetName = streetName;
 	}
 
 	public int getNumber() {
@@ -91,12 +93,14 @@ public class Address {
 		this.zipCode = zipCode;
 	}
 
-	public boolean isHasDevice() {
-		return hasDevice;
+	public List<Device> getDevices() {
+		return devices;
 	}
 
-	public void setHasDevice(boolean hasDevice) {
-		this.hasDevice = hasDevice;
+	public void addDevice(Device device) {
+		this.devices.add(device);
 	}
 
+	
+	
 }

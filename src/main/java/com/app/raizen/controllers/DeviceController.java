@@ -1,7 +1,10 @@
 package com.app.raizen.controllers;
 
+import java.util.Optional;
+
 import javax.validation.Valid;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -9,11 +12,15 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.app.raizen.dto.DeviceDto;
+import com.app.raizen.models.Address;
 import com.app.raizen.models.Device;
+import com.app.raizen.repositories.AddressRepository;
 import com.app.raizen.services.ServiceDevice;
 
 @RestController
@@ -24,8 +31,15 @@ public class DeviceController {
 	@Autowired
 	ServiceDevice serviceDevice;
 	
+	@Autowired
+	AddressRepository ar;
+	
 	@PostMapping
-	public @ResponseBody ResponseEntity<Object> saveDevice(@Valid Device device) {
+	public @ResponseBody ResponseEntity<Object> saveDevice(@RequestBody @Valid DeviceDto deviceDto) {
+		Device device = new Device();
+		BeanUtils.copyProperties(deviceDto, device);
+		Address address = ar.findById(deviceDto.getAddressID()).orElse(null);
+		device.setAddress(address);
 		return ResponseEntity.status(HttpStatus.CREATED).body(serviceDevice.save(device));
 	}
 	
@@ -34,10 +48,10 @@ public class DeviceController {
 		return ResponseEntity.status(HttpStatus.OK).body(serviceDevice.findAll());
 	}
 	
-	@GetMapping(path = "/name/{namePart}")
-	public ResponseEntity<Object> findDeviceByName(@PathVariable String namePart){
-		return ResponseEntity.status(HttpStatus.OK).body(serviceDevice.findByNameContaining(namePart));
-	}
+//	@GetMapping(path = "/name/{namePart}")
+//	public ResponseEntity<Object> findDeviceByName(@PathVariable String namePart){
+//		return ResponseEntity.status(HttpStatus.OK).body(serviceDevice.findByNameContaining(namePart));
+//	}
 	
 	@GetMapping(path = "/id/{id}")
 	public ResponseEntity<Object> findDeviceByName(@PathVariable int id){
