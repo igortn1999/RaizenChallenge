@@ -2,32 +2,33 @@ package com.app.raizen.dto;
 
 import java.util.Date;
 
-import org.springframework.format.datetime.DateFormatter;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import com.app.raizen.models.Address;
+import com.app.raizen.repositories.AddressRepository;
 
 public class DeviceDto {
 	
 	private int id;
 	private String name;
 	private double consumption;
-	private int addressID;
-	private Date lastMaintenane;
+	private int address_id;
+	private Date last_maintenance;
+	
+	@Autowired
+	AddressRepository ar;
 	
 	public DeviceDto() {
-	//TODO discover if this is necessary
+	//TODO discover which builder is necessary
 	}
 
-	public DeviceDto(int id, String name, double consumption, int addressID, Date lastMaintenane) {
+	public DeviceDto(int id, String name, double consumption, int address_id, Date last_maintenance) {
+		//TODO discover which builder is necessary
 		this.id = id;
 		this.name = name;
 		this.consumption = consumption;
-		this.addressID=addressID;
-		this.lastMaintenane = lastMaintenane;
+		this.address_id = address_id;
+		this.last_maintenance = last_maintenance;
 	}
-//	public DeviceDto(int id, String name, double consumption) {
-//		this(id, name, consumption, null ,new Date());
-//	}
 
 	public int getId() {
 		return id;
@@ -53,20 +54,20 @@ public class DeviceDto {
 		this.consumption = consumption;
 	}
 
-	public int getAddressID() {
-		return addressID;
+	public int getAddress_id() {
+		return address_id;
 	}
 
-	public void setAddressID(int addressID) {
-		this.addressID = addressID;
+	public void setAddress_id(int address_id) {
+		this.address_id = address_id;
 	}
 
-	public Date getLastMaintenane() {
-		return lastMaintenane;
+	public Date getLast_maintenance() {
+		return last_maintenance;
 	}
 
-	public void setLastMaintenane(Date lastMaintenane) {
-		this.lastMaintenane = lastMaintenane;
-	}	
+	public void setLast_maintenance(Date last_maintenance) {
+		this.last_maintenance = last_maintenance;
+	}
 	
 }

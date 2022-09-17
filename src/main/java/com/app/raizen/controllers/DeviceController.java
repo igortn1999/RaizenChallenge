@@ -1,7 +1,5 @@
 package com.app.raizen.controllers;
 
-import java.util.Optional;
-
 import javax.validation.Valid;
 
 import org.springframework.beans.BeanUtils;
@@ -18,7 +16,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.app.raizen.dto.DeviceDto;
-import com.app.raizen.models.Address;
 import com.app.raizen.models.Device;
 import com.app.raizen.repositories.AddressRepository;
 import com.app.raizen.services.ServiceDevice;
@@ -31,15 +28,8 @@ public class DeviceController {
 	@Autowired
 	ServiceDevice serviceDevice;
 	
-	@Autowired
-	AddressRepository ar;
-	
 	@PostMapping
-	public @ResponseBody ResponseEntity<Object> saveDevice(@RequestBody @Valid DeviceDto deviceDto) {
-		Device device = new Device();
-		BeanUtils.copyProperties(deviceDto, device);
-		Address address = ar.findById(deviceDto.getAddressID()).orElse(null);
-		device.setAddress(address);
+	public @ResponseBody ResponseEntity<Object> saveDevice(@Valid Device device) {
 		return ResponseEntity.status(HttpStatus.CREATED).body(serviceDevice.save(device));
 	}
 	

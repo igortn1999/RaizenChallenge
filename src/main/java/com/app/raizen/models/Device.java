@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -28,21 +29,14 @@ public class Device {
 	@Column(name="consumption")
 	private double consumption;
 	
-	@ManyToOne
+	@ManyToOne//Java Spring only needs this notation to create a Many To one relationship.
 	private Address address;
 	
-	@Column(name="lastMaintenance")
-	private Date lastMaintenane;
+	@Column(name="last_maintenance")
+	private Date last_maintenance;//must be carefull with date format
 
 	public Device() {
 		
-	}
-	
-	public Device(String name, double consumption, Address address, Date lastMaintenane) {
-		this.name=name;
-		this.consumption=consumption;
-		this.address = address;
-		this.lastMaintenane = lastMaintenane;
 	}
 
 	public int getId() {
@@ -77,12 +71,12 @@ public class Device {
 		this.address = address;
 	}
 
-	public Date getLastMaintenane() {
-		return lastMaintenane;
+	public Date getLast_maintenance() {
+		return last_maintenance;
 	}
 
-	public void setLastMaintenane(Date lastMaintenane) {
-		this.lastMaintenane = lastMaintenane;
+	public void setLast_maintenance(Date last_maintenance) {
+		this.last_maintenance = last_maintenance;
 	}
 		
 }

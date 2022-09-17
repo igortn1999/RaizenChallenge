@@ -1,12 +1,9 @@
 package com.app.raizen.models;
 
-import java.util.List;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
@@ -37,20 +34,12 @@ public class Address {
 	@Column(name = "zipCode")
 	private String zipCode;
 	
-	@OneToMany(mappedBy = "address")
-	private List<Device> devices;
+//	@OneToMany(mappedBy = "address")//DO NOT USE THIS IN JAVA SPRING!!!!!!
+//	private List<Device> devices;
 	
 	public Address() {
-		
-	}
-
-	public Address(@NotNull String streetName, @NotNull int number, String complement, @NotNull String zipCode, Device device) {
-		this.streetName = streetName;
-		this.number = number;
-		this.complement = complement;
-		this.zipCode = zipCode;
-		addDevice(device);
-		
+		//The framework will take care of creating and setting models.
+		//Just a empty builder will handle the problem
 	}
 
 	public int getId() {
@@ -92,15 +81,5 @@ public class Address {
 	public void setZipCode(String zipCode) {
 		this.zipCode = zipCode;
 	}
-
-	public List<Device> getDevices() {
-		return devices;
-	}
-
-	public void addDevice(Device device) {
-		this.devices.add(device);
-	}
-
-	
 	
 }
