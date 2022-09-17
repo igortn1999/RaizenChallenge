@@ -1,0 +1,86 @@
+.AboutPage{
+    background-color: #861F83;
+    width: 100%;
+}
+
+.AboutPage .topbar{
+        background-image: url(../static/Elipse_Branca.svg);
+        height: 14rem;
+        background-repeat: no-repeat;
+}
+
+.AboutPage .topbar h3{
+    margin-bottom: 0;
+    font-size: 1.2rem;
+}
+
+.AboutPage .topbar a{
+    width: 100%;
+    padding-left: 2rem;
+    text-decoration: none;
+}
+
+
+.AboutPage li{
+    margin-top: 2rem;
+    font-size: 1.1rem;
+}
+
+.AboutPage ul {
+    list-style: none; /* Remove default bullets */
+  }
+  
+  .AboutPage ul li::before {
+    content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+    color: #EE7015; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+  }
+
+.AboutPage section{
+    color: white;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.logo{
+    background-image: url(../static/logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 12rem;
+    width: 12rem;
+}
+
+.lampada{
+    width: 3rem;
+    height: 3rem;
+}
+
+.proposta{
+    display: flex;
+    align-items: center;
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.proposta h1{
+    font-weight: 600;
+}
+
+.AboutPage figure{
+    height: 15rem;
+    display: flex;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    justify-content: center;
+}
+
+.AboutPage .graph{
+    background-image: url(../static/charts_cuate.svg);
+    height: 15rem;
+    width: 15rem;
+    background-repeat: no-repeat;
+}

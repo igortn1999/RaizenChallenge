@@ -19,4 +19,12 @@ services:
       - "3000:3000"
     volumes:
       - "../../react/app:/app"
+  raizen-python:
+    image: "raizen-python"
+    build: "../../python"
+    container_name:  "raizen-python"
+    ports:
+      - "7272:7272"
+    volumes:
+      - "../../python/graph:/graph"
 

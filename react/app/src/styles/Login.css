@@ -1,0 +1,122 @@
+.LoginPage,.topbar{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.LoginPage{
+    padding-bottom: 2rem;
+}
+
+.LoginPage p{
+    font-size: 22px;
+}
+
+.LoginPage .topbar{
+    background-image: url(../static/elipse.svg);
+    height: 30rem;
+    background-repeat: no-repeat;
+}
+
+.LoginPage .logo{
+    background-image: url(../static/logo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 12rem;
+    width: 12rem;
+}
+
+.LoginPage .refiki{
+    width: 70%;
+}
+
+.LoginPage .guardian_logo{
+    width: 5rem;
+    height: 5rem;
+    background-color: #FFF;
+    border-radius: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.LoginPage .guardian_logo img{
+    width: 80%;
+    height: 80%;
+}
+
+.LoginPage .buttons{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    font-size: 22px;
+    width: 80%;
+}
+
+.LoginPage .buttons button{
+    height: 3rem;
+    width: 99%;
+    font-size: 22px;
+    margin-top: 2rem;
+}
+
+
+.LoginPage .entrar,.inscrevase{
+    border-color: rgba(0, 0, 0, 0.4);
+    box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 6rem;
+}
+
+.LoginPage .entrar{
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.1));
+}
+
+.LoginPage .inscrevase{
+    background-color: #861F83;
+    border-color: transparent;
+    color:#FFF;
+}
+
+.LoginPage .socialmediabuttons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.socialmediabuttons button{
+    width: 5rem;
+    height: 5rem;
+    border-radius: 100%;
+    border-color: transparent;
+    background-color: #861F83;
+}
+
+.facebook{
+    margin-right: 1rem;
+    background-image: url(../static/facebook.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+}
+
+.google{
+    margin-left: 1rem;
+    background-image: url(../static/google.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 70%;
+}
+
+.LoginPage .entrar{ 
+    transition: all .1s ease-in-out;
+}
+
+.LoginPage .entrar:active{
+    transform: scale(0.9);
+    transition: all .1s;
+}
