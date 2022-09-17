@@ -34,8 +34,8 @@ public class User {
 	@Column(name = "surename")
 	private String surename;
 	
-	@Column(name = "CPFCNPJ")
-	private String cpfCnpj;
+	@Column(name = "cpfcnpj")
+	private String cpfcnpj;
 	
 	@Column(name = "email")
 	private String email;
@@ -51,32 +51,86 @@ public class User {
 		
 	}
 	
-	public User(String username, String password, String name, String cpfCnpj){
-		this.username = username;
-		setPassword(password);
-		this.name = name;
-		this.cpfCnpj = cpfCnpj;
-	}
-	
-	public User(String name, String cpfCnpj){
-		this(RandomString.make(6).toString(), "password", name, cpfCnpj);
-	}
 
 	public int getId() {
 		return id;
 	}
 
+
 	public void setId(int id) {
 		this.id = id;
 	}
-	
+
+
 	public String getUsername() {
 		return username;
 	}
 
+
 	public void setUsername(String username) {
 		this.username = username;
 	}
+
+
+	public String getName() {
+		return name;
+	}
+
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
+	public String getSurename() {
+		return surename;
+	}
+
+
+	public void setSurename(String surename) {
+		this.surename = surename;
+	}
+
+
+	public String getCpfcnpj() {
+		return cpfcnpj;
+	}
+
+
+	public void setCpfcnpj(String cpfcnpj) {
+		this.cpfcnpj = cpfcnpj;
+	}
+
+
+	public String getEmail() {
+		return email;
+	}
+
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+
+	public Date getBirthday() {
+		return birthday;
+	}
+
+
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
+	}
+
+
+	public String getTelephone() {
+		return telephone;
+	}
+
+
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
+	}
+
 
 	public String getPassword() {
 		return password;
@@ -93,23 +147,4 @@ public class User {
 		
 	}
 
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	public String getCpfCnpj() {
-		return cpfCnpj;
-	}
-
-	public void setCpfCnpj(String cpfCnpj) {
-		this.cpfCnpj = cpfCnpj;
-	}
-	
-	
-	
-	
 }

@@ -21,8 +21,8 @@ public class Provider {
 	@Column(name = "surename")
 	private String surename;
 	
-	@Column(name = "CPFCNPJ")
-	private String cpfCnpj;
+	@Column(name = "cpfcnpj")
+	private String cpfcnpj;
 	
 	@Column(name = "email")
 	private String email;
@@ -33,21 +33,21 @@ public class Provider {
 //	@Column(name = "address")
 //	private Address addrres;//TODO might cause trouble because of 'userid'
 	
-	@Column(name = "serviceType")
-	private String serviceType;//TODO maybe this should be a List?	
+	@Column(name = "service_type")
+	private String service_type;//TODO maybe this should be a List?	
 	
 	public Provider() {
 		
 	}
 
-	public Provider(String name, String surename, String cpfCnpj, String email, String telephone, String serviceType) {
+	public Provider(String name, String surename, String cpfCnpj, String email, String telephone, String service_type) {
 		super();
 		this.name = name;
 		this.surename = surename;
-		this.cpfCnpj = cpfCnpj;
+		this.cpfcnpj = cpfCnpj;
 		this.email = email;
 		this.telephone = telephone;
-		this.serviceType = serviceType;
+		this.service_type = service_type;
 	}
 
 	public int getId() {
@@ -74,12 +74,12 @@ public class Provider {
 		this.surename = surename;
 	}
 
-	public String getCpfCnpj() {
-		return cpfCnpj;
+	public String getCpfcnpj() {
+		return cpfcnpj;
 	}
 
-	public void setCpfCnpj(String cpfCnpj) {
-		this.cpfCnpj = cpfCnpj;
+	public void setCpfcnpj(String cpfcnpj) {
+		this.cpfcnpj = cpfcnpj;
 	}
 
 	public String getEmail() {
@@ -98,12 +98,12 @@ public class Provider {
 		this.telephone = telephone;
 	}
 
-	public String getServiceType() {
-		return serviceType;
+	public String getService_type() {
+		return service_type;
 	}
 
-	public void setServiceType(String serviceType) {
-		this.serviceType = serviceType;
+	public void setService_type(String service_type) {
+		this.service_type = service_type;
 	}
 	
 }
