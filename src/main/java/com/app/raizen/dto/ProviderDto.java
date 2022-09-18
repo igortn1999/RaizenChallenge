@@ -5,24 +5,24 @@ public class ProviderDto {
 	private int id;
 	private String name;
 	private String surename;
-	private String cpfCnpj;
+	private String cpfcnpj;
 	private String email;
 	private String telephone;
-//	private Address address;//TODO might cause trouble because of 'userid'
-	private String serviceType;//TODO maybe this should be a List?
+//	private Address address;//TODO create relationship
+	private String service_type;//TODO maybe this should be a List?
 
 	public ProviderDto(){
 		
 	}
 
-	public ProviderDto(int id, String name, String surename, String cpfCnpj, String email, String telephone, String serviceType) {
+	public ProviderDto(int id, String name, String surename, String cpfcnpj, String email, String telephone, String service_type) {
 		this.id = id;
 		this.name = name;
 		this.surename = surename;
-		this.cpfCnpj = cpfCnpj;
+		this.cpfcnpj = cpfcnpj;
 		this.email = email;
 		this.telephone = telephone;
-		this.serviceType = serviceType;
+		this.service_type = service_type;
 	}
 
 	public int getId() {
@@ -49,12 +49,12 @@ public class ProviderDto {
 		this.surename = surename;
 	}
 
-	public String getCpfCnpj() {
-		return cpfCnpj;
+	public String getCpfcnpj() {
+		return cpfcnpj;
 	}
 
-	public void setCpfCnpj(String cpfCnpj) {
-		this.cpfCnpj = cpfCnpj;
+	public void setCpfcnpj(String cpfcnpj) {
+		this.cpfcnpj = cpfcnpj;
 	}
 
 	public String getEmail() {
@@ -73,18 +73,12 @@ public class ProviderDto {
 		this.telephone = telephone;
 	}
 
-	public String getServiceType() {
-		return serviceType;
+	public String getService_type() {
+		return service_type;
 	}
 
-	public void setServiceType(String serviceType) {
-		this.serviceType = serviceType;
+	public void setService_type(String serviceType) {
+		this.service_type = serviceType;
 	}
 	
-	
-	
-	
-	
-	
-
 }

@@ -1,5 +1,9 @@
 package com.app.raizen.dto;
 
+import java.util.List;
+
+import com.app.raizen.models.Device;
+
 public class AddressDto {
 	
 //	private int userid;
@@ -7,20 +11,19 @@ public class AddressDto {
 	private int number;
 	private String complement;
 	private String zipCode;
-	private boolean hasDevice;
+	private List<Device> devices;
 	
 	public AddressDto() {
 		
 	}
 
-	public AddressDto(int userid, String streetName, int number, String complement, String zipCode, boolean hasDevice) {
-		super();
+	public AddressDto(String streetName, int number, String complement, String zipCode, Device device) {
 //		this.userid = userid;
 		this.streetName = streetName;
 		this.number = number;
 		this.complement = complement;
 		this.zipCode = zipCode;
-		this.hasDevice = hasDevice;
+		addDevice(device);
 	}
 
 //	public int getUserid() {
@@ -63,12 +66,22 @@ public class AddressDto {
 		this.zipCode = zipCode;
 	}
 
-	public boolean isHasDevice() {
-		return hasDevice;
+	public String getStreetName() {
+		return streetName;
 	}
 
-	public void setHasDevice(boolean hasDevice) {
-		this.hasDevice = hasDevice;
+	public void setStreetName(String streetName) {
+		this.streetName = streetName;
 	}
+
+	public List<Device> getDevices() {
+		return devices;
+	}
+
+	public void addDevice(Device device) {
+		this.devices.add(device);
+	}
+
+
 
 }

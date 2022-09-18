@@ -33,5 +33,4 @@ public class AddressController {
 		return ResponseEntity.status(HttpStatus.OK).body(serviceAddress.findAll());
 	}
 	
-	
 }

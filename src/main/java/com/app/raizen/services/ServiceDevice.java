@@ -22,9 +22,9 @@ public class ServiceDevice {
 		return dr.findAll();
 	}
 	
-	public Object findByNameContaining(String deviceName) {
-		return dr.findByNameContaining(deviceName);
-	}
+//	public Object findByNameContaining(String deviceName) {
+//		return dr.findByNameContaining(deviceName);
+//	}
 	
 	public Object findById(int id) {
 		return dr.findById(id);

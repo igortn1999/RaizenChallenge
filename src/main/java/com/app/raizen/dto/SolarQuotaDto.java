@@ -3,7 +3,7 @@ package com.app.raizen.dto;
 public class SolarQuotaDto {
 	
 	private int id;
-	private int userid;
+	private int user_id;
 	private int quantity;
 	private String production;
 	private double value;
@@ -12,10 +12,9 @@ public class SolarQuotaDto {
 		
 	}
 
-	public SolarQuotaDto(int id, int userid, int quantity, String production, double value) {
-		super();
+	public SolarQuotaDto(int id, int user_id, int quantity, String production, double value) {
 		this.id = id;
-		this.userid = userid;
+		this.user_id = user_id;
 		this.quantity = quantity;
 		this.production = production;
 		this.value = value;
@@ -29,12 +28,12 @@ public class SolarQuotaDto {
 		this.id = id;
 	}
 
-	public int getUserid() {
-		return userid;
+	public int getUser_id() {
+		return user_id;
 	}
 
-	public void setUserid(int userid) {
-		this.userid = userid;
+	public void setUser_id(int user_id) {
+		this.user_id = user_id;
 	}
 
 	public int getQuantity() {

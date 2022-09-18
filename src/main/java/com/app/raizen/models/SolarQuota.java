@@ -4,7 +4,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -15,9 +17,9 @@ public class SolarQuota {
 	@GeneratedValue
 	private int id;
 	
+	@ManyToOne
 	@NotNull
-	@Column(name = "userid")
-	private int userid;
+	private User user;
 	
 	@Column(name = "quantity")
 	private int quantity;
@@ -32,28 +34,12 @@ public class SolarQuota {
 		
 	}
 
-	public SolarQuota(@NotNull int userid, int quantity, String production, double value) {
-		super();
-		this.userid = userid;
-		this.quantity = quantity;
-		this.production = production;
-		this.value = value;
-	}
-
 	public int getId() {
 		return id;
 	}
 
 	public void setId(int id) {
 		this.id = id;
-	}
-
-	public int getUserid() {
-		return userid;
-	}
-
-	public void setUserid(int userid) {
-		this.userid = userid;
 	}
 
 	public int getQuantity() {
@@ -78,6 +64,14 @@ public class SolarQuota {
 
 	public void setValue(double value) {
 		this.value = value;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
 	}
 
 }

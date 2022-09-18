@@ -7,5 +7,4 @@ import com.app.raizen.models.Address;
 
 @Repository
 public interface AddressRepository extends JpaRepository<Address, Integer>{
-	//TODO methods to query addresses
 }

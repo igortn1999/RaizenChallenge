@@ -13,12 +13,11 @@ import com.app.raizen.models.Device;
 @Repository
 public interface DeviceRepository extends JpaRepository<Device, Integer>{
 	
-	@Query(value = "SELECT new com.app.raizen.dto.DeviceDto(u.id, u.name, u.consumption) " + "FROM Device u WHERE u.name LIKE %?1%")
-	public List<DeviceDto> findByNameContaining(@Param("namePart") String namePart);
+//	@Query(value = "SELECT new com.app.raizen.dto.DeviceDto(u.id, u.name, u.consumption, u.address, u.lastMaintenance) " + "FROM Device u WHERE u.name LIKE %?1%")
+//	public List<DeviceDto> findByNameContaining(@Param("namePart") String namePart);
 	
 	public Device findById(int id);
 	
-	//@Query(value = "SELECT new com.app.raizen.dto.DeviceDto(u.id, u.name, u.consumption) " + "FROM Device u WHERE u.name = ?1")
 	public List<Device> findByConsumption(@Param("consumption") double consumption);
 	
 }
