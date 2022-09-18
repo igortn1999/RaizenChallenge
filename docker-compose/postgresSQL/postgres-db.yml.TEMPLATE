@@ -13,7 +13,7 @@ services:
     restart: "always"
   raizen-react:
     image: "raizen-react"
-    build: "../../react"
+    build: "../../react/app"
     container_name: "raizen-react"
     ports: 
       - "3000:3000"
@@ -27,4 +27,3 @@ services:
       - "7272:7272"
     volumes:
       - "../../python/graph:/graph"
-
