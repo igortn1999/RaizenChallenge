@@ -7,9 +7,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name="Devices", schema="public")
@@ -30,6 +30,7 @@ public class Device {
 	private double consumption;
 	
 	@ManyToOne//Java Spring only needs this notation to create a Many To one relationship.
+	@NotNull
 	private Address address;
 	
 	@Column(name="last_maintenance")

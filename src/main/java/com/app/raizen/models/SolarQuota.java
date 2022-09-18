@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -17,6 +18,7 @@ public class SolarQuota {
 	private int id;
 	
 	@ManyToOne
+	@NotNull
 	private User user;
 	
 	@Column(name = "quantity")
