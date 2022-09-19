@@ -43,3 +43,12 @@
     justify-content: center;
     width:100%;
 }
+
+#cadastroform{
+    padding-bottom: 2rem;
+}
+
+#cadastro_btn{
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+}

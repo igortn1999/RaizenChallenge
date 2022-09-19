@@ -8,7 +8,6 @@ function PreLoginPage() {
 
 
 
-
     return (
         <div className="LoginPage">
             <div className='topbar'>
@@ -26,10 +25,12 @@ function PreLoginPage() {
 
             <section className='buttons'>
                 <Link to="login">
-                <button className='entrar'>Entrar</button>
+                    <button className='entrar'>Entrar</button>
                 </Link>
-                
-                <button className='inscrevase'>Inscreva-se</button>
+                <Link to="cadastro">
+                    <button className='inscrevase'>Inscreva-se</button>
+                </Link>
+
             </section>
 
             <p>Ou entre com</p>

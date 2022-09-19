@@ -52,7 +52,10 @@ function LoginPage() {
         <button className='login'>Entrar</button>
       </Link>
 
-      <button className='inscrevase'>Não tem uma conta? Inscreva-se</button>
+      <Link to="/cadastro" className='contratacao_btn'>
+        <button className='inscrevase'>Não tem uma conta? Inscreva-se</button>
+      </Link>
+      
       <p>Ou entre com</p>
       <section className='socialmediabuttons'>
         <button className='facebook'></button>

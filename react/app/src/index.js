@@ -14,6 +14,7 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
+import Cadastro from './pages/cadastro';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,6 +24,7 @@ root.render(
       <Route path="/login" index element={<LoginPage />} />
       <Route path="/integrantes" element={<Integrantes />} />
       <Route path="/contratacao" element={<Contratacao />} />
+      <Route path="/cadastro" element={<Cadastro />} />
       <Route path="/sobre" element={<Sobre />} />
       <Route path="*" element={<NotFound />} />
     </Routes>
