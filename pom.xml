@@ -71,6 +71,7 @@
 				<version>${project.parent.version}</version>
 			</plugin>	
 		</plugins>
+		<finalName>raizen-api</finalName>
 	</build>
 
 </project>

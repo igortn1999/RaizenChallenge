@@ -27,3 +27,22 @@ services:
       - "7272:7272"
     volumes:
       - "../../python/graph:/graph"
+  raizen-api:
+    image: "raizen-api"
+    build: "../../"
+    container_name: "raizen-api"
+    command: ["java","-jar","/raizen-api.jar"]
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://raizen-db:5432/raizen-db
+      - SPRING_DATASOURCE_DRIVER-CLASS-NAME=org.postgresql.Driver
+    ports: 
+      - "8080:8080"
+    depends_on:
+      - "raizen-db"
+    networks: 
+      - db
+
+networks:
+  db:
+    driver: bridge
+
