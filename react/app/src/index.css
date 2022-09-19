@@ -1,3 +1,10 @@
+html,#root{
+  overflow-x: hidden !important;
+}
+
+button:hover{
+  cursor:pointer;
+}
 
 html,body,#root{
   height: 100% ;
