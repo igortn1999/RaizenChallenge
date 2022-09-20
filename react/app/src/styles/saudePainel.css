@@ -1,0 +1,95 @@
+.SaudePainel{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 8rem;
+}
+
+.SaudePainel .heading{
+    display: flex;
+    align-items: center;
+    color:#861F83;
+    transform: scale(1.3);
+    font-weight: 600;
+    margin-top: 3rem;
+}
+
+.SaudePainel img{
+    margin-bottom: 2rem;
+}
+
+.SaudePainel .button_div{
+    width: 75%;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    background-color:#861F83;
+    border-radius: 0.5rem;
+    padding:0.5rem;
+    margin-bottom: 1rem;
+    height: 80.17px;
+}
+
+.SaudePainel p{
+    width: 100%;
+    font-size: 1.5rem;
+    color:#FFF;
+    text-decoration: none;
+}
+
+.SaudePainel .button_amarelo{
+    width: 75%;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    background-color:#FEB715;
+    border-radius: 0.5rem;
+    padding:0.5rem;
+    margin-bottom: 1rem;
+    height: 50.17px;
+    border-radius: 20px;
+}
+
+.button_bigger{
+    width: 100%;
+    font-size: 1.5rem;
+    color:#FFF;
+    text-decoration: none;
+}
+
+.SaudePainel .button_bigger p{
+    margin: 0;
+    padding-left: 1rem;
+}
+
+.tooltip{
+    width: 8rem;
+    margin-left: auto !important;
+    background-color: #ca3fc6 !important;
+    margin-top: 1rem !important;
+}
+
+.SaudePainel .button_inside{
+    display: flex;
+    width: 250px;
+    align-items: center;
+    height: 21.93px;
+    left: calc(50% - 279px/2 + 8.5px);
+    top: calc(50% - 21.93px/2 + 239.06px);
+    background: red;
+    border-radius: 1rem;
+}
+
+.SaudePainel .button_inside_2{
+    display: flex;
+    width: 250px;
+    align-items: center;
+    height: 21.93px;
+    left: calc(50% - 279px/2 + 8.5px);
+    top: calc(50% - 21.93px/2 + 239.06px);
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 1rem;
+}
+
