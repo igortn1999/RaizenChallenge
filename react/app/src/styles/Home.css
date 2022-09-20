@@ -1,0 +1,44 @@
+.Home{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+}
+
+.Home section{
+    grid-column:1 / span 4;
+    display: flex;
+    padding-left: 2rem;
+    font-size: 1.5rem;
+    align-items: center;
+}
+
+.Home .grafico{
+    width: 90%;
+}
+
+.dados-consumo{ 
+    border-color: rgba(0, 0, 0, 0.2);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 0.8rem;
+    width: 75%;
+}
+
+.dados-consumo >*{
+        border: 2px solid rgb(214,232,182);
+}
+
+.dados-consumo .title{
+    font-weight: 600;
+}
+
+.tabela{
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+    width: 100%;
+}
+
+.tabela{
+    text-align: center;
+    width: 100%;
+}

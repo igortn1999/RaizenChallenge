@@ -33,7 +33,11 @@ function Navbar(props) {
             <Link to="/SaudePainel" className='option_navbar' id="escudo"><HealthAndSafetyIcon sx={iconStyle} />
                 <p>Saúde</p>
             </Link>
+<<<<<<< Updated upstream
             <Link to="/ManuPainel" className='option_navbar'><ConstructionIcon sx={iconStyle} />
+=======
+            <Link to="/manutencao" className='option_navbar'><ConstructionIcon sx={iconStyle} />
+>>>>>>> Stashed changes
                 <p>Cuidado</p>
             </Link>
 

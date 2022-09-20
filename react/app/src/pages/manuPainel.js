@@ -13,16 +13,7 @@ import * as React from 'react';
 
 function ManuPainel() {
 
-    const [open1, setOpen1] = React.useState(false);
     const [open2, setOpen2] = React.useState(false);
-
-    const handleTooltipClose1 = () => {
-        setOpen1(false);
-    };
-
-    const handleTooltipOpen1 = () => {
-        setOpen1(true);
-    };
 
     const handleTooltipClose2 = () => {
         setOpen2(false);
@@ -46,32 +37,33 @@ function ManuPainel() {
                     <div className='button_bigger'>
                         <p>Próxima Manutenção</p>
                     </div>
-                        <ClickAwayListener onClickAway={handleTooltipClose2}>
-                            <div>
-                                <Tooltip
-                                    PopperProps={{
-                                        disablePortal: true,
-                                    }}
-                                    componentsProps={{ tooltip: { className: 'tooltip' } }}
-                                    onClose={handleTooltipClose2}
-                                    open={open2}
-                                    disableFocusListener
-                                    disableHoverListener
-                                    disableTouchListener
-                                    title="Manutenção, de painel x"
-                                    sx={{color:'white',padding:0,pl:'2rem'}}
-                                >
-                                    <Button onClick={handleTooltipOpen2}><HelpOutlineIcon/></Button>
-                                </Tooltip>
-                            </div>
-                        </ClickAwayListener>
+                    <ClickAwayListener onClickAway={handleTooltipClose2}>
+                        <div>
+                            <Tooltip
+                                PopperProps={{
+                                    disablePortal: true,
+                                }}
+                                componentsProps={{ tooltip: { className: 'tooltip' } }}
+                                onClose={handleTooltipClose2}
+                                open={open2}
+                                disableFocusListener
+                                disableHoverListener
+                                disableTouchListener
+                                title="Manutenção, de painel x"
+                                sx={{ color: 'white', padding: 0, pl: '2rem' }}
+                            >
+                                <Button onClick={handleTooltipOpen2}><HelpOutlineIcon /></Button>
+                            </Tooltip>
+                        </div>
+                    </ClickAwayListener>
+                    <div className="no_days">
+                        <p>{365} dias</p>
+                    </div>
 
                 </div>
 
                 <div className='button_amarelo'>
-                    <div className='button_bigger'>
-                        <p class='amarelo'>Dúvidas sobre a manutenção</p>
-                    </div>
+                    <p class='amarelo'>Dúvidas sobre a manutenção</p>
                 </div>
 
             </div>

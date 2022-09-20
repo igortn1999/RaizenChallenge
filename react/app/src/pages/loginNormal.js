@@ -48,7 +48,7 @@ function LoginPage() {
           }
         />
       </form>
-      <Link to="/contratacao" className='contratacao_btn'>
+      <Link to="/Home" className='contratacao_btn'>
         <button className='login'>Entrar</button>
       </Link>
 
