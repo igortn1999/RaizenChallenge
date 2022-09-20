@@ -19,7 +19,7 @@ function Navbar(props) {
                 <p>Home</p>
             </Link>
 
-            <Link to="/ServicoContratado" className='option_navbar'><AccountBalanceWalletIcon sx={iconStyle} />
+            <Link to="/servico_contratado" className='option_navbar'><AccountBalanceWalletIcon sx={iconStyle} />
                 <p>Finanças</p>
             </Link>
 
@@ -30,14 +30,10 @@ function Navbar(props) {
 
             <Link to="/contratacao" className='option_navbar2'><AddCircleOutlineIcon sx={specialIconStyle} /></Link>
 
-            <Link to="/SaudePainel" className='option_navbar' id="escudo"><HealthAndSafetyIcon sx={iconStyle} />
+            <Link to="/saude_painel" className='option_navbar' id="escudo"><HealthAndSafetyIcon sx={iconStyle} />
                 <p>Saúde</p>
             </Link>
-<<<<<<< Updated upstream
-            <Link to="/ManuPainel" className='option_navbar'><ConstructionIcon sx={iconStyle} />
-=======
             <Link to="/manutencao" className='option_navbar'><ConstructionIcon sx={iconStyle} />
->>>>>>> Stashed changes
                 <p>Cuidado</p>
             </Link>
 

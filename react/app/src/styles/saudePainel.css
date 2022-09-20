@@ -69,27 +69,24 @@
     margin-left: auto !important;
     background-color: #ca3fc6 !important;
     margin-top: 1rem !important;
+    font-size: 1rem !important;
 }
 
-.SaudePainel .button_inside{
+.SaudePainel .button_inside ,.SaudePainel .button_inside_2{
     display: flex;
-    width: 250px;
+    width: 100%;
     align-items: center;
-    height: 21.93px;
-    left: calc(50% - 279px/2 + 8.5px);
-    top: calc(50% - 21.93px/2 + 239.06px);
+    height: 2rem;
     background: red;
     border-radius: 1rem;
+    grid-column: 1 / span 2;
 }
-
 .SaudePainel .button_inside_2{
-    display: flex;
-    width: 250px;
-    align-items: center;
-    height: 21.93px;
-    left: calc(50% - 279px/2 + 8.5px);
-    top: calc(50% - 21.93px/2 + 239.06px);
-    background: rgba(255, 255, 255, 0.7);
-    border-radius: 1rem;
+    background-color: rgba(255,255,255,0.3);
 }
 
+
+.text,.texto2{
+    text-align: center;
+    margin:0;
+}

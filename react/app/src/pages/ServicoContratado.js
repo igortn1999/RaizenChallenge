@@ -38,62 +38,62 @@ function ServicoContratado() {
             <div className="Servico">
                 <heading>
                     <p className='heading'><AccountBalanceWalletIcon /><span>Serviço Contratado</span></p>
-                    <div className='button_div'>
-                        <div className='button_bigger'>
-                            <p className='parcela'>Faltam 60 Parcelas</p>
-                        </div>
-                        <ClickAwayListener onClickAway={handleTooltipClose2}>
-                            <div>
-                                <Tooltip
-                                    PopperProps={{
-                                        disablePortal: true,
-                                    }}
-                                    componentsProps={{ tooltip: { className: 'tooltip' } }}
-                                    onClose={handleTooltipClose2}
-                                    open={open2}
-                                    disableFocusListener
-                                    disableHoverListener
-                                    disableTouchListener
-                                    title="Manutenção, de painel x"
-                                    sx={{color:'white',padding:0,pl:'2rem'}}
-                                >
-                                    <Button onClick={handleTooltipOpen2}><HelpOutlineIcon/></Button>
-                                </Tooltip>
-                            </div>
-                        </ClickAwayListener>
-                    </div>
                 </heading>
+                <div className='prazo_div'>
+                    <div className='button_bigger'>
+                        <p className='parcela'>Faltam</p>
+                        <p className='parcela'>60</p>
+                        <p className='parcela'>Parcelas</p>
+                    </div>
+                    <ClickAwayListener onClickAway={handleTooltipClose1}>
+                        <div className='tooltip-sc2'>
+                            <Tooltip
+                                PopperProps={{
+                                    disablePortal: true,
+                                }}
+                                componentsProps={{ tooltip: { className: 'tooltip' } }}
+                                onClose={handleTooltipClose1}
+                                open={open1}
+                                disableFocusListener
+                                disableHoverListener
+                                disableTouchListener
+                                title="Parcelas restantes para quitar os paineis"
+                                sx={{ color: 'white', padding: 0, pl: 0 }}
+                            >
+                                <Button onClick={handleTooltipOpen1}><HelpOutlineIcon /></Button>
+                            </Tooltip>
+                        </div>
+                    </ClickAwayListener>
+                </div>
 
                 <img src={servico_img} alt="Arrumando Painel Solar" />
 
                 <div className='button_div'>
                     <div className='button_bigger'>
                         <p>Próxima Manutenção</p>
-                        <div className='button_inside'>
-                            <div className='text'>
-                                <p>110 dias</p>
-                            </div>
-                        </div>
                     </div>
-                        <ClickAwayListener onClickAway={handleTooltipClose2}>
-                            <div>
-                                <Tooltip
-                                    PopperProps={{
-                                        disablePortal: true,
-                                    }}
-                                    componentsProps={{ tooltip: { className: 'tooltip' } }}
-                                    onClose={handleTooltipClose2}
-                                    open={open2}
-                                    disableFocusListener
-                                    disableHoverListener
-                                    disableTouchListener
-                                    title="Manutenção, de painel x"
-                                    sx={{color:'white',padding:0,pl:'2rem'}}
-                                >
-                                    <Button onClick={handleTooltipOpen2}><HelpOutlineIcon/></Button>
-                                </Tooltip>
-                            </div>
-                        </ClickAwayListener>
+                    <ClickAwayListener onClickAway={handleTooltipClose2}>
+                        <div>
+                            <Tooltip
+                                PopperProps={{
+                                    disablePortal: true,
+                                }}
+                                componentsProps={{ tooltip: { className: 'tooltip' } }}
+                                onClose={handleTooltipClose2}
+                                open={open2}
+                                disableFocusListener
+                                disableHoverListener
+                                disableTouchListener
+                                title="Prazo do próximo agendamento"
+                                sx={{ color: 'white', padding: 0, pl: '2rem' }}
+                            >
+                                <Button onClick={handleTooltipOpen2}><HelpOutlineIcon /></Button>
+                            </Tooltip>
+                        </div>
+                    </ClickAwayListener>
+
+                    <p className='button_inside'>110 dias</p>
+
 
                 </div>
 
