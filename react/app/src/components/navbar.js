@@ -1,3 +1,4 @@
+import * as React from 'react';
 import '../styles/navbar.css';
 import { Link } from "react-router-dom";
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
@@ -18,7 +19,7 @@ function Navbar(props) {
                 <p>Home</p>
             </Link>
 
-            <Link to="/" className='option_navbar'><AccountBalanceWalletIcon sx={iconStyle} />
+            <Link to="/ServicoContratado" className='option_navbar'><AccountBalanceWalletIcon sx={iconStyle} />
                 <p>Finanças</p>
             </Link>
 
@@ -29,10 +30,10 @@ function Navbar(props) {
 
             <Link to="/contratacao" className='option_navbar2'><AddCircleOutlineIcon sx={specialIconStyle} /></Link>
 
-            <Link to="/" className='option_navbar' id="escudo"><HealthAndSafetyIcon sx={iconStyle} />
+            <Link to="/SaudePainel" className='option_navbar' id="escudo"><HealthAndSafetyIcon sx={iconStyle} />
                 <p>Saúde</p>
             </Link>
-            <Link to="/" className='option_navbar'><ConstructionIcon sx={iconStyle} />
+            <Link to="/ManuPainel" className='option_navbar'><ConstructionIcon sx={iconStyle} />
                 <p>Cuidado</p>
             </Link>
 
