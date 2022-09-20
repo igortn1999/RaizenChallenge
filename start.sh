@@ -6,6 +6,7 @@ cd $WORK/react/app
 #update node/dependencies
 npm install
 
+mkdir $WORK/target
 #make sure there is a jar in target folder. If there aren't any, copy from backup
 JAR=$(ls -1 target/ | grep -c .jar)
 
