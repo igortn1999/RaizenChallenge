@@ -15,7 +15,7 @@ function Navbar(props) {
 
     return (
         <div className="navbar">
-            <Link to="/" className='option_navbar'><HomeIcon sx={iconStyle} />
+            <Link to="/Home" className='option_navbar'><HomeIcon sx={iconStyle} />
                 <p>Home</p>
             </Link>
 
