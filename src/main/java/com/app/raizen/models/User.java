@@ -46,6 +46,9 @@ public class User {
 	@Column(name = "telephone")
 	private String telephone;
 	
+	@Column(name = "roadmap_step")
+	private int roadmap_step = 0;
+	
 	
 	public User(){
 		
@@ -146,5 +149,16 @@ public class User {
 		}
 		
 	}
+
+	public int getRoadmap_step() {
+		return roadmap_step;
+	}
+
+
+	public void setRoadmap_step(int roadmap_step) {
+		this.roadmap_step = roadmap_step;
+	}
+	
+	
 
 }
