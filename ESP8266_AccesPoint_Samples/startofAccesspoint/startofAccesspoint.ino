@@ -34,14 +34,19 @@
 #include <WiFiClient.h>
 #include <ESP8266WebServer.h>
 
+#define LED D0 //LED GPIO 10
+#define LED1 A0 //LED GPIO 5
+
 #ifndef APSSID
-#define APSSID "ESPap"
-#define APPSK  "thereisnospoon"
+#define APSSID "Guardian-Raizen"
+#define APPSK  "Guardi4n"
 #endif
 
 /* Set these to your desired credentials. */
 const char *ssid = APSSID;
 const char *password = APPSK;
+//adiciona url legível
+const char *host = "guardian-energy.com";
 
 ESP8266WebServer server(80);
 
@@ -50,6 +55,23 @@ ESP8266WebServer server(80);
 */
 void handleRoot() {
   server.send(200, "text/html", "<h1>You are connected</h1>");
+  
+  
+}
+
+void LEDon(){
+  digitalWrite(LED, HIGH);
+  server.send(200,"text/html", "<h1>Setting LED to ON</h1>");
+}
+
+void LEDoff(){
+  digitalWrite(LED, LOW);
+  server.send(200,"text/html", "<h1>Setting LED to OFF</h1>");
+}
+
+void sensor(){
+  //server.send(200, "text/html", ((String)digitalRead(LED1)));
+  server.send(200, "text/html", ((String)analogRead(LED1)));
 }
 
 void setup() {
@@ -64,8 +86,24 @@ void setup() {
   Serial.print("AP IP address: ");
   Serial.println(myIP);
   server.on("/", handleRoot);
+  //adding endpoints
+  server.on("/on", LEDon);
+  server.on("/off", LEDoff);
+  server.on("/sensor", sensor);
+  
   server.begin();
   Serial.println("HTTP server started");
+
+  //Start of setup for light and transistors
+  pinMode(LED, OUTPUT);
+  digitalWrite(LED, HIGH);
+  delay(500);
+  digitalWrite(LED, LOW);
+  delay(500);
+  digitalWrite(LED, HIGH);
+  delay(500);
+  digitalWrite(LED, LOW);
+  delay(500);
 }
 
 void loop() {
