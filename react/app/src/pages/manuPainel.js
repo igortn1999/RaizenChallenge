@@ -57,7 +57,7 @@ function ManuPainel() {
                         </div>
                     </ClickAwayListener>
                     <div className="no_days">
-                        <p>{365} dias</p>
+                        <p>{110} dias</p>
                     </div>
 
                 </div>
