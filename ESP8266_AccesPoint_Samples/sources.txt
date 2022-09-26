@@ -1,0 +1,10 @@
+https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266WebServer
+
+https://esp8266-shop.com/blog/how-to-http-get-and-post-requests-with-esp8266/
+
+https://www.electronicwings.com/nodemcu/nodemcu-gpio-with-arduino-ide
+
+https://randomnerdtutorials.com/esp8266-adc-reading-analog-values-with-nodemcu/
+
+https://www.youtube.com/watch?v=1oFlc4jv2-g
+
