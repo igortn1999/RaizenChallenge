@@ -12,8 +12,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
-import net.bytebuddy.utility.RandomString;
-
 @Entity
 @Table(name = "Users", schema = "public", uniqueConstraints = @UniqueConstraint(columnNames = { "username", "CPFCNPJ" }))
 public class User {
