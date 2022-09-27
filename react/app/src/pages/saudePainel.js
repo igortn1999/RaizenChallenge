@@ -8,11 +8,50 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
 import * as React from 'react';
+import PropTypes from 'prop-types';
+import CircularProgress from '@mui/material/CircularProgress';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
 
 
 
 function SaudePainel() {
 
+
+
+    function CircularProgressWithLabel(props) {
+        return (
+          <Box sx={{ position: 'relative', display: 'inline-flex',marginBottom:"2rem"}}>
+            <CircularProgress variant="determinate" {...props} size={120} color="warning"></CircularProgress>
+            <Box
+              sx={{
+                top: 0,
+                left: 0,
+                bottom: 0,
+                right: 0,
+                position: 'absolute',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}
+            >
+              <Typography variant="caption" component="div" color="text.secondary" sx={{fontSize:"2rem"}}>
+                {`${Math.round(props.value)}%`}
+              </Typography>
+            </Box>
+          </Box>
+        );
+      }
+      
+      CircularProgressWithLabel.propTypes = {
+        /**
+         * The value of the progress indicator for the determinate variant.
+         * Value between 0 and 100.
+         * @default 0
+         */
+        value: PropTypes.number.isRequired,
+      };
+      
     const [open1, setOpen1] = React.useState(false);
     const [open2, setOpen2] = React.useState(false);
 
@@ -40,7 +79,7 @@ function SaudePainel() {
                     <p className='heading'><HealthAndSafetyIcon /><span>Saúde dos paineis</span></p>
                 </heading>
 
-                <img src={grafico_img} alt="Arrumando Painel Solar" />
+                <CircularProgressWithLabel value={80} />
 
                 <div className='button_div'>
                     <div className='button_bigger'>

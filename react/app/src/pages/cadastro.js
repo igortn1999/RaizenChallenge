@@ -3,8 +3,10 @@ import { Link } from "react-router-dom";
 import BackBar from '../components/backbar';
 import Input from '@mui/material/Input';
 import React, { useState } from 'react';
-
+import axios from "axios";
+ 
 function Cadastro() {
+
 
     const input_style = {
         width: '100%',
@@ -106,10 +108,20 @@ function Cadastro() {
 
 
 
-
             </form>
             <button className='login' id="cadastro_btn" onClick={(e)=>{
-                console.log(form)
+                const newForm = {...form};
+                newForm["username"] = form.email;
+                setForm(newForm);
+
+                axios
+                 .post("/api/users/", form)
+                 .then((response) => {
+                   console.log(response.data.results);
+                 })
+                 .catch((error) => {
+                   console.log(error);
+                 });
             }}>Cadastrar-se</button>
         </div>
     );

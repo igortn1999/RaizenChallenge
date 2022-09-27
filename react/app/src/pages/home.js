@@ -17,12 +17,20 @@ function Home() {
             borderColor: "rgba(11,127,40,0.6)",
             borderWidth: "2",
             backgroundColor: "rgba(11,127,40,0.3)",
-            borderRadius: "5"
+            borderRadius: "3"
+
+        },
+        {
+            label: "Produção em KW",
+            data: [110, 200, 200, 224, 120, 319, 334, 257],
+            borderColor: "rgba(31,78,219,0.6)",
+            borderWidth: "2",
+            backgroundColor: "rgba(31,78,219,0.3)",
+            borderRadius: "3"
 
         }]
 
     };
-
 
     return (
         <Layout>
@@ -32,7 +40,7 @@ function Home() {
             </div>
 
             <figure className='grafico'>
-                <Bar data={data} />
+                <Bar data={data}/>
             </figure>
 
             <div className='tabela'>
