@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.app.raizen.models.SolarQuota;
+import com.app.raizen.models.SolarQuotaConstants;
+import com.app.raizen.repositories.SolarQuotaConstantsRepository;
 import com.app.raizen.repositories.SolarQuotaRepository;
 
 @Service
@@ -16,8 +18,8 @@ public class ServiceSolarQuota {
 	SolarQuotaRepository sqr;
 
 	@Transactional
-	public Object save(@Valid SolarQuota sq) {
-		return sqr.save(sq);
+	public Object save(@Valid SolarQuota sqc) {
+		return sqr.save(sqc);
 	}
 
 	public Object findAll() {

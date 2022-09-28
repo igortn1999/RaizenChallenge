@@ -6,7 +6,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -22,13 +21,16 @@ public class SolarQuota {
 	private User user;
 	
 	@Column(name = "quantity")
-	private int quantity;
+	private int quantity;//how many solar quotas are being buyed
 	
-	@Column(name = "production")
-	private String production;//TODO what is this for exactly?
+	@Column(name = "customer_consumption")
+	private double customer_consumption;//kwh
 	
-	@Column(name = "value")
-	private double value;//TODO quantity and value are directly related
+	@Column(name = "cost")
+	private double cost;//total cost for client 
+	
+//	@Column(name = "kwh_value")
+//	private double kwh_value;
 	
 	public SolarQuota() {
 		
@@ -42,30 +44,6 @@ public class SolarQuota {
 		this.id = id;
 	}
 
-	public int getQuantity() {
-		return quantity;
-	}
-
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
-
-	public String getProduction() {
-		return production;
-	}
-
-	public void setProduction(String production) {
-		this.production = production;
-	}
-
-	public double getValue() {
-		return value;
-	}
-
-	public void setValue(double value) {
-		this.value = value;
-	}
-
 	public User getUser() {
 		return user;
 	}
@@ -74,4 +52,28 @@ public class SolarQuota {
 		this.user = user;
 	}
 
+	public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+	public double getCustomer_consumption() {
+		return customer_consumption;
+	}
+
+	public void setCustomer_consumption(double customer_consumption) {
+		this.customer_consumption = customer_consumption;
+	}
+
+	public double getCost() {
+		return cost;
+	}
+
+	public void setCost(double cost) {
+		this.cost = cost;
+	}
+	
 }
