@@ -18,7 +18,7 @@ public class SolarQuota {
 	
 	@ManyToOne
 	@NotNull
-	private User user;
+	private User user;//TODO change to OneToOne
 	
 	@Column(name = "quantity")
 	private int quantity;//how many solar quotas are being buyed

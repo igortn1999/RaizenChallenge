@@ -4,20 +4,26 @@ public class SolarQuotaDto {
 	
 	private int id;
 	private int user_id;
-	private int quantity;
-	private String production;
-	private double value;
+//	private int quantity;
+	private double customer_consumption;//kwh
+//	private double cost;
 	
 	public SolarQuotaDto() {
 		
 	}
 
-	public SolarQuotaDto(int id, int user_id, int quantity, String production, double value) {
-		this.id = id;
-		this.user_id = user_id;
-		this.quantity = quantity;
-		this.production = production;
-		this.value = value;
+//	public SolarQuotaDto(int id, int user_id, int quantity, double customer_consumption, double cost) {
+//		this.id = id;
+//		this.user_id = user_id;
+//		this.quantity = quantity;
+//		this.customer_consumption = customer_consumption;
+//		this.cost= cost;
+//	}
+	
+	public SolarQuotaDto(int id, int user_id, double customer_consuption) {
+		this.id=id;
+		this.user_id=user_id;
+		this.customer_consumption = customer_consuption;
 	}
 
 	public int getId() {
@@ -36,31 +42,12 @@ public class SolarQuotaDto {
 		this.user_id = user_id;
 	}
 
-	public int getQuantity() {
-		return quantity;
+	public double getCustomer_consumption() {
+		return customer_consumption;
 	}
 
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
+	public void setCustomer_consumption(double customer_consumption) {
+		this.customer_consumption = customer_consumption;
 	}
-
-	public String getProduction() {
-		return production;
-	}
-
-	public void setProduction(String production) {
-		this.production = production;
-	}
-
-	public double getValue() {
-		return value;
-	}
-
-	public void setValue(double value) {
-		this.value = value;
-	}
-	
-	
-
 
 }
