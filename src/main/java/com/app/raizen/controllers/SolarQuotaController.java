@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.app.raizen.dto.SolarQuotaDto;
 import com.app.raizen.models.SolarQuota;
 import com.app.raizen.services.ServiceSolarQuota;
 
@@ -23,9 +24,14 @@ public class SolarQuotaController {
 	@Autowired
 	ServiceSolarQuota sqc;
 	
+//	@PostMapping
+//	public @ResponseBody ResponseEntity<Object> saveSQ(@Valid SolarQuota sq) {
+//		return ResponseEntity.status(HttpStatus.CREATED).body(sqc.save(sq));
+//	}
+	
 	@PostMapping
-	public @ResponseBody ResponseEntity<Object> saveSQ(@Valid SolarQuota sq) {
-		return ResponseEntity.status(HttpStatus.CREATED).body(sqc.save(sq));
+	public @ResponseBody ResponseEntity<Object> saveSQ(@Valid SolarQuotaDto sqDto) {
+		return ResponseEntity.status(HttpStatus.CREATED).body(sqc.save(sqDto));
 	}
 	
 	@GetMapping

@@ -7,7 +7,5 @@ import com.app.raizen.models.SolarQuota;
 
 @Repository
 public interface SolarQuotaRepository extends JpaRepository<SolarQuota, Integer>{
-
-	public SolarQuota findById(int id);
 	
 }
