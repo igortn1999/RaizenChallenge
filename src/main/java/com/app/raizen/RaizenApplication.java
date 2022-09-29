@@ -5,18 +5,18 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 
-import com.app.raizen.models.SolarQuotaConstants;
-import com.app.raizen.repositories.SolarQuotaConstantsRepository;
+import com.app.raizen.models.Constants;
+import com.app.raizen.repositories.ConstantsRepository;
 
 @SpringBootApplication
 public class RaizenApplication {
 	
 	@Autowired
-	private SolarQuotaConstantsRepository sqcr;
+	private ConstantsRepository sqcr;
 	
 	@EventListener
 	public void appReady(ApplicationReadyEvent event) {
-		sqcr.save(new SolarQuotaConstants());
+		sqcr.save(new Constants());
 	}
 
 	public static void main(String[] args) { 
