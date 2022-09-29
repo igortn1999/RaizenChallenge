@@ -115,7 +115,7 @@ function Cadastro() {
                 setForm(newForm);
 
                 axios
-                 .post("/api/users/", form)
+                 .post(`${process.env.REACT_APP_BACK_URL}/api/users/`, form)
                  .then((response) => {
                    console.log(response.data.results);
                  })
