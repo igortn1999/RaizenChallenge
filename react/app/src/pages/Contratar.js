@@ -78,7 +78,7 @@ function Contratacao() {
                 </div>
 
                 <div className='button_div'>
-                    <Link to="/" className='button_bigger'>
+                    <Link to="/recomendacao" className='button_bigger'>
                         <p>Cotas Solares</p>
                     </Link>
                     <ClickAwayListener onClickAway={handleTooltipClose2}>
