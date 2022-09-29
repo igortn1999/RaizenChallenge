@@ -1,0 +1,58 @@
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+
+   opacity: 1;
+
+}
+
+
+
+.nocotas{
+    height: 1.5rem;
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 0.2rem;
+    width: 100%;
+}
+
+.contratacao form{
+    width: 60%;
+    background-color: #861F83;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 1rem;
+    flex-direction: column;
+}
+
+.contratacao form p{
+    font-weight: 600;
+    font-size: 90%;
+    color:#fff;
+}
+
+.contratacao-btn, #contratar-btn{
+    width: 102.5%;
+    margin-top: 1rem;
+    background-color: #861F83;
+    color:#fff;
+    border-color: rgba(255,255,255,0.6);
+    border-style: solid;
+    height: 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+
+}
+
+.recommendation>*{
+    margin-bottom: 0;
+    color:#FFF;
+}
+
+.recommendation h3{
+    margin: 0;
+}
+
+#contratar-btn{
+    width: 60% !important;
+    background-color: #c98507 !important;
+}
