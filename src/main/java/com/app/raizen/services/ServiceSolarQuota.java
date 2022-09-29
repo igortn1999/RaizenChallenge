@@ -20,16 +20,19 @@ public class ServiceSolarQuota {
 	SolarQuotaRepository sqr;
 	
 	@Autowired
-	ConstantsRepository constants;
+	ConstantsRepository constantsRepository;
 
 	@Autowired
 	UserRepository userRepository;
 	
 	@Transactional
 	public Object save(@Valid SolarQuotaDto sqDto) {
-		//maybe there will we problems with User
-		SolarQuota sq = new SolarQuota();
-		Constants sqc = constants.findAll().get(0);
+		//TODO this does not work when sending JSON format
+		
+//		SolarQuota sq = new SolarQuota();
+		SolarQuota sq = sqr.findByUserId(sqDto.getUser_id()).orElse(new SolarQuota());
+		
+		Constants sqc = constantsRepository.findAll().get(0);
 		
 		double customerConsuption = sqDto.getCustomer_consumption();
 		double eachQuotaValue = sqc.getSq_monetary_value();
