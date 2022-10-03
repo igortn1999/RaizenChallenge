@@ -1,5 +1,4 @@
 import '../styles/LoginForm.css';
-import { Link } from "react-router-dom";
 import BackBar from '../components/backbar';
 import Input from '@mui/material/Input';
 import React, { useState } from 'react';
@@ -34,8 +33,6 @@ function Cadastro() {
     }
 
     return (
-        //TODO:
-        //Terminar a função de cadastro
 
         <div className="LoginForm" id="cadastroform">
             <BackBar />

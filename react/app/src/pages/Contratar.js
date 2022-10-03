@@ -1,11 +1,9 @@
 import '../styles/contratacao.css';
-import BackBar from '../components/backbar';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import Layout from './hocs/Layout';
 import Contrata_img from '../static/contrata_painel.svg';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import { Link } from 'react-router-dom';
-import Grid from '@mui/material/Grid';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
@@ -71,7 +69,7 @@ function Contratacao() {
 
 
                 <div className='button_div'>
-                    <Link to="/" className='button_bigger'>
+                    <Link to="/lista_provedores" className='button_bigger'>
                         <p>Adquirir Paineis</p>
                     </Link>
 

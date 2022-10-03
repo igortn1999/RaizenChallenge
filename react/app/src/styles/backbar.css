@@ -33,10 +33,10 @@
     height:5rem;
 }
 
-.back_button{
+.back_btn{
     height: 3rem;
     width: 1rem;
-    background-image: url(../static/icon-voltar.svg);
-    background-repeat: no-repeat;
     margin-top: 1.2rem;
+    display: flex;
+    align-items: flex-end;
 }

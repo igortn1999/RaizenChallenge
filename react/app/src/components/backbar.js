@@ -1,18 +1,22 @@
 import '../styles/backbar.css';
-import { Link } from "react-router-dom";
+import { useNavigate} from 'react-router-dom';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+
 
 function BackBar(props) {
 
-
+    const navigate = useNavigate();
 
 
     return (
         <div className="backbar">
             <section className='options'>
-                <Link to="/">
-                    <div className='back_button'></div>
+                <div onClick={(e)=>{
+                    navigate(-1);
+                }} className="back_btn">
+                    <ArrowBackIosIcon sx={{"color":"white"}}/>
                     <p>Voltar</p>
-                </Link>  
+                </div>  
                 <div className='logo'></div>
             </section>
 
