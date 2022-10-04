@@ -8,6 +8,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
 import * as React from 'react';
+import axios from 'axios';
 
 
 
@@ -101,6 +102,25 @@ function Contratacao() {
                     </ClickAwayListener>
 
                 </div>
+
+                <button className='button_div button_bigger' onClick={(e)=>{
+                    e.preventDefault();
+                    console.log("ON")
+                    axios.post(`${process.env.REACT_APP_ESP_URL}/on`).then((res)=>{
+                        console.log(res);
+                    }).catch((err)=>{
+                        console.log(err);
+                    })
+                }}>Liga led</button>
+                <button className='button_div button_bigger' onClick={(e)=>{
+                    e.preventDefault();
+                    console.log("OFF")
+                    axios.post(`${process.env.REACT_APP_ESP_URL}/off`).then((res)=>{
+                        console.log(res);
+                    }).catch((err)=>{
+                        console.log(err);
+                    })
+                }}>Desliga led</button>
 
 
 
