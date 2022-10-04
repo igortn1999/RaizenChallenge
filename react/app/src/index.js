@@ -19,6 +19,7 @@ import {
 import ManuPainel from './pages/manuPainel';
 import RecomendaCotas from './pages/recomendacao_cotas';
 import ListaProvedores from './pages/lista_provedores';
+import Financiamento from './pages/financiamento';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -34,6 +35,7 @@ root.render(
       <Route path="/saude_painel" element={<SaudePainel/>} />
       <Route path="/manutencao" element={<ManuPainel />} />
       <Route path="/recomendacao" element={<RecomendaCotas />} />
+      <Route path="/financiamento" element={<Financiamento />} />
       <Route path="/sobre" element={<Sobre />} />
       <Route path="/lista_provedores" element={<ListaProvedores />} />
       <Route path="*" element={<NotFound />} />

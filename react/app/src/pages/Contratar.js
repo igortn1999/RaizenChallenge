@@ -44,7 +44,7 @@ function Contratacao() {
                 <img src={Contrata_img} alt="Menina utilizando painel solar" />
 
                 <div className='button_div'>
-                    <Link to="/" className='button_bigger'>
+                    <Link to="/financiamento" className='button_bigger'>
                         <p>Financiamento</p>
                     </Link>
                     <ClickAwayListener onClickAway={handleTooltipClose1}>
