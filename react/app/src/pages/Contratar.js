@@ -106,7 +106,7 @@ function Contratacao() {
                 <button className='button_div button_bigger' onClick={(e)=>{
                     e.preventDefault();
                     console.log("ON")
-                    axios.post(`${process.env.REACT_APP_ESP_URL}/on`).then((res)=>{
+                    axios.get(`${process.env.REACT_APP_ESP_URL}/on`).then((res)=>{
                         console.log(res);
                     }).catch((err)=>{
                         console.log(err);
@@ -115,7 +115,7 @@ function Contratacao() {
                 <button className='button_div button_bigger' onClick={(e)=>{
                     e.preventDefault();
                     console.log("OFF")
-                    axios.post(`${process.env.REACT_APP_ESP_URL}/off`).then((res)=>{
+                    axios.get(`${process.env.REACT_APP_ESP_URL}/off`).then((res)=>{
                         console.log(res);
                     }).catch((err)=>{
                         console.log(err);
