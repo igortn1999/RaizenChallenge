@@ -34,19 +34,21 @@
 #include <WiFiClient.h>
 #include <ESP8266WebServer.h>
 
-#define LED D0 //LED GPIO 10
-#define LED1 A0 //LED GPIO 5
+#define blue D0 //blue GPIO 10
+#define red D3 //red GPIO 5
+#define green D2//green GPIO 4
+
+#define analog A0 //analog ADC 0
+
 
 #ifndef APSSID
-#define APSSID "Guardian-Raizen"
+#define APSSID "Raizen-Guardian"
 #define APPSK  "Guardi4n"
 #endif
 
 /* Set these to your desired credentials. */
 const char *ssid = APSSID;
 const char *password = APPSK;
-//adiciona url legível
-const char *host = "guardian-energy.com";
 
 ESP8266WebServer server(80);
 
@@ -54,24 +56,30 @@ ESP8266WebServer server(80);
    connected to this access point to see it.
 */
 void handleRoot() {
+  Serial.println("Connection atempt");
   server.send(200, "text/html", "<h1>You are connected</h1>");
-  
-  
 }
 
-void LEDon(){
-  digitalWrite(LED, HIGH);
-  server.send(200,"text/html", "<h1>Setting LED to ON</h1>");
+void ledOn(){
+  Serial.println("led on");
+  digitalWrite(blue, HIGH);
+  digitalWrite(red, HIGH);
+
+  server.send(200,"text/html", "<h1>Setting led to ON</h1>");
 }
 
-void LEDoff(){
-  digitalWrite(LED, LOW);
-  server.send(200,"text/html", "<h1>Setting LED to OFF</h1>");
+void ledOff(){
+  Serial.println("led off");
+  digitalWrite(blue, LOW);
+  digitalWrite(red, LOW);
+
+  server.send(200,"text/html", "<h1>Setting led to OFF</h1>");
 }
 
 void sensor(){
-  //server.send(200, "text/html", ((String)digitalRead(LED1)));
-  server.send(200, "text/html", ((String)analogRead(LED1)));
+//  server.send(200, "text/html", ((String)digitalRead(analog)));
+  Serial.println("sensor");
+  server.send(200, "text/html", ((String)analogRead(analog)));
 }
 
 void setup() {
@@ -87,23 +95,36 @@ void setup() {
   Serial.println(myIP);
   server.on("/", handleRoot);
   //adding endpoints
-  server.on("/on", LEDon);
-  server.on("/off", LEDoff);
+  server.on("/on", ledOn);
+  Serial.println("/on enabled");
+  server.on("/off", ledOff);
+  Serial.println("/off enabled");
   server.on("/sensor", sensor);
+  Serial.println("/sensor enabled");
   
   server.begin();
   Serial.println("HTTP server started");
 
   //Start of setup for light and transistors
-  pinMode(LED, OUTPUT);
-  digitalWrite(LED, HIGH);
+  pinMode(blue, OUTPUT);
+  digitalWrite(blue, HIGH);
+  digitalWrite(red, LOW);
   delay(500);
-  digitalWrite(LED, LOW);
+  digitalWrite(blue, LOW);
+  digitalWrite(red, HIGH);
   delay(500);
-  digitalWrite(LED, HIGH);
+  digitalWrite(blue, HIGH);
+  digitalWrite(red, LOW);
   delay(500);
-  digitalWrite(LED, LOW);
+  digitalWrite(blue, LOW);
+  digitalWrite(red, HIGH);
   delay(500);
+  digitalWrite(red, LOW);
+  Serial.println("end setup");
+  Serial.print("ssid: ");
+  Serial.println(ssid);
+  Serial.print("password: ");
+  Serial.println(password);
 }
 
 void loop() {
