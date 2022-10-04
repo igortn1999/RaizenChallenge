@@ -34,6 +34,16 @@ public class UserController {
 		return ResponseEntity.status(HttpStatus.CREATED).body(serviceUser.save(user));
 	}
 	
+	@PostMapping(path="/nextStep")
+	public @ResponseBody ResponseEntity<Object> nextStep(int user_id){
+		return ResponseEntity.status(HttpStatus.OK).body(serviceUser.nextStep(user_id));
+	}
+	
+	@PostMapping(path="/resetSteps")
+	public @ResponseBody ResponseEntity<Object> resetSteps(int user_id){
+		return ResponseEntity.status(HttpStatus.OK).body(serviceUser.resetSteps(user_id));
+	}
+	
 	
 	
 	
