@@ -38,7 +38,7 @@ function Cadastro() {
             <BackBar />
             <section>
                 <h1>Cadastro</h1>
-                <p>Se cadastre e gerencie melhor seu gasto energético</p>
+                <p>Cadastre-se e gerencie melhor seu gasto energético</p>
             </section>
             <form>
 

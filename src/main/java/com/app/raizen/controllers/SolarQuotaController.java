@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.app.raizen.dto.SolarQuotaDto;
-import com.app.raizen.models.SolarQuota;
 import com.app.raizen.services.ServiceSolarQuota;
 
 @RestController

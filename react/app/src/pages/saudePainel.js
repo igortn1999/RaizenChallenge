@@ -76,14 +76,14 @@ function SaudePainel() {
         <Layout>
             <div className="SaudePainel">
                 <heading>
-                    <p className='heading'><HealthAndSafetyIcon /><span>Saúde dos paineis</span></p>
+                    <p className='heading'><HealthAndSafetyIcon /><span>Saúde dos Painéis</span></p>
                 </heading>
 
                 <CircularProgressWithLabel value={80} />
 
                 <div className='button_div'>
                     <div className='button_bigger'>
-                        <p>Saúde dos Paineis</p>
+                        <p>Saúde dos painéis</p>
                     </div>
                     <ClickAwayListener onClickAway={handleTooltipClose1}>
                         <div>

@@ -28,14 +28,14 @@ function ManuPainel() {
         <Layout>
             <div className="ManuPainel">
                 <heading>
-                    <p className='heading'><ConstructionIcon /><span>Manutenção dos paineis</span></p>
+                    <p className='heading'><ConstructionIcon /><span>Manutenção dos Painéis</span></p>
                 </heading>
 
                 <img src={manutem_img} alt="Arrumando Painel Solar" />
 
                 <div className='button_div'>
                     <div className='button_bigger'>
-                        <p>Próxima Manutenção</p>
+                        <p>Próxima manutenção</p>
                     </div>
                     <ClickAwayListener onClickAway={handleTooltipClose2}>
                         <div>
@@ -49,7 +49,7 @@ function ManuPainel() {
                                 disableFocusListener
                                 disableHoverListener
                                 disableTouchListener
-                                title="Manutenção, de painel x"
+                                title="Tempo para a próxima manutenção"
                                 sx={{ color: 'white', padding: 0, pl: '2rem' }}
                             >
                                 <Button onClick={handleTooltipOpen2}><HelpOutlineIcon /></Button>

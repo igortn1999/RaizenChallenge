@@ -43,7 +43,7 @@ function ServicoContratado() {
                     <div className='button_bigger'>
                         <p className='parcela'>Faltam</p>
                         <p className='parcela'>60</p>
-                        <p className='parcela'>Parcelas</p>
+                        <p className='parcela'>parcelas</p>
                     </div>
                     <ClickAwayListener onClickAway={handleTooltipClose1}>
                         <div className='tooltip-sc2'>
@@ -57,7 +57,7 @@ function ServicoContratado() {
                                 disableFocusListener
                                 disableHoverListener
                                 disableTouchListener
-                                title="Parcelas restantes para quitar os paineis"
+                                title="Parcelas restantes para quitar os painéis"
                                 sx={{ color: 'white', padding: 0, pl: 0 }}
                             >
                                 <Button onClick={handleTooltipOpen1}><HelpOutlineIcon /></Button>
@@ -70,7 +70,7 @@ function ServicoContratado() {
 
                 <div className='button_div'>
                     <div className='button_bigger'>
-                        <p>Próxima Manutenção</p>
+                        <p>Próxima manutenção</p>
                     </div>
                     <ClickAwayListener onClickAway={handleTooltipClose2}>
                         <div>
