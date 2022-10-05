@@ -1,4 +1,5 @@
 package com.app.raizen;
+import java.nio.charset.StandardCharsets;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -86,5 +87,12 @@ public class RaizenApplication {
 		pr.save(provider);
 		
 	}
-
+	
+	public static String encrypt(String string){
+		
+		return com.google.common.hash.Hashing.sha256()
+						.hashString(string, StandardCharsets.UTF_8)
+						.toString();
+		
+	}
 }
