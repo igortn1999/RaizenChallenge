@@ -1,4 +1,6 @@
 package com.app.raizen;
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,11 +9,16 @@ import org.springframework.context.event.EventListener;
 
 import com.app.raizen.models.Constants;
 import com.app.raizen.models.Provider;
+import com.app.raizen.models.User;
 import com.app.raizen.repositories.ConstantsRepository;
 import com.app.raizen.repositories.ProviderRepository;
+import com.app.raizen.repositories.UserRepository;
 
 @SpringBootApplication
 public class RaizenApplication {
+	
+	@Autowired
+	private UserRepository ur;
 	
 	@Autowired
 	private ConstantsRepository sqcr;
@@ -22,7 +29,13 @@ public class RaizenApplication {
 	@EventListener
 	public void appReady(ApplicationReadyEvent event) {
 		
-		if(sqcr.findAll().isEmpty() && pr.findAll().isEmpty()) {
+		if(sqcr.findAll().isEmpty() && pr.findAll().isEmpty() && ur.findAll().isEmpty()) {
+			
+			mockUser("raizenadmin", "raizenadmin",
+					"Raizen", "Admin",
+					"08070508000178", "canaldeetica@raizen.com",
+					null, "+55 11 2344-6200");
+			
 			sqcr.save(new Constants());
 			
 			mockProvider("Raízen", null,
@@ -44,7 +57,23 @@ public class RaizenApplication {
 		SpringApplication.run(RaizenApplication.class, args);
 	}
 	
-	private void mockProvider(String name, String surename, String cpfCnpj, String email, String service_type, String telephone) {
+	private void mockUser(String username, String password, String name, String surename, String cpfCnpj, String email, Date birthday, String telephone) {
+		User user = new User();
+		
+		user.setUsername(username);
+		user.setPassword(password);
+		user.setName(name);
+		user.setSurename(surename);
+		user.setCpfcnpj(cpfCnpj);
+		user.setEmail(email);
+		user.setBirthday(birthday);
+		user.setTelephone(telephone);
+		
+		ur.save(user);
+		
+	}
+	
+	private void mockProvider(String name, String surename, String cpfCnpj, String email, String service_type, String telephone){
 		Provider provider = new Provider();
 		
 		provider.setName(name);
