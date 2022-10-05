@@ -119,7 +119,7 @@ public class User {
 
 
 	public void setBirthday(Date birthday) {
-		this.birthday = birthday;
+		this.birthday = birthday == null ? new Date() : birthday;
 	}
 
 
