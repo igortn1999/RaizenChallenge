@@ -12,6 +12,7 @@ import PropTypes from 'prop-types';
 import CircularProgress from '@mui/material/CircularProgress';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import Switch from '@mui/material/Switch';
 
 
 
@@ -75,6 +76,11 @@ function SaudePainel() {
     return (
         <Layout>
             <div className="SaudePainel">
+                <section style={{"width":"80%",display:"flex",alignItems:"center"}}>
+                    <p style={{color:"black",fontSize:"1rem"}}>Agendamento automático</p>
+                <Switch defaultChecked color="secondary" label="revisão automática"/>
+                </section>
+                
                 <heading>
                     <p className='heading'><HealthAndSafetyIcon /><span>Saúde dos Painéis</span></p>
                 </heading>
@@ -97,7 +103,7 @@ function SaudePainel() {
                                 disableFocusListener
                                 disableHoverListener
                                 disableTouchListener
-                                title="Chame o serviço de manutenção para uma produção otimizada"
+                                title="Produção de energia dos seus paineis"
                                 sx={{ color: 'white', padding: 0, pl: '2rem',fontSize:"10rem" }}
                             >
                                 <Button onClick={handleTooltipOpen1}><HelpOutlineIcon /></Button>
@@ -127,7 +133,7 @@ function SaudePainel() {
                                 disableFocusListener
                                 disableHoverListener
                                 disableTouchListener
-                                title="Tempo até a próxima manutenção"
+                                title="Tempo até a próxima manutenção agendada"
                                 sx={{ color: 'white', padding: 0, pl: '2rem' }}
                             >
                                 <Button onClick={handleTooltipOpen2}><HelpOutlineIcon /></Button>
@@ -138,13 +144,6 @@ function SaudePainel() {
                         <p class='texto2'>110 dias</p>
                     </div>
                 </div>
-
-                <div className='button_amarelo'>
-                    <div className='button_bigger'>
-                        <p class='amarelo'>Contratar Manutenção</p>
-                    </div>
-                </div>
-
             </div>
         </Layout>
     );

@@ -56,6 +56,10 @@ function Home() {
                 </table>
             </div>
 
+            <Link to="/visao_geral" className='tabela'>
+                <button>Acompanhe a sua instalação</button>
+            </Link>
+
         </Layout>
     );
 }

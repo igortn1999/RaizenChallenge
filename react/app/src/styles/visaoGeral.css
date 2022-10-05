@@ -1,0 +1,10 @@
+.visaoGeral{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.visaoGeral h1{
+    text-align: center;
+}
+

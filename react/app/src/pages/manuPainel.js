@@ -62,9 +62,11 @@ function ManuPainel() {
 
                 </div>
 
-                <div className='button_amarelo'>
-                    <p class='amarelo'>Dúvidas sobre a manutenção</p>
-                </div>
+                <Link to="/lista_provedores" className='button_amarelo'>
+                    <div className='button_bigger'>
+                        <p class='amarelo'>Contratar Manutenção</p>
+                    </div>
+                </Link>
 
             </div>
         </Layout>

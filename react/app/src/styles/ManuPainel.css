@@ -44,8 +44,9 @@
     display: grid;
     grid-template-columns: auto;
     background-color:#FEB715;
-    border-radius: 1.5rem;
+    border-radius: 0.5rem;
     justify-content: center;
+    padding: 0.5rem;
 }
 
 .ManuPainel .button_amarelo p{

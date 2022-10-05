@@ -40,3 +40,7 @@
     display: flex;
     align-items: flex-end;
 }
+
+.back_btn:hover{
+    cursor: pointer;
+}

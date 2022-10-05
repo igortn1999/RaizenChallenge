@@ -1,6 +1,7 @@
 .AboutPage{
     background-color: #861F83;
     width: 100%;
+    height: 100%;
 }
 
 .AboutPage .topbar{
@@ -73,9 +74,9 @@
 .AboutPage figure{
     height: 15rem;
     display: flex;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    margin: 0;
     justify-content: center;
+    background-color: #861F83;
 }
 
 .AboutPage .graph{
@@ -84,3 +85,4 @@
     width: 15rem;
     background-repeat: no-repeat;
 }
+

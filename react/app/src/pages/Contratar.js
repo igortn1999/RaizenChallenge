@@ -103,7 +103,7 @@ function Contratacao() {
 
                 </div>
 
-                <button className='button_div button_bigger' onClick={(e)=>{
+{/*                 <button className='button_div button_bigger' onClick={(e)=>{
                     e.preventDefault();
                     console.log("ON")
                     axios.get(`${process.env.REACT_APP_ESP_URL}/on`).then((res)=>{
@@ -120,7 +120,7 @@ function Contratacao() {
                     }).catch((err)=>{
                         console.log(err);
                     })
-                }}>Desliga led</button>
+                }}>Desliga led</button> */}
 
 
 

@@ -20,11 +20,11 @@ function Financiamento() {
   function calcula_orcamento_solar(consumo_em_kwh,taxa_de_juros,tempo){
     var preco = 0.00;
     
-    if(consumo_em_kwh<200){
+    if(consumo_em_kwh<50){
         return undefined;
     }
 
-    if(consumo_em_kwh>=200 && consumo_em_kwh<350){
+    if(consumo_em_kwh>=50 && consumo_em_kwh<350){
         preco = 16000;
         return calculaJurosSimples(preco,taxa_de_juros,tempo)
     }
@@ -53,14 +53,14 @@ function Financiamento() {
         <h1>Em quanto tempo quer financiar?</h1>
         <section className="planos">
           <button className="finance_plan" onClick={(e)=>{
-            setJuros(1.5)
-            setTime(5)}}>5 anos</button>
+            setJuros(1.2)
+            setTime(1)}}>1 ano</button>
+          <button className="finance_plan" onClick={(e)=>{
+            setJuros(1.4)
+            setTime(3)}}>3 anos</button>
           <button className="finance_plan" onClick={(e)=>{
             setJuros(1.6)
-            setTime(10)}}>10 anos</button>
-          <button className="finance_plan" onClick={(e)=>{
-            setJuros(1.8)
-            setTime(15)}}>15 anos</button>
+            setTime(5)}}>5 anos</button>
         </section>
         
         {(KWH&&time)?
@@ -73,9 +73,11 @@ function Financiamento() {
             <h3 className="additional-info">{juros?juros:'X'}% a.m</h3>
             <h3>Valor total do projeto</h3>
             <h3 className="additional-info">R${calcula_orcamento_solar(KWH,juros,time)}</h3>
+            <h3>Valor das parcelas</h3>
+            <h3 className="additional-info">R${(calcula_orcamento_solar(KWH,juros,time)/(time*12)).toFixed(2)}</h3>
           </section>
         
-          <Link to="/lista_provedores">    
+          <Link to="/visao_geral">    
           <button className="next">Continuar</button>
           </Link>
         </section>

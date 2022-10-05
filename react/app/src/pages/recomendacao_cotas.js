@@ -32,7 +32,7 @@ function RecomendaCotas() {
                     }}></input>
                     <button onClick={(e) => {
                         e.preventDefault();
-                        formBody.set("user_id", 9);
+                        formBody.set("user_id", 8);
                         formBody.set("customer_consumption", consumo - 0);
 
                         axios.post(`${process.env.REACT_APP_BACK_URL}/api/sq/`, formBody, headers).then((res) => {
@@ -51,7 +51,7 @@ function RecomendaCotas() {
                     </section>
                 </form>
 
-                <Link to="/lista_provedores" id='contratar-btn'>
+                <Link to="/home" id='contratar-btn'>
                     Contratar
                 </Link>
 

@@ -20,6 +20,7 @@ import ManuPainel from './pages/manuPainel';
 import RecomendaCotas from './pages/recomendacao_cotas';
 import ListaProvedores from './pages/lista_provedores';
 import Financiamento from './pages/financiamento';
+import VisaoGeral from './pages/visaoGeral';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -37,6 +38,7 @@ root.render(
       <Route path="/recomendacao" element={<RecomendaCotas />} />
       <Route path="/financiamento" element={<Financiamento />} />
       <Route path="/sobre" element={<Sobre />} />
+      <Route path="visao_geral" element={<VisaoGeral />} />
       <Route path="/lista_provedores" element={<ListaProvedores />} />
       <Route path="*" element={<NotFound />} />
     </Routes>

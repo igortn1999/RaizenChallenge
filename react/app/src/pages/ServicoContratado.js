@@ -97,10 +97,10 @@ function ServicoContratado() {
 
                 </div>
 
-                <div className='button_amarelo'>
-                    <div className='button_bigger'>
-                        <p class='amarelo'>Adiantar Parcelas</p>
-                    </div>
+                <div className='button_div'>
+                    <Link to="/" className='button_bigger'>
+                            <p>Adiantar Parcelas</p>
+                    </Link>
                 </div>
 
             </div>

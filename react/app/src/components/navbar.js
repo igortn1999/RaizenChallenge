@@ -23,13 +23,9 @@ function Navbar(props) {
                 <p>Finanças</p>
             </Link>
 
-
-            <div className='option_navbar'>
-            </div>
-
-
-            <Link to="/contratacao" className='option_navbar2'><AddCircleOutlineIcon sx={specialIconStyle} /></Link>
-
+            <Link to="/contratacao" className='option_navbar' id="escudo"><AddCircleOutlineIcon sx={iconStyle} />
+                <p>Contratação</p>
+            </Link>
             <Link to="/saude_painel" className='option_navbar' id="escudo"><HealthAndSafetyIcon sx={iconStyle} />
                 <p>Saúde</p>
             </Link>
