@@ -1,4 +1,5 @@
 package com.app.raizen;
+import java.nio.charset.StandardCharsets;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,10 +8,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 
+import com.app.raizen.models.Address;
 import com.app.raizen.models.Constants;
+import com.app.raizen.models.Device;
 import com.app.raizen.models.Provider;
 import com.app.raizen.models.User;
+import com.app.raizen.repositories.AddressRepository;
 import com.app.raizen.repositories.ConstantsRepository;
+import com.app.raizen.repositories.DeviceRepository;
 import com.app.raizen.repositories.ProviderRepository;
 import com.app.raizen.repositories.UserRepository;
 
@@ -21,34 +26,49 @@ public class RaizenApplication {
 	private UserRepository ur;
 	
 	@Autowired
-	private ConstantsRepository sqcr;
+	private ConstantsRepository cr;
 	
 	@Autowired
 	private ProviderRepository pr;
 	
+	@Autowired
+	private DeviceRepository dr;
+	
+	@Autowired
+	private AddressRepository ar;
+	
 	@EventListener
 	public void appReady(ApplicationReadyEvent event) {
 		
-		if(sqcr.findAll().isEmpty() && pr.findAll().isEmpty() && ur.findAll().isEmpty()) {
+		if(ur.findAll().isEmpty() 
+				&& cr.findAll().isEmpty()
+				&& pr.findAll().isEmpty() 
+				&& dr.findAll().isEmpty()
+				&& ar.findAll().isEmpty()) {
 			
 			mockUser("raizenadmin", "raizenadmin",
 					"Raizen", "Admin",
 					"08070508000178", "canaldeetica@raizen.com",
 					null, "+55 11 2344-6200");
 			
-			sqcr.save(new Constants());
+			cr.save(new Constants());
 			
-			mockProvider("Raízen", null,
-					"08070508000178", "canaldeetica@raizen.com",
-					"Instalação/Venda", "+55 11 2344-6200");
+			mockProvider("Lucas", "Santos",
+					"18374836509", "lsantos@ficticio.com",
+					"Instalação", "+55 11 8877-6655");
 			
-			mockProvider("WEG", null,
-					"11111111111111", "weg@ficticio.com.br",
-					"Instalação", "+55 11 1234-4321");
+			mockProvider("Roberto", "Matos",
+					"09647365037", "robmatos@ficticio.com.br",
+					"Manutenção", "+55 11 1234-4321");
 			
-			mockProvider("Bosch", null,
-					"22222222222222", "bosch@ficticio.com.br",
+			mockProvider("João", "Silva",
+					"9363825036", "silvajoao@ficticio.com.br",
 					"Instalação", "+55 11 1234-5678");
+			
+			Address addr= mockAddress("Rua São Jorge", 200,
+										"Ap 1", "96736-047");
+			
+			mockDevice("Painel Solar", 65.0, null, addr);
 		}
 		
 	}
@@ -86,5 +106,36 @@ public class RaizenApplication {
 		pr.save(provider);
 		
 	}
-
+	
+	private Address mockAddress(String street_name, int number, String complement, String zipcode) {
+		Address address = new Address();
+		
+		address.setStreetName(street_name);
+		address.setNumber(number);
+		address.setComplement(complement);
+		address.setZipCode(zipcode);
+		
+		ar.save(address);
+		
+		return address;
+	}
+	
+	private void mockDevice(String name, double consumption, Date date, Address address) {
+		Device device = new Device();
+		
+		device.setName(name);
+		device.setConsumption(consumption);
+		device.setLast_maintenance(date);
+		device.setAddress(address);
+		
+		dr.save(device);
+	}
+	
+	public static String encrypt(String string){
+		
+		return com.google.common.hash.Hashing.sha256()
+						.hashString(string, StandardCharsets.UTF_8)
+						.toString();
+		
+	}
 }
