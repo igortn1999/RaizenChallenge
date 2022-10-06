@@ -12,6 +12,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
+import com.app.raizen.RaizenApplication;
+
 @Entity
 @Table(name = "Users", schema = "public", uniqueConstraints = @UniqueConstraint(columnNames = { "username", "CPFCNPJ" }))
 public class User {
@@ -138,13 +140,14 @@ public class User {
 	}
 
 	public void setPassword(String password) {
-		try {
-			MessageDigest digest = MessageDigest.getInstance("SHA-256");
-			String hash = digest.digest(password.getBytes(StandardCharsets.UTF_8)).toString();
-			this.password = hash;
-		} catch (NoSuchAlgorithmException e) {
-			e.printStackTrace();
-		}
+//		try {
+//			MessageDigest digest = MessageDigest.getInstance("MD5");
+//			String hash = digest.digest(password.getBytes(StandardCharsets.UTF_8)).toString();
+//			this.password = hash;
+//		} catch (NoSuchAlgorithmException e) {
+//			e.printStackTrace();
+//		}
+		this.password = RaizenApplication.encrypt(password);
 		
 	}
 
@@ -156,7 +159,5 @@ public class User {
 	public void setRoadmap_step(int roadmap_step) {
 		this.roadmap_step = roadmap_step;
 	}
-	
-	
 
 }
