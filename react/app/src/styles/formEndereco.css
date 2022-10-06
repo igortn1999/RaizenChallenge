@@ -1,0 +1,59 @@
+.formEndereco .form{
+    display: flex;
+    flex-direction: column;
+}
+
+.formEndereco{
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+    padding-bottom: 10rem;
+}
+
+.formEndereco input,.formEndereco p{
+    font-size: 1.2rem;
+}
+
+
+.formEndereco input{
+    padding: 0.5rem;
+    border-color: transparent;
+    border-bottom-color: rgba(0,0,0,.3);
+    border-style: solid;
+}
+
+.formEndereco input:focus{
+    border-radius: 0.3rem;
+    outline: 2px solid rgba(134, 31, 131, 0.6);
+    border-color: transparent;
+
+}
+
+.formEndereco button{
+    margin-top: 2rem;
+}
+
+.formEndereco label{
+    font-weight: 600;
+    opacity: 0.5;
+    margin-top: 1rem;
+}
+
+.formEndereco h4{
+    width: 15rem;
+}
+
+.button_div{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    background-color:#861F83;
+    border:none;
+    border-radius: 0.5rem;
+    padding:0.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color:#FFF;
+    font-size: 1.2rem;
+
+}

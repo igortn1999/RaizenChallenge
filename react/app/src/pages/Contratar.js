@@ -70,7 +70,7 @@ function Contratacao() {
 
 
                 <div className='button_div'>
-                    <Link to="/lista_provedores" className='button_bigger'>
+                    <Link to="/aquisicao" className='button_bigger'>
                         <p>Adquirir Paineis</p>
                     </Link>
 

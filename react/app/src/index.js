@@ -21,6 +21,10 @@ import RecomendaCotas from './pages/recomendacao_cotas';
 import ListaProvedores from './pages/lista_provedores';
 import Financiamento from './pages/financiamento';
 import VisaoGeral from './pages/visaoGeral';
+import FormularioCep from './pages/formulario_end';
+import Resumo from './pages/resumo';
+import Aquisicao from './pages/aquisicao';
+export const Context = React.createContext({});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -28,8 +32,11 @@ root.render(
     <Routes>
       <Route path="/" index element={<PreLoginPage />} />
       <Route path="/login" index element={<LoginPage />} />
+      <Route path="/resumo" index element={<Resumo />} />
       <Route path="/cadastro" index element={<Cadastro />} />
+      <Route path="/aquisicao" index element={<Aquisicao />} />
       <Route path="/integrantes" element={<Integrantes />} />
+      <Route path="/formulario_cep" element={<FormularioCep />} />
       <Route path="/home" index element={<Home/>} />
       <Route path="/contratacao" element={<Contratacao />} />
       <Route path="/servico_contratado" element={<ServicoContratado />} />
