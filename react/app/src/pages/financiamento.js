@@ -8,7 +8,7 @@ function Financiamento() {
   const [KWH, setKWH] = useState(undefined);
   const [time, setTime] = useState(undefined);
   const [juros,setJuros] = useState(undefined)
-
+  //id = 1
 
   function calculaJurosSimples(preco,taxa_de_juros,tempo_em_anos){
     var meses = 12*tempo_em_anos;
@@ -36,8 +36,8 @@ function Financiamento() {
         preco = 47000;
         return calculaJurosSimples(preco,taxa_de_juros,tempo)
     }
-    else if(consumo_em_kwh>1000){
-        return undefined
+    else{
+        return 100000;
     }
   }
 

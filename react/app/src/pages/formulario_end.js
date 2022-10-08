@@ -1,12 +1,13 @@
 import '../styles/formEndereco.css';
 import Layout from './hocs/Layout';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { React, useState } from 'react';
 import axios from 'axios';
 
 
 function FormularioCep(props) {
     const [pedido, setPedido] = useState(undefined);
+    const navigate = useNavigate();
 
 
 
@@ -69,17 +70,13 @@ function FormularioCep(props) {
                     <label for="time">Horário</label>
                     <input type="time" id="time" onChange={(e) => {
                         var newEndereco = pedido;
-                        newEndereco.time = e.target.value;
+                        newEndereco.date = `${newEndereco.date} ${e.target.value}:00`;
                         setPedido(newEndereco);
                     }}></input>
                 </form>
-                <button onClick={(e)=>{
-                    e.preventDefault();
-                    console.log(pedido)
-                }}>Teste</button>
-                <Link to="/resumo" style={{width:"60%"}}>
-                <button className='button_div'>Submeter</button>
-                </Link>
+                <button className='button_div' style={{width:"60%"}} onClick={(e)=>{
+                    navigate(`/resumo`);
+                }}>Submeter</button>
                 
             </div>
         </Layout>
