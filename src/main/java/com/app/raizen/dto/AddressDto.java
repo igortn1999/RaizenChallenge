@@ -1,45 +1,69 @@
 package com.app.raizen.dto;
 
-import java.util.List;
-
-import com.app.raizen.models.Device;
+import com.app.raizen.models.User;
 
 public class AddressDto {
 	
-//	private int userid;
-	private String streetName;
+	private int id;
+	private String zip_code;
+	private String state;
+	private String city;
+	private String neighborhood;
+	private String street_name;
 	private int number;
 	private String complement;
-	private String zipCode;
-	private List<Device> devices;
+	private User user;
 	
 	public AddressDto() {
 		
 	}
 
-	public AddressDto(String streetName, int number, String complement, String zipCode, Device device) {
-//		this.userid = userid;
-		this.streetName = streetName;
-		this.number = number;
-		this.complement = complement;
-		this.zipCode = zipCode;
-		addDevice(device);
+	public int getId() {
+		return id;
 	}
 
-//	public int getUserid() {
-//		return userid;
-//	}
-//
-//	public void setUserid(int userid) {
-//		this.userid = userid;
-//	}
-
-	public String getAddress() {
-		return streetName;
+	public void setId(int id) {
+		this.id = id;
 	}
 
-	public void setAddress(String address) {
-		this.streetName = address;
+	public String getZip_code() {
+		return zip_code;
+	}
+
+	public void setZip_code(String zip_code) {
+		this.zip_code = zip_code;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getNeighborhood() {
+		return neighborhood;
+	}
+
+	public void setNeighborhood(String neighborhood) {
+		this.neighborhood = neighborhood;
+	}
+
+	public String getStreet_name() {
+		return street_name;
+	}
+
+	public void setStreet_name(String street_name) {
+		this.street_name = street_name;
 	}
 
 	public int getNumber() {
@@ -58,30 +82,12 @@ public class AddressDto {
 		this.complement = complement;
 	}
 
-	public String getZipCode() {
-		return zipCode;
+	public User getUser() {
+		return user;
 	}
 
-	public void setZipCode(String zipCode) {
-		this.zipCode = zipCode;
-	}
-
-	public String getStreetName() {
-		return streetName;
-	}
-
-	public void setStreetName(String streetName) {
-		this.streetName = streetName;
-	}
-
-	public List<Device> getDevices() {
-		return devices;
-	}
-
-	public void addDevice(Device device) {
-		this.devices.add(device);
-	}
-
-
+	public void setUser(User user) {
+		this.user = user;
+	}	
 
 }

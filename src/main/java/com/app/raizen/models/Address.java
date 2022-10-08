@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
@@ -15,13 +16,25 @@ public class Address {
 	@GeneratedValue
 	private int id;
 	
-//	@NotNull
-//	@Column(name = "userid")
-//	private int userid;
+	@NotNull
+	@Column(name = "zip_code")
+	private String zip_code;
 	
 	@NotNull
-	@Column(name = "streetName")
-	private String streetName;
+	@Column(name = "state")
+	private String state;
+	
+	@NotNull
+	@Column(name = "city")
+	private String city;
+	
+	@NotNull
+	@Column(name = "neighborhood")
+	private String neighborhood;
+	
+	@NotNull
+	@Column(name = "street_name")
+	private String street_name;
 	
 	@NotNull
 	@Column(name = "number")
@@ -31,11 +44,11 @@ public class Address {
 	private String complement;
 	
 	@NotNull
-	@Column(name = "zipCode")
-	private String zipCode;
+	@ManyToOne
+	private User user;
 	
 //	@OneToMany(mappedBy = "address")//DO NOT USE THIS IN JAVA SPRING!!!!!!
-//	private List<Device> devices;
+//	private List<Device> devices;//CAUSES MEMORY LEAK
 	
 	public Address() {
 		//The framework will take care of creating and setting models.
@@ -50,12 +63,44 @@ public class Address {
 		this.id = id;
 	}
 
-	public String getStreetName() {
-		return streetName;
+	public String getZip_code() {
+		return zip_code;
 	}
 
-	public void setStreetName(String streetName) {
-		this.streetName = streetName;
+	public void setZip_code(String zip_code) {
+		this.zip_code = zip_code;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getNeighborhood() {
+		return neighborhood;
+	}
+
+	public void setNeighborhood(String neighborhood) {
+		this.neighborhood = neighborhood;
+	}
+
+	public String getStreet_name() {
+		return street_name;
+	}
+
+	public void setStreet_name(String street_name) {
+		this.street_name = street_name;
 	}
 
 	public int getNumber() {
@@ -74,12 +119,13 @@ public class Address {
 		this.complement = complement;
 	}
 
-	public String getZipCode() {
-		return zipCode;
+	public User getUser() {
+		return user;
 	}
 
-	public void setZipCode(String zipCode) {
-		this.zipCode = zipCode;
+	public void setUser(User user) {
+		this.user = user;
 	}
-	
+
+		
 }
