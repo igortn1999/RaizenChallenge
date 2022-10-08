@@ -8,6 +8,10 @@ import axios from 'axios';
 function FormularioCep(props) {
     const [pedido, setPedido] = useState(undefined);
     const navigate = useNavigate();
+    
+    var headers = {
+        'Content-Type': 'application/json'
+    }
 
 
 
@@ -51,7 +55,9 @@ function FormularioCep(props) {
                     <label for="no">Número</label>
                     <input type="number" id="no" onChange={(e) => {
                         var newEndereco = pedido;
-                        newEndereco.no = e.target.value;
+                        newEndereco.zip_code = newEndereco.cep;
+                        delete newEndereco.cep;
+                        newEndereco.number = e.target.value;
                         setPedido(newEndereco);
                     }}></input>
                     <label for="complement">Complemento</label>
@@ -71,11 +77,15 @@ function FormularioCep(props) {
                     <input type="time" id="time" onChange={(e) => {
                         var newEndereco = pedido;
                         newEndereco.date = `${newEndereco.date} ${e.target.value}:00`;
+                        newEndereco.value = 10000;
                         setPedido(newEndereco);
                     }}></input>
                 </form>
                 <button className='button_div' style={{width:"60%"}} onClick={(e)=>{
-                    navigate(`/resumo`);
+                    axios.post(`${process.env.REACT_APP_BACK_URL}/api/addresses`, pedido, headers).then((res) => { 
+                        console.log(res.data); 
+                    })
+                    //navigate(`/resumo`);
                 }}>Submeter</button>
                 
             </div>
