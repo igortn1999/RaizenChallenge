@@ -19,10 +19,6 @@ public class Device {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	
-//	@NotNull
-//	@Column(name = "userid")
-//	private int userid;
-	
 	@Column(name="name")
 	private String name;
 	
@@ -34,7 +30,11 @@ public class Device {
 	private Address address;
 	
 	@Column(name="last_maintenance")
-	private Date last_maintenance;//must be carefull with date format
+	private Date last_maintenance;
+	//must be carefull with date format
+	
+	@ManyToOne
+	public Order order;
 
 	public Device() {
 		
@@ -79,5 +79,13 @@ public class Device {
 	public void setLast_maintenance(Date last_maintenance) {
 		this.last_maintenance = last_maintenance;
 	}
-		
+
+	public Order getOrder() {
+		return order;
+	}
+
+	public void setOrder(Order order) {
+		this.order = order;
+	}
+	
 }
