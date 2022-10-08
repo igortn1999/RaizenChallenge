@@ -33,8 +33,8 @@ public class Address {
 	private String neighborhood;
 	
 	@NotNull
-	@Column(name = "street_name")
-	private String street_name;
+	@Column(name = "street")
+	private String street;
 	
 	@NotNull
 	@Column(name = "number")
@@ -95,12 +95,12 @@ public class Address {
 		this.neighborhood = neighborhood;
 	}
 
-	public String getStreet_name() {
-		return street_name;
+	public String getStreet() {
+		return street;
 	}
 
-	public void setStreet_name(String street_name) {
-		this.street_name = street_name;
+	public void setStreet(String street) {
+		this.street = street;
 	}
 
 	public int getNumber() {

@@ -114,14 +114,14 @@ public class RaizenApplication {
 		
 	}
 	
-	private Address mockAddress(String zip_code, String state, String city, String neighborhood, String street_name, int number, String complement, User user) {
+	private Address mockAddress(String zip_code, String state, String city, String neighborhood, String street, int number, String complement, User user) {
 		Address address = new Address();
 		
 		address.setZip_code(zip_code);
 		address.setState(state);
 		address.setCity(city);
 		address.setNeighborhood(neighborhood);
-		address.setStreet_name(street_name);
+		address.setStreet(street);
 		address.setNumber(number);
 		address.setComplement(complement);
 		address.setUser(user);
