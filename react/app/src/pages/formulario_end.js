@@ -21,7 +21,7 @@ function FormularioCep(props) {
                 <h1>Preencha seu endereço</h1>
                 <form className='form'>
                     <label for="cep">CEP</label>
-                    <input placeholder='12345123' id="cep" onChange={(e) => {
+                    <input placeholder='04618030' id="cep" onChange={(e) => {
                         if (e.target.value.length === 8) {
                             axios.get(`https://brasilapi.com.br/api/cep/v2/${e.target.value}`).then((res) => {
                             delete res.data.location;
@@ -53,7 +53,7 @@ function FormularioCep(props) {
                         </>
                     }
                     <label for="no">Número</label>
-                    <input type="number" id="no" onChange={(e) => {
+                    <input type="number" id="no" placeholder='54' onChange={(e) => {
                         var newEndereco = pedido;
                         newEndereco.zip_code = newEndereco.cep;
                         delete newEndereco.cep;

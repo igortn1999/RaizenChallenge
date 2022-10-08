@@ -13,24 +13,28 @@ function Resumo(props) {
 
     useEffect(()=>{
         axios.get(`${process.env.REACT_APP_BACK_URL}/api/orders/`).then((res) => { 
+            console.log(res.data);
             setOrder(res.data);
         })
     },[])
-
-    return (
+    
+    return(
+        order?
+        <>
         <Layout>
             <div className="formEndereco">
                 <h1>Sua avaliação foi marcada!</h1>
-                <h3>O Prestador {"Welligton"}</h3> 
-                <h3>vai no endereço X as Xh no dia D</h3>
-                <h1>Resumo do pedido:</h1>
-
-"Instalação Painel Solar"
-"Preço estimado"
-"Parcelas"
+                <h3>Prestador de Serviço </h3>
+                <h3>{"Welligton"}</h3> 
+                <h3>Endereço</h3>
+                <h3>{order[0].address.street_name}, {order[0].address.number} </h3>
+                <h3>Data</h3>
+                <h3>{order[0].date.split("T")[0].replaceAll("-","/")}</h3>
+                <h3>Horário</h3>
+                <h3>{order[0].date.split("T")[1].slice(0,5)}</h3>
             </div>
-        </Layout>
-    );
+        </Layout></>:<h1>Carregando</h1>
+    )
 }
 
 export default Resumo;
