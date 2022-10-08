@@ -46,7 +46,7 @@ public class RaizenApplication {
 				&& dr.findAll().isEmpty()
 				&& ar.findAll().isEmpty()) {
 			
-			mockUser("raizenadmin", "raizenadmin",
+			User user = mockUser("raizenadmin", "raizenadmin",
 					"Raizen", "Admin",
 					"08070508000178", "canaldeetica@raizen.com",
 					null, "+55 11 2344-6200");
@@ -65,8 +65,13 @@ public class RaizenApplication {
 					"9363825036", "silvajoao@ficticio.com.br",
 					"Instalação", "+55 11 1234-5678");
 			
-			Address addr= mockAddress("Rua São Jorge", 200,
-										"Ap 1", "96736-047");
+			mockAddress("01547000", "SP",
+						"São Paulo", "Jardim da Glória",
+						"Rua Cláudio Rossi", 572, "Casa", user);
+			
+			Address addr = mockAddress("04618030", "SP",
+							"São Paulo", "Campo Belo",
+							"Rua Edison", 200, "Ap. 54", user);
 			
 			mockDevice("Painel Solar", 65.0, null, addr);
 		}
@@ -77,7 +82,7 @@ public class RaizenApplication {
 		SpringApplication.run(RaizenApplication.class, args);
 	}
 	
-	private void mockUser(String username, String password, String name, String surename, String cpfCnpj, String email, Date birthday, String telephone) {
+	private User mockUser(String username, String password, String name, String surename, String cpfCnpj, String email, Date birthday, String telephone) {
 		User user = new User();
 		
 		user.setUsername(username);
@@ -90,6 +95,8 @@ public class RaizenApplication {
 		user.setTelephone(telephone);
 		
 		ur.save(user);
+		
+		return user;
 		
 	}
 	
@@ -107,13 +114,17 @@ public class RaizenApplication {
 		
 	}
 	
-	private Address mockAddress(String street_name, int number, String complement, String zipcode) {
+	private Address mockAddress(String zip_code, String state, String city, String neighborhood, String street_name, int number, String complement, User user) {
 		Address address = new Address();
 		
-		address.setStreetName(street_name);
+		address.setZip_code(zip_code);
+		address.setState(state);
+		address.setCity(city);
+		address.setNeighborhood(neighborhood);
+		address.setStreet_name(street_name);
 		address.setNumber(number);
 		address.setComplement(complement);
-		address.setZipCode(zipcode);
+		address.setUser(user);
 		
 		ar.save(address);
 		
