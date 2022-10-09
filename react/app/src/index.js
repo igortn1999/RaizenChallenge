@@ -14,7 +14,7 @@ import SaudePainel from './pages/saudePainel';
 import {
   BrowserRouter,
   Routes,
-  Route,
+  Route
 } from "react-router-dom";
 import ManuPainel from './pages/manuPainel';
 import RecomendaCotas from './pages/recomendacao_cotas';
@@ -32,7 +32,7 @@ root.render(
     <Routes>
       <Route path="/" index element={<PreLoginPage />} />
       <Route path="/login" index element={<LoginPage />} />
-      <Route path="/resumo" index element={<Resumo />} />
+      <Route path="/resumo/:tipo" index element={<Resumo />} />
       <Route path="/cadastro" index element={<Cadastro />} />
       <Route path="/aquisicao" index element={<Aquisicao />} />
       <Route path="/integrantes" element={<Integrantes />} />

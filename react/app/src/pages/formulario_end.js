@@ -82,10 +82,10 @@ function FormularioCep(props) {
                     }}></input>
                 </form>
                 <button className='button_div' style={{width:"60%"}} onClick={(e)=>{
-                    axios.post(`${process.env.REACT_APP_BACK_URL}/api/addresses`, pedido, headers).then((res) => { 
+                   /*  axios.post(`${process.env.REACT_APP_BACK_URL}/api/addresses`, pedido, headers).then((res) => { 
                         console.log(res.data); 
-                    })
-                    //navigate(`/resumo`);
+                    }) */
+                    navigate(`/resumo/avaliação`);
                 }}>Submeter</button>
                 
             </div>

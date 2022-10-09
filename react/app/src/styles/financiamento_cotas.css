@@ -1,4 +1,4 @@
-.financiamento{
+.financiamento_cotas{
     width: 100%;
     display: flex;
     align-items: center;
@@ -8,13 +8,14 @@
 }
 
 
-.financiamento form{
+.financiamento_cotas form{
     width: 100%;
-    display: flex;
+    display: grid;
     justify-content: center;
+    justify-items: center;
 }
 
-.financiamento form input{
+.financiamento_cotas form input{
     font-size: 1.5rem;
     padding: 0.6rem;
     width: 60%;
@@ -23,11 +24,11 @@
     border-color: rgba(0,0,0,0.3);
 }
 
-.financiamento h1{
+.financiamento_cotas h1{
     text-align: center;
 }
 
-.financiamento .finance_plan{
+.financiamento_cotas .finance_plan{
     border: 1px solid rgba(0,0,0,0.3);
     background-color: white;
     height: 5rem;
@@ -37,19 +38,19 @@
     font-weight: 600;
 }
 
-.financiamento .planos{
+.financiamento_cotas .planos{
     display: grid;
     grid-template-columns: auto auto auto;
     width: 80%;
     justify-content: space-between;
 }
 
-.financiamento .planos button:focus{
+.financiamento_cotas .planos button:focus{
     background-color: #861F83;
     color:white;
 }
 
-.financiamento .next{
+.financiamento_cotas .next{
     margin-top: 1rem;
     font-size: 1.2rem;
     border-radius: 0.5rem;
@@ -59,32 +60,39 @@
     background-color: transparent;
 }
 
-.financiamento .next:focus{
+.financiamento_cotas .next:focus{
     background-color: #FEB715;
     border-color: #FEB715;
     color: white;
 }
 
 
-.financiamento .results{
+.financiamento_cotas .results{
     width: 80%;
 }
 
-.financiamento .primary-info{
+.financiamento_cotas .primary-info{
     display: grid;
     grid-template-columns: auto auto;
     font-weight: 500;
 }
 
-.financiamento .results h2{
+.financiamento_cotas .results h2{
     border-bottom: 1px solid rgba(0,0,0,0.2);
     margin-top: 3rem;
 }
 
-.financiamento .results .additional-info{
+.financiamento_cotas .results .additional-info{
     font-weight: 600;
 }
 
-.financiamento .contratacao-btn{
+.financiamento_cotas .contratacao-btn{
     background-color: #861F83;
+    width: 70%;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border: 1px solid transparent;
+    color:#FFF;
 }

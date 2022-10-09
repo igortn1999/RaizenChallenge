@@ -1,0 +1,45 @@
+.formResumo{
+    display: grid;
+    grid-template-columns: auto;
+    padding-bottom: 10rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.formResumo .formLabel{
+    margin-bottom: 0.1rem;
+    color: rgba(0,0,0,0.4);
+    font-weight: 600;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    display: flex;
+}
+
+.datetime{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+
+.formResumo .btn-div{
+    width: 100%;
+    display: grid;
+    justify-items: center;
+}
+
+.formResumo .btn-div button{
+    padding: 1rem;
+    width: 80%;
+    font-weight: 600;
+    font-size: 1.2rem;
+    background-color: #861F83;
+    border-color: #861F83;
+    color: #FFF;
+    border-style: solid;
+    border-radius: 0.5rem;
+}
+
+.formResumo span{
+    display: grid;
+    grid-template-columns: auto auto;
+    text-align: center;
+}

@@ -47,12 +47,17 @@
 }
 
 .logo{
-    background-image: url(../static/logo.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 12rem;
     width: 12rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.6rem;
+    background-color: transparent;
+    border: none;
 }
 
 .lampada{

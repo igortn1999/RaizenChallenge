@@ -39,17 +39,17 @@ function ListaProvedores() {
     return (
         <Layout>
             <div className="contratacao provedores">
-                <h1>Escolha seu provedor</h1>
+                <h1>Serviço de Manutenção</h1>
                 {
                     providers.map((e,i) => {
                         return <div className='provedor' key={i}>
-                            <Link to="/" className='link'>
+                            <Link to="/resumo/manutenção" className='link'>
                                 <div className='Header'>
-                                    <p className='titulo'>{e.name}</p>
-                                    <div className='rating'><StarIcon sx={{ 'color': 'rgba(245, 179, 66,0.8)' }} /><p>{randomIntFromInterval(3, 5)}</p></div>
+                                    <p className='titulo'>{e.name} {e.surename}</p>
+                                    <div className='rating'>{/* <StarIcon sx={{ 'color': 'rgba(245, 179, 66,0.8)' }} /><p>{randomIntFromInterval(3, 5)}</p> */}</div>
                                 </div>
                                 <div className='phone'>
-                                <p className='price_range'>{randomPriceFromInterval(1,4)}</p>
+                                <p className='price_range'>{e.service_type}</p>
                                     <p></p>
                                 </div>
                                 <div className='phone'>

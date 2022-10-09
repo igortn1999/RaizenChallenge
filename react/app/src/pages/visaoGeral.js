@@ -26,7 +26,7 @@ function VisaoGeral(props) {
         <Layout>
             <div className="visaoGeral">
                 <h1>Acompanhe a sua instalação</h1>
-                <Timeline sx={{mb:"8rem"}}>
+                <Timeline sx={{mb:"2rem"}}>
                     <TimelineItem>
                         <TimelineSeparator>
                             <TimelineDot color="secondary">
@@ -43,7 +43,7 @@ function VisaoGeral(props) {
                     <TimelineItem>
                         <TimelineSeparator>
                             <TimelineConnector />
-                            <TimelineDot color="secondary">
+                            <TimelineDot>
                             <DoneIcon />
                             </TimelineDot>
                             <TimelineConnector />
@@ -75,16 +75,16 @@ function VisaoGeral(props) {
                             <DoneIcon />
                             </TimelineDot>
                         </TimelineSeparator>
-                        <TimelineContent sx={{ py: '12px', px: 2 }}>
+                        <TimelineContent sx={{ py: '12spx', px: 2 }}>
                             <Typography variant="h6" component="span">
-                                Avaliação
+                                Período de testes
                             </Typography>
                         </TimelineContent>
                     </TimelineItem>
             
                 </Timeline>
-
             </div>
+
         </Layout>
     );
 }
