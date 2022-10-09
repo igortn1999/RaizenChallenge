@@ -61,17 +61,17 @@ public class RaizenApplication {
 					"09647365037", "robmatos@ficticio.com.br",
 					"Manutenção", "+55 11 1234-4321");
 			
-			mockProvider("João", "Silva",
-					"9363825036", "silvajoao@ficticio.com.br",
-					"Instalação", "+55 11 1234-5678");
+//			mockProvider("João", "Silva",
+//					"9363825036", "silvajoao@ficticio.com.br",
+//					"Instalação", "+55 11 1234-5678");
 			
-			mockAddress("01547000", "SP",
+			Address addr = mockAddress("01547000", "SP",
 						"São Paulo", "Jardim da Glória",
 						"Rua Cláudio Rossi", 572, "Casa", user);
 			
-			Address addr = mockAddress("04618030", "SP",
-							"São Paulo", "Campo Belo",
-							"Rua Edison", 200, "Ap. 54", user);
+//			Address addr = mockAddress("04618030", "SP",
+//							"São Paulo", "Campo Belo",
+//							"Rua Edison", 200, "Ap. 54", user);
 			
 			mockDevice("Painel Solar", 65.0, null, addr);
 		}
