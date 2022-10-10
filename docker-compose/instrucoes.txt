@@ -5,4 +5,4 @@
 3. Dentro desse novo arquivo, alterar as propriedades como nome de usuário e senha e salvar
 4. Ainda dentro da pasta, executar o seguinte comando:
         $ docker-compose -f <NOME_DO_ARQUIVO>.yml up -d
-5. Atualizar o arquivo .properties com as informações corretas de driver e porta
+5. Atualizar o arquivo .properties com as informações corretas de usuário e senha
