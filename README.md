@@ -15,7 +15,7 @@ Turma:
 ## Conteúdo:
    1. [Problemática](#1-problemática)
    2. [Escopo do Web App](#2-escopo-do-web-app)
-   3. [Estrutura dos diretórios](#)
+   3. [Estrutura dos diretórios](#3-estrutura-dos-diretórios)
    4. [Como Rodar a aplicação](#4-como-rodar-a-aplicação)
    
 ## 1. Problemática
