@@ -18,7 +18,7 @@ function Resumo(props) {
     const [visible, setVisible] = useState(false);
 
     useEffect(() => {
-        axios.get(`${process.env.REACT_APP_BACK_URL}/api/addresses`).then((res) => {
+        axios.get(`${process.env.REACT_APP_BACK_URL}/api/orders`).then((res) => {
             console.log(res.data);
             setOrder(res.data);
         })
@@ -42,11 +42,11 @@ function Resumo(props) {
                         <h3 className="formLabel">Prestador de Serviço </h3>
                         <h3>{providers[0].name} {providers[0].surename}</h3>
                         <h3 className="formLabel">Endereço</h3>
-                        <h3>{order[0].street}, {order[0].number} </h3>
+                        <h3>{order[0].address.street}, {order[0].address.number} </h3>
 
 
                         <h3 className="formLabel"> <CalendarTodayIcon /> Data</h3>
-                        <h3>{order[0].user.birthday.split("T")[0].replaceAll("-", "/")}</h3>
+                        <h3>{order[0].date.split("T")[0].replaceAll("-", "/")}</h3>
 
                         <h3 className="formLabel"> <AccessTimeIcon />Horário</h3>
 
