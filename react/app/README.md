@@ -10,6 +10,82 @@ TODO:
 - Pages - Pasta com páginas, por exemplo a página de Login, a Home...
 
 
+## Telas do app:
+
+### Tela inicial:
+
+![inicio](/assets/telas/inicio.png)
+
+### Proposta do app:
+
+![proposta](/assets/telas/proposta.png)
+
+
+
+### Login:
+
+![login](/assets/telas/login.png)
+
+
+### Cadastro:
+
+![cadastro](/assets/telas/cadastro.png)
+
+### Home:
+
+![home](/assets/telas/home.png)
+![home2](/assets/telas/home_demo.png)
+
+
+### Finanças:
+
+![financas](/assets/telas/financas.png)
+
+
+## Fluxo de contratação
+
+![contratacao](/assets/telas/contratacao.png)
+![contratacao_2](/assets/telas/contratacao_2.png)
+
+
+## Financiamento de um painel
+
+![financiamento](/assets/telas/financiamento.png)
+![visao_geral](/assets/telas/visao_geral.png)
+
+
+## Aquisição de painel com dinheiro próprio
+
+![aquisicao](/assets/telas/aquisicao.png)
+![form_endereco](/assets/telas/form_endereco.png)
+![form_endereco2](/assets/telas/form_endereco2.png)
+![avaliacao](/assets/telas/avaliacao.png)
+![visao_geral](/assets/telas/visao_geral.png)
+
+
+## Aquisição de cotas solares
+
+![cotas](/assets/telas/cotas.png)
+![cotas2](/assets/telas/cotas2.png)
+
+
+## Saude dos Paineis e manutenção preventiva automática
+
+![saude_paineis](/assets/telas/saude_paineis.png)
+
+
+## Contratação de Manutenção
+
+![manutencao](/assets/telas/manutencao.png)
+![lista_provedores](/assets/telas/provedor.png)
+![manutencao2](/assets/telas/manutencao2.png)
+
+
+### Integrantes do grupo:
+
+![integrantes](/assets/telas/integrantes.png)
+
+
 ## Rotas
 Para adicionar ou remover rotas acesse:
 
