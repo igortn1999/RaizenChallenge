@@ -60,20 +60,29 @@ TO DO...
 [Back-End](./src)
 
 ## 4. Como rodar a aplicação
-Vá para o diretório `\RaizenChallenge\docker-compose\postgresSQL` e rode o comando abaixo:
+
+Vá para o diretório `\src\main\resources` e renomeie o arquivo `raizen.txt` para `application.properties`
+
+Altere o conteúdo do novo arquivo `application.properties` para adicionar o usuário e senha do banco de dados
+
+Vá para o diretório `\RaizenChallenge\docker-compose\postgresSQL` e altere o nome do arquivo `postgres-db.yml.TEMPLATE` para `postgres-db.yml`
+
+Altere o conteúdo do arquivo `postgres-db.yml` para abrigar o usuário e senha de preferência do banco de dados (obs: colocar os mesmos do arquivo application.properties) 
+
+Ainda dentro da pasta `postgreSQL` rode o comando abaixo:
 
 `docker-compose -f .\postgres-db.yml up -d`
 
 Após isso, espere até que todos os containeres estejam montados para interagir com a aplicação
 
-## Para importar o projeto no Eclipse:
+## Para importar o projeto no Eclipse (instalação manual):
 
 1. Criar uma wokspace
 2. Clonar este repositorio dentro dessa Workspace
 3. Dentro do eclipse: Canto superior > Eclipse > Preferences > Java > Compiler > Compiler Compilance Level > 11
 4. Dentro do eclipse: Import project > Maven > Existing Maven Projects > escolher a pasta que contem o pom.xml
 5. Deixar o Maven baixar todas as dependencias
-6. Realizar as instruções especificadas no arquivo raizen.properties (src/main/resources/raizen.properties)
+6. Realizar as instruções especificadas no arquivo raizen.txt (src/main/resources/raizen.txt)
 7. Adicionar as libs necessárias ao classpath do projeto raizen: Clicar com o botao direito no projeto > properties > Java Build Path > Libraries > Clicar em classpath > add jars > selecionar os jars em src/lib
 8. Executar a classe RaizenApplication.java
 
