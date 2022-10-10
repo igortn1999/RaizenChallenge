@@ -86,7 +86,7 @@ Após isso, espere até que todos os containeres estejam montados para interagir
 7. Adicionar as libs necessárias ao classpath do projeto raizen: Clicar com o botao direito no projeto > properties > Java Build Path > Libraries > Clicar em classpath > add jars > selecionar os jars em src/lib
 8. Executar a classe RaizenApplication.java
 
-##Configurações do banco de dados:
+## Configurações do banco de dados:
 
 Por enquanto, estamos usando um DB Postgres instanciado pelo docker.
 Para criar esse container, é necessário ter o docker instalado e baixar a imagem do postgreSQL:
