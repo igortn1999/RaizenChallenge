@@ -21,14 +21,7 @@
 
 
 .formResumo .btn-div{
-    width: 100%;
-    display: grid;
-    justify-items: center;
-}
-
-.formResumo .btn-div button{
     padding: 1rem;
-    width: 80%;
     font-weight: 600;
     font-size: 1.2rem;
     background-color: #861F83;

@@ -48,6 +48,12 @@ function Aquisicao() {
 
     const handleClick = () => {
         setOpen(true);
+
+        axios.get(`${process.env.REACT_APP_ESP_URL}/on`).then((res)=>{
+            console.log(res);
+            }).catch((err)=>{
+            console.log(err);
+            })
     };
 
     const handleClose = (event, reason) => {
@@ -87,6 +93,7 @@ function Aquisicao() {
                             setRecomendacao(res.data.quantity);
                             setAssinatura(res.data.cost);
                         })
+
                         if (assinatura > 0) {
                             setHidden(false);
                         }
