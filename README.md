@@ -61,6 +61,10 @@ TO DO...
 
 ## 4. Como rodar a aplicação
 
+No diretório raiz do projeto, crie uma pasta chamada `target`
+
+Copie o arquivo `raizen-api.jar` localizado na pasta `javadeploy\` para dentro da pasta `target\`
+
 Vá para o diretório `\src\main\resources` e renomeie o arquivo `raizen.txt` para `application.properties`
 
 Altere o conteúdo do novo arquivo `application.properties` para adicionar o usuário e senha do banco de dados
