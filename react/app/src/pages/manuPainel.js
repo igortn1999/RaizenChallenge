@@ -33,34 +33,6 @@ function ManuPainel() {
 
                 <img src={manutem_img} alt="Arrumando Painel Solar" />
 
-                <div className='button_div'>
-                    <div className='button_bigger'>
-                        <p>Próxima manutenção</p>
-                    </div>
-                    <ClickAwayListener onClickAway={handleTooltipClose2}>
-                        <div>
-                            <Tooltip
-                                PopperProps={{
-                                    disablePortal: true,
-                                }}
-                                componentsProps={{ tooltip: { className: 'tooltip' } }}
-                                onClose={handleTooltipClose2}
-                                open={open2}
-                                disableFocusListener
-                                disableHoverListener
-                                disableTouchListener
-                                title="Tempo para a próxima manutenção"
-                                sx={{ color: 'white', padding: 0, pl: '2rem' }}
-                            >
-                                <Button onClick={handleTooltipOpen2}><HelpOutlineIcon /></Button>
-                            </Tooltip>
-                        </div>
-                    </ClickAwayListener>
-                    <div className="no_days">
-                        <p>{110} dias</p>
-                    </div>
-
-                </div>
 
                 <Link to="/lista_provedores" className='button_amarelo'>
                     <div className='button_bigger'>

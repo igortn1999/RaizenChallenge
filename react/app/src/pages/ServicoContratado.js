@@ -68,34 +68,6 @@ function ServicoContratado() {
 
                 <img src={servico_img} alt="Arrumando Painel Solar" />
 
-                <div className='button_div'>
-                    <div className='button_bigger'>
-                        <p>Próxima manutenção</p>
-                    </div>
-                    <ClickAwayListener onClickAway={handleTooltipClose2}>
-                        <div>
-                            <Tooltip
-                                PopperProps={{
-                                    disablePortal: true,
-                                }}
-                                componentsProps={{ tooltip: { className: 'tooltip' } }}
-                                onClose={handleTooltipClose2}
-                                open={open2}
-                                disableFocusListener
-                                disableHoverListener
-                                disableTouchListener
-                                title="Prazo do próximo agendamento"
-                                sx={{ color: 'white', padding: 0, pl: '2rem' }}
-                            >
-                                <Button onClick={handleTooltipOpen2}><HelpOutlineIcon /></Button>
-                            </Tooltip>
-                        </div>
-                    </ClickAwayListener>
-
-                    <p className='button_inside'>110 dias</p>
-
-
-                </div>
 
                 <div className='button_div'>
                     <Link to="/" className='button_bigger'>
