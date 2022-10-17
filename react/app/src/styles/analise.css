@@ -1,0 +1,9 @@
+.Video_Animacao{
+    display: grid;
+    justify-items: center;
+}
+
+.Video_Animacao p{
+    font-size: 1.5rem;
+    font-weight: 600;
+}

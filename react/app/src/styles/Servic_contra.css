@@ -23,10 +23,10 @@
 }
 
 .Servico .button_div{
-    width: 75%;
+    width: 65%;
     display: grid;
     grid-template-columns: auto auto;
-    justify-content: space-between;
+    justify-content: center;
     background-color:#861F83;
     border-radius: 0.5rem;
     padding:0.5rem;

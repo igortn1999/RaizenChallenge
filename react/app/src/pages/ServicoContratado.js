@@ -7,14 +7,18 @@ import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
-import * as React from 'react';
+import Snackbar from '@mui/material/Snackbar';
+import MuiAlert from '@mui/material/Alert';
+import { React, useState, forwardRef } from "react";
 
 
 
 function ServicoContratado() {
 
-    const [open1, setOpen1] = React.useState(false);
-    const [open2, setOpen2] = React.useState(false);
+    const [open1, setOpen1] = useState(false);
+    const [open, setOpen] = useState(false);
+    const [open2, setOpen2] = useState(false);
+    const [parcelas, setParcelas] =useState(60);
 
     const handleTooltipClose1 = () => {
         setOpen1(false);
@@ -33,6 +37,22 @@ function ServicoContratado() {
     };
 
 
+    const handleClick = () => {
+        setOpen(true);
+    };
+
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+            return;
+        }
+
+        setOpen(false);
+    };
+
+    const Alert = forwardRef(function Alert(props, ref) {
+        return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+    });
+
     return (
         <Layout>
             <div className="Servico">
@@ -42,7 +62,7 @@ function ServicoContratado() {
                 <div className='prazo_div'>
                     <div className='button_bigger'>
                         <p className='parcela'>Faltam</p>
-                        <p className='parcela'>60</p>
+                        <p className='parcela'>{parcelas}</p>
                         <p className='parcela'>parcelas</p>
                     </div>
                     <ClickAwayListener onClickAway={handleTooltipClose1}>
@@ -69,11 +89,24 @@ function ServicoContratado() {
                 <img src={servico_img} alt="Arrumando Painel Solar" />
 
 
-                <div className='button_div'>
-                    <Link to="/" className='button_bigger'>
-                            <p>Adiantar Parcelas</p>
-                    </Link>
-                </div>
+                <button className='button_div' onClick={(e)=>{
+                    if(parcelas>1){
+                        handleClick();
+                        setParcelas(parcelas-1);
+                    }else{
+                        setParcelas(60);
+                    }
+                    
+                }}>Adiantar Parcelas
+                </button>
+                <Snackbar open={open} autoHideDuration={1500} onClose={handleClose} anchorOrigin={{
+                vertical: "bottom",
+                horizontal: "center"
+            }}>
+                <Alert onClose={handleClose} severity="success" sx={{ width: '16rem', marginBottom: "4rem", fontSize: "1rem" }} >
+                    Parcela Adiantada!
+                </Alert>
+            </Snackbar>
 
             </div>
         </Layout>

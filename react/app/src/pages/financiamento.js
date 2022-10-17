@@ -88,7 +88,7 @@ function Financiamento() {
                 }).catch((err) => {
                   console.log(err);
                 })
-                navigate("/visao_geral");
+                navigate("/analise");
               }}>Continuar</button>
           </section>
           : ""}

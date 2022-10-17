@@ -22,6 +22,7 @@ import ListaProvedores from './pages/lista_provedores';
 import Financiamento from './pages/financiamento';
 import VisaoGeral from './pages/visaoGeral';
 import FormularioCep from './pages/formulario_end';
+import AnaliseAnimada from './pages/analiseAnimada';
 import Resumo from './pages/resumo';
 import Aquisicao from './pages/aquisicao';
 export const Context = React.createContext({});
@@ -37,6 +38,7 @@ root.render(
       <Route path="/aquisicao" index element={<Aquisicao />} />
       <Route path="/integrantes" element={<Integrantes />} />
       <Route path="/formulario_cep" element={<FormularioCep />} />
+      <Route path="/analise" element={<AnaliseAnimada />} />
       <Route path="/home" index element={<Home/>} />
       <Route path="/contratacao" element={<Contratacao />} />
       <Route path="/servico_contratado" element={<ServicoContratado />} />
