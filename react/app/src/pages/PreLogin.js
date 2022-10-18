@@ -24,12 +24,10 @@ function PreLoginPage() {
             </div>
 
             <section className='buttons'>
-                <Link to="login">
+                <Link to="/home">
                     <button className='entrar'>Entrar</button>
                 </Link>
-                <Link to="cadastro">
                     <button className='inscrevase'>Inscreva-se</button>
-                </Link>
 
             </section>
 

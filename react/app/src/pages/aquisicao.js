@@ -35,7 +35,13 @@ function Aquisicao() {
         <form>
           <input type={"number"} placeholder="KWh" onChange={(e)=>{
             setKWH(e.target.value);
-          }}></input>
+          }}
+          
+          onKeyPress={(e) => { if (e.key === 'Enter') { 
+            e.preventDefault();
+            e.target.blur(); 
+          } }} 
+          ></input>
         </form>
         
         {(KWH)?
@@ -46,7 +52,7 @@ function Aquisicao() {
             <h3 className="additional-info">R${calcula_orcamento_solar(KWH)}</h3>
           </section>
         
-          <Link to="/formulario_cep">    
+          <Link to="/contratacao_animada">    
           <button className="next">Continuar</button>
           </Link>
         </section>

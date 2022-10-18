@@ -25,6 +25,8 @@ import FormularioCep from './pages/formulario_end';
 import AnaliseAnimada from './pages/analiseAnimada';
 import Resumo from './pages/resumo';
 import Aquisicao from './pages/aquisicao';
+import ContratacaoAnimada from './pages/contratacaoAnimada';
+import ContratacaoCotasAnimada from './pages/cotasAnimada';
 export const Context = React.createContext({});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -37,6 +39,8 @@ root.render(
       <Route path="/cadastro" index element={<Cadastro />} />
       <Route path="/aquisicao" index element={<Aquisicao />} />
       <Route path="/integrantes" element={<Integrantes />} />
+      <Route path="/contratacao_animada" element={<ContratacaoAnimada />} />
+      <Route path="/contratacao_cotas_animada" element={<ContratacaoCotasAnimada />} />
       <Route path="/formulario_cep" element={<FormularioCep />} />
       <Route path="/analise" element={<AnaliseAnimada />} />
       <Route path="/home" index element={<Home/>} />

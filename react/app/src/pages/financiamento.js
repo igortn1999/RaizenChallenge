@@ -49,7 +49,12 @@ function Financiamento() {
         <form>
           <input type={"number"} placeholder="KWh" onChange={(e) => {
             setKWH(e.target.value);
-          }}></input>
+          }}
+            onKeyPress={(e) => { if (e.key === 'Enter') { 
+              e.preventDefault();
+              e.target.blur(); 
+            } }}
+          ></input>
         </form>
         <h1>Em quanto tempo quer financiar?</h1>
         <section className="planos">

@@ -19,6 +19,8 @@ import Switch from '@mui/material/Switch';
 function SaudePainel() {
 
 
+    const  [opacity,setOpacity]= React.useState(1);
+    const  [habilitado,setHabilitado]= React.useState(true);
 
     function CircularProgressWithLabel(props) {
         return (
@@ -78,7 +80,14 @@ function SaudePainel() {
             <div className="SaudePainel">
                 <section style={{"width":"80%",display:"flex",alignItems:"center"}}>
                     <p style={{color:"black",fontSize:"1rem"}}>Agendamento automático</p>
-                <Switch defaultChecked color="secondary" label="revisão automática"/>
+                <Switch defaultChecked color="secondary" label="revisão automática"  onChange={(e)=>{
+                    setHabilitado(!habilitado);
+                    if(habilitado){
+                        setOpacity(0.3);
+                    }else{
+                        setOpacity(1);
+                    }
+                }}/>
                 </section>
                 
                 <heading>
@@ -87,7 +96,7 @@ function SaudePainel() {
 
                 <CircularProgressWithLabel value={80} />
 
-                <div className='button_div'>
+                <div className='button_div' style={{opacity:opacity}}>
                     <div className='button_bigger'>
                         <p>Saúde dos painéis</p>
                     </div>
@@ -116,7 +125,7 @@ function SaudePainel() {
 
                 </div>
 
-                <div className='button_div'>
+                <div className='button_div' style={{opacity:opacity}}>
                     <div className='button_bigger'>
                         <p>Próxima manutenção</p>
 

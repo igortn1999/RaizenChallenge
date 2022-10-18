@@ -2,17 +2,18 @@ import '../styles/analise.css';
 import Layout from './hocs/Layout';
 import { React, useState, forwardRef } from "react";
 import analise from "../static/Analyze.gif";
+import solar_energy from "../static/solar_energy.gif";
 import ok from "../static/ok-gif.gif";
 import { Link, useNavigate} from 'react-router-dom';
 
 
 
-function AnaliseAnimada() {
+function ContratacaoAnimada() {
 
     const navigate = useNavigate();
 
     const [progress, setProgress] = useState("");
-    const [status, setStatus] = useState("Realizando Análise");
+    const [status, setStatus] = useState("Adquirindo Paineis");
     const [count, setCount] = useState(0);
     const [hidden,setHidden] = useState(false);
 
@@ -23,7 +24,7 @@ function AnaliseAnimada() {
         }
 
         if(count===3){
-            setStatus("Análise aprovada!");
+            setStatus("Aprovado!");
             setProgress("");
             setHidden(true);
             setTimeout(() => {
@@ -37,7 +38,7 @@ function AnaliseAnimada() {
     return (
         <Layout>
             <div className="Video_Animacao">
-            <img src={analise} alt="loading..." hidden={hidden} />
+            <img src={solar_energy} alt="loading..." hidden={hidden} />
             <img src={ok} hidden={!hidden} className="aprovado"/>
             <p>{status} {progress}</p>
 
@@ -46,4 +47,4 @@ function AnaliseAnimada() {
     );
 }
 
-export default AnaliseAnimada;
+export default ContratacaoAnimada;

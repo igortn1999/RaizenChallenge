@@ -31,7 +31,7 @@ import "../styles/financiamento_cotas.css";
 import Layout from "./hocs/Layout";
 import { React, useState, forwardRef } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Context } from "..";
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
@@ -43,7 +43,7 @@ function Aquisicao() {
     const [assinatura, setAssinatura] = useState(undefined);
     const [recomendacao, setRecomendacao] = useState(undefined);
     const [hidden, setHidden] = useState(true);
-
+    const navigate = useNavigate();
     const [open, setOpen] = useState(false);
 
     const handleClick = () => {
@@ -54,6 +54,7 @@ function Aquisicao() {
             }).catch((err)=>{
             console.log(err);
             })
+        navigate("/contratacao_cotas_animada");
     };
 
     const handleClose = (event, reason) => {
@@ -82,7 +83,24 @@ function Aquisicao() {
                 <form>
                     <input type={"number"} placeholder="KWh" onChange={(e) => {
                         setKWH(e.target.value);
-                    }}></input>
+                    }}
+                    onKeyPress={(e) => { if (e.key === 'Enter') { 
+                        e.preventDefault();
+                        e.target.blur(); 
+
+                        formBody.set("user_id", 1);
+                        formBody.set("customer_consumption", KWH - 0);
+                        axios.post(`${process.env.REACT_APP_BACK_URL}/api/sq/`, formBody, headers).then((res) => {
+                            console.log(res.data);
+                            setRecomendacao(res.data.quantity);
+                            setAssinatura(res.data.cost);
+                        })
+
+                        if (assinatura > 0) {
+                            setHidden(false);
+                        }
+                      } }}
+                    ></input>
 
                     <button onClick={(e) => {
                         e.preventDefault();
@@ -119,14 +137,6 @@ function Aquisicao() {
                     </section>
                     : ""}
             </div>
-            <Snackbar open={open} autoHideDuration={6000} onClose={handleClose} anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "center"
-            }}>
-                <Alert onClose={handleClose} severity="success" sx={{ width: '16rem', marginBottom: "4rem", fontSize: "1rem" }} >
-                    Assinatura realizada!
-                </Alert>
-            </Snackbar>
         </Layout>
     );
 }
