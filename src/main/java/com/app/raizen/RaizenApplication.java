@@ -1,5 +1,6 @@
 package com.app.raizen;
 import java.nio.charset.StandardCharsets;
+import java.util.Calendar;
 import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,11 +12,13 @@ import org.springframework.context.event.EventListener;
 import com.app.raizen.models.Address;
 import com.app.raizen.models.Constants;
 import com.app.raizen.models.Device;
+import com.app.raizen.models.Order;
 import com.app.raizen.models.Provider;
 import com.app.raizen.models.User;
 import com.app.raizen.repositories.AddressRepository;
 import com.app.raizen.repositories.ConstantsRepository;
 import com.app.raizen.repositories.DeviceRepository;
+import com.app.raizen.repositories.OrderRepository;
 import com.app.raizen.repositories.ProviderRepository;
 import com.app.raizen.repositories.UserRepository;
 
@@ -37,6 +40,9 @@ public class RaizenApplication {
 	@Autowired
 	private AddressRepository ar;
 	
+	@Autowired 
+	private OrderRepository or;
+	
 	@EventListener
 	public void appReady(ApplicationReadyEvent event) {
 		
@@ -44,7 +50,8 @@ public class RaizenApplication {
 				&& cr.findAll().isEmpty()
 				&& pr.findAll().isEmpty() 
 				&& dr.findAll().isEmpty()
-				&& ar.findAll().isEmpty()) {
+				&& ar.findAll().isEmpty()
+				&& or.findAll().isEmpty()) {
 			
 			User user = mockUser("raizenadmin", "raizenadmin",
 					"Raizen", "Admin",
@@ -74,6 +81,8 @@ public class RaizenApplication {
 //							"Rua Edison", 200, "Ap. 54", user);
 			
 			mockDevice("Painel Solar", 65.0, null, addr);
+			
+			mockOrder(addr);
 		}
 		
 	}
@@ -140,6 +149,22 @@ public class RaizenApplication {
 		device.setAddress(address);
 		
 		dr.save(device);
+	}
+	
+	private void mockOrder(Address address) {
+		Order order = new Order();
+		order.setAddress(address);
+		Date date = new Date();
+		date.setYear(123);
+		date.setMonth(Calendar.DECEMBER);
+		date.setDate(10);
+		date.setHours(10);
+		date.setMinutes(30);
+		date.setSeconds(0);
+		order.setDate(date);
+		order.setValue(16000);
+		or.save(order);
+		
 	}
 	
 	public static String encrypt(String string){
