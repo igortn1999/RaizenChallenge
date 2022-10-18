@@ -140,8 +140,26 @@ Criamos uma nova rota com o path="/usuarios/", exemplo:
 ```
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="*" element={<NotFound />} />
+      <Route path="/" index element={<PreLoginPage />} />
+      <Route path="/login" index element={<LoginPage />} />
+      <Route path="/resumo/:tipo" index element={<Resumo />} />
+      <Route path="/cadastro" index element={<Cadastro />} />
+      <Route path="/aquisicao" index element={<Aquisicao />} />
+      <Route path="/integrantes" element={<Integrantes />} />
+      <Route path="/contratacao_animada" element={<ContratacaoAnimada />} />
+      <Route path="/contratacao_cotas_animada" element={<ContratacaoCotasAnimada />} />
+      <Route path="/formulario_cep" element={<FormularioCep />} />
+      <Route path="/analise" element={<AnaliseAnimada />} />
+      <Route path="/home" index element={<Home/>} />
+      <Route path="/contratacao" element={<Contratacao />} />
+      <Route path="/servico_contratado" element={<ServicoContratado />} />
+      <Route path="/saude_painel" element={<SaudePainel/>} />
+      <Route path="/manutencao" element={<ManuPainel />} />
+      <Route path="/recomendacao" element={<RecomendaCotas />} />
+      <Route path="/financiamento" element={<Financiamento />} />
+      <Route path="/sobre" element={<Sobre />} />
+      <Route path="visao_geral" element={<VisaoGeral />} />
+      <Route path="/lista_provedores" element={<ListaProvedores />} />
     </Routes>
   </BrowserRouter>
 ```
