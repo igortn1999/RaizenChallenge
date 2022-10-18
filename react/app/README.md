@@ -41,6 +41,7 @@ Na tela home é possível obter um insight geral da produção energética do us
 Aqui é onde o usuário pode verificar quantas parcelas faltam para terminar de pagar seu financiamento, sendo possível antecipar parcelas do faturamento.
 
 ![financas](/assets/telas/financas.png)
+![financas2](/assets/telas/financas2.png)
 
 
 ## Fluxo de contratação
@@ -73,8 +74,6 @@ O usuário diz o quanto consome, e decide se quer assinar ou não as cotas. Depo
 ## 2. Aquisição de painel com dinheiro próprio
 
 ![aquisicao](/assets/telas/aquisicao.png)
-![form_endereco](/assets/telas/form_endereco.png)
-![form_endereco2](/assets/telas/form_endereco2.png)
 ![avaliacao](/assets/telas/avaliacao.png)
 ![visao_geral](/assets/telas/visao_geral.png)
 
@@ -84,6 +83,16 @@ O usuário diz o quanto consome, e decide se quer assinar ou não as cotas. Depo
 ![cotas](/assets/telas/cotas.png)
 ![cotas2](/assets/telas/cotas2.png)
 
+## Formulário de endereço
+Caso o usuário não possua endereço cadastrado na plataforma, é possível cadastrar de forma fácil e intuitiva. Há uma integração com a Brasil API, portanto quando o usuário preenche seu CEP, ficam restantes somente 4 campos para o preenchimento. Sendo eles:
+
+ - O número de sua residência
+ - O complemento do seu endereço
+ - A data da avaliação presencial
+ - O horário da avaliação presencial
+
+![form_endereco](/assets/telas/form_endereco.png)
+![form_endereco2](/assets/telas/form_endereco2.png)
 
 ## Saude dos Paineis e manutenção preventiva automática
 
