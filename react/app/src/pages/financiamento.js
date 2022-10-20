@@ -88,11 +88,11 @@ function Financiamento() {
 
             <button className="next"
               onClick={(e) => {
-                axios.get(`${process.env.REACT_APP_ESP_URL}/on`).then((res) => {
+               /*  axios.get(`${process.env.REACT_APP_ESP_URL}/on`).then((res) => {
                   console.log(res);
                 }).catch((err) => {
                   console.log(err);
-                })
+                }) */
                 navigate("/analise");
               }}>Continuar</button>
           </section>

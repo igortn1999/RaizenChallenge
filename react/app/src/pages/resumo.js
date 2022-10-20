@@ -8,6 +8,7 @@ import axios from 'axios';
 
 
 
+
 function Resumo(props) {
 
     let { tipo } = useParams();
@@ -55,11 +56,11 @@ function Resumo(props) {
 
 
                         <button className='btn-div' onClick={(e) => {
-                            axios.get(`${process.env.REACT_APP_ESP_URL}/on`).then((res) => {
+                          /*   axios.get(`${process.env.REACT_APP_ESP_URL}/on`).then((res) => {
                                 console.log(res);
                             }).catch((err) => {
                                 console.log(err);
-                            })
+                            }) */
 
                             navigate("/visao_geral")
                         }}>Acompanhar Processo </button>

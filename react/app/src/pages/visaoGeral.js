@@ -17,6 +17,7 @@ import LaptopMacIcon from '@mui/icons-material/LaptopMac';
 import HotelIcon from '@mui/icons-material/Hotel';
 import RepeatIcon from '@mui/icons-material/Repeat';
 import Typography from '@mui/material/Typography';
+import roadmap from "../static/acompanhamento.png";
 
 
 function VisaoGeral(props) {
@@ -26,63 +27,8 @@ function VisaoGeral(props) {
         <Layout>
             <div className="visaoGeral">
                 <h1>Acompanhe a sua instalação</h1>
-                <Timeline sx={{mb:"2rem"}}>
-                    <TimelineItem>
-                        <TimelineSeparator>
-                            <TimelineDot color="secondary">
-                                <DoneIcon />
-                            </TimelineDot>
-                            <TimelineConnector />
-                        </TimelineSeparator>
-                        <TimelineContent sx={{ py: '12px', px: 2 }}>
-                            <Typography variant="h6" component="span">
-                                Avaliação Técnica
-                            </Typography>
-                        </TimelineContent>
-                    </TimelineItem>
-                    <TimelineItem>
-                        <TimelineSeparator>
-                            <TimelineConnector />
-                            <TimelineDot>
-                            <DoneIcon />
-                            </TimelineDot>
-                            <TimelineConnector />
-                        </TimelineSeparator>
-                        <TimelineContent sx={{ py: '12px', px: 2 }}>
-                            <Typography variant="h6" component="span">
-                                Registro e Documentação
-                            </Typography>
-                        </TimelineContent>
-                    </TimelineItem>
-                    <TimelineItem>
-                        <TimelineSeparator>
-                            <TimelineConnector />
-                            <TimelineDot>
-                            <DoneIcon />
-                            </TimelineDot>
-                            <TimelineConnector />
-                        </TimelineSeparator>
-                        <TimelineContent sx={{ py: '12px', px: 2 }}>
-                            <Typography variant="h6" component="span">
-                                Instalação do equipamento
-                            </Typography>
-                        </TimelineContent>
-                    </TimelineItem>
-                    <TimelineItem>
-                        <TimelineSeparator>
-                            <TimelineConnector />
-                            <TimelineDot>
-                            <DoneIcon />
-                            </TimelineDot>
-                        </TimelineSeparator>
-                        <TimelineContent sx={{ py: '12spx', px: 2 }}>
-                            <Typography variant="h6" component="span">
-                                Período de testes
-                            </Typography>
-                        </TimelineContent>
-                    </TimelineItem>
-            
-                </Timeline>
+                <img src={roadmap} width={"60%"} />
+               
             </div>
 
         </Layout>
