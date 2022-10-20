@@ -1,6 +1,6 @@
 import '../styles/formResumo.css';
 import Layout from './hocs/Layout';
-import { Link,Route, useParams, useNavigate } from 'react-router-dom';
+import { Link, Route, useParams, useNavigate } from 'react-router-dom';
 import { React, useEffect, useState } from 'react';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
@@ -13,20 +13,21 @@ function Resumo(props) {
     let { tipo } = useParams();
     let navigate = useNavigate();
     const [order, setOrder] = useState(undefined);
-    const [providers,setProviders] = useState(undefined);
+    const [providers, setProviders] = useState(undefined);
     const [cep, setCep] = useState(undefined);
     const [visible, setVisible] = useState(false);
 
     useEffect(() => {
-        axios.get(`${process.env.REACT_APP_BACK_URL}/api/orders`).then((res) => {
-            console.log(res.data);
-            setOrder(res.data);
-        })
-
         axios
             .get(`${process.env.REACT_APP_BACK_URL}/api/providers`)
             .then((response) => {
                 setProviders(response.data);
+
+                axios.get(`${process.env.REACT_APP_BACK_URL}/api/orders`).then((res) => {
+                    console.log(res.data);
+                    setOrder(res.data);
+                })
+
             })
             .catch((error) => {
                 console.log(error);
@@ -52,19 +53,19 @@ function Resumo(props) {
 
                         <h3>{"11:00"}h</h3>
 
-                        
-                        <button className='btn-div' onClick={(e)=>{
-                            axios.get(`${process.env.REACT_APP_ESP_URL}/on`).then((res)=>{
-                            console.log(res);
-                            }).catch((err)=>{
-                            console.log(err);
+
+                        <button className='btn-div' onClick={(e) => {
+                            axios.get(`${process.env.REACT_APP_ESP_URL}/on`).then((res) => {
+                                console.log(res);
+                            }).catch((err) => {
+                                console.log(err);
                             })
 
                             navigate("/visao_geral")
                         }}>Acompanhar Processo </button>
-                        
+
                     </div>
-                    
+
                 </Layout></> : <h1>Carregando</h1>
     )
 }
