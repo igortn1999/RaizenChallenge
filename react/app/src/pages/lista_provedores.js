@@ -29,7 +29,7 @@ function ListaProvedores() {
         axios
             .get(`${process.env.REACT_APP_BACK_URL}/api/providers`)
             .then((response) => {
-                setProviders(response.data);
+                setProviders([response.data[0]]);
             })
             .catch((error) => {
                 console.log(error);
